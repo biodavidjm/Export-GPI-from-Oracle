@@ -33,15 +33,60 @@ I will test my scripts on oracle-vm of nubic. I will write scripts that will con
 
 
 #### On the Mac
-The Instant client for Mac has traditionally very problematic. However, I am going to try to see if I can make it work and be able to connect to Oracle using DBD::Oracle with Perl. This is what I tried:
 
-* [Instant Client](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) for Mac OS X (Intel x86) Version 11.2.0.3.0 (64-bit): Instant Client Package Basic: All files required to run OCI, OCCI, and JDBC-OCI applications: 
-	* Download instantclient-basic-macos.x64-11.2.0.3.0.zip (62,342,264 bytes) - This alone gave errors
-	* Download  SQLPlus: Additional libraries and executable for running SQLPlus with Instant Client
-Download instantclient-sqlplus-macos.x64-11.2.0.3.0.zip (888,991 bytes)
-* I found similar problems described [here](http://blog.caseylucas.com/tag/oracle-sqlplus/). It solves most of the problem except one: ``./Oracle.h:37:10: fatal error: 'oci.h' file not found``
+##### Installation of DBD::Oracle 
 
+I need to first install the 64 bits instant client for Mac, which traditionally has been very problematic. After a lot of difficulties, I made it work. And these are the steps adapted from [here](http://blog.caseylucas.com/tag/oracle-sqlplus/) (the sh script is the essential part) and specially [here](http://blog.g14n.info/2013/07/how-to-install-dbdoracle.html). Since I combined both, I am going to rewrite the steps:
 
+Folder: ``$HOME:/opt/Oracle/packages/`` where I [downloaded](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html):
+
+```
+ls opt/Oracle/packages/
+instantclient-basic-macos.x64-11.2.0.3.0.zip   
+instantclient-sdk-macos.x64-11.2.0.3.0.zip     
+instantclient-sqlplus-macos.x64-11.2.0.3.0.zip
+```
+
+Next unzip them:
+
+```
+$ cd $HOME/opt/Oracle
+$ unzip packages/basic-10.2.0.5.0-linux-x64.zip
+$ unzip packages/sdk-10.2.0.5.0-linux-x64.zip
+$ unzip packages/sqlplus-10.2.0.5.0-linux-x64.zip
+```
+
+Then, go to $HOME and create a ``.oracle_profile`` file with the environment variables 
+
+```
+more .oracle_profile
+export ORACLE_BASE=$HOME/opt/Oracle
+export ORACLE_HOME=$ORACLE_BASE/instantclient_11_2
+export PATH=$ORACLE_HOME:$PATH
+export TNS_ADMIN=$HOME/etc
+export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P15
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+```
+
+...which has to be source from ``.bash_profile``. At this point, the test ``sqlplus /nolog`` should give errors. To solve the problem, I cd to the folder ``/opt/Oracle/instantclient_11_2`` and run the script ``changeOracleLibs.sh`` (it should be available in this github project, folder ``/bin``).
+
+After running the script, testing sqlplus should work:
+
+```
+$ sqlplus /nolog
+
+SQLPlus: Release 11.2.0.3.0 Production on Fri Mar 21 13:49:34 2014
+
+Copyright (c) 1982, 2012, Oracle.  All rights reserved.
+
+SQL>
+
+```
+
+Finally, it's time to call ``cpanm PERL::DBI``, which was finally install WITH SUCCESS!!
+
+Now, am I gonna be able to connect to Oracle with Perl? That's another story, baby. I'll find out soon.
 
 
 

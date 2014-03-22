@@ -84,9 +84,12 @@ SQL>
 
 ```
 
-Finally, it's time to call ``cpanm PERL::DBI``, which was finally install WITH SUCCESS!!
+Finally, install the DBI module ``cpanm PERL::DBI``, which was installed WITH SUCCESS!!
 
-Now, am I gonna be able to connect to Oracle with Perl? That's another story, baby. I'll find out soon.
+The testing script ``connect2oracle.pl`` was tested to connect to the Oracle database at the VM on nubic with SUCCESS!
+
+The preliminary conclusion is that now it is possible to develop perl DBI scripts from a Mac OS X (64 bits).
+
 
 
 

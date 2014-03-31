@@ -22,6 +22,29 @@ column | name                    | required? | cardinality  | GAF column  | Exam
 09     | Gene_Product_Properties | optional  | 0 or greater | -           | See Note 4 below	
 ***
 
+#### GPI FORMAT from Dictybase
+Where is the info?
+
+
+01 DB_Object_ID = dictyID (DDB#) = feature.uniquename
+
+02 DB_Object_Symbol = GeneName = feature.name
+
+03 DB_Object_Name = Gene Product (take the newest one, or think about it)
+
+04 DB_Object_Synonym(s) = Alternative Gene names
+
+05 DB_Object_Type = 'Gene' (Dicty is a gene centric database)
+
+06 Taxon = 44689
+
+07 Parent_Object_ID = DDB:GeneID (think about the problem of the different gene variants)
+
+08 DB_Xref(s) = Either leave it empty or use the go2protein tool
+
+09 Gene_Product_Properties = Think about it.
+
+
 ### The Plan / challenges
 
 I will test my scripts on oracle-vm of nubic. I will write scripts that will connect to the oracle database and dump the data. These are the challenges ahead:

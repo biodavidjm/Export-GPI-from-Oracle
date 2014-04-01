@@ -113,6 +113,14 @@ The testing script ``connect2oracle.pl`` was tested to connect to the Oracle dat
 
 The preliminary conclusion is that now it is possible to develop perl DBI scripts from a Mac OS X (64 bits).
 
+### Scripts
+* Started with script ``connect2oracle.pl``
+* After Sidd feedback, re-write the script in a more professional way. 
+* As a result: ``gen_gpi_file.pl``, with
+	* Write perldoc
+	* Ready to connect to any Oracle database
+	* to be continued
+
 
 
 

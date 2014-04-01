@@ -7,6 +7,13 @@ use warnings;
 
 use DBI;
 
+use Getopt::Long;
+use IO::File;
+use autodie qw/open close/;
+use Text::CSV;
+
+
+
 # Connecting to the Database on nubic 
 my $user = "CGM_CHADO";
 my $passwd = "CGM_CHADO";

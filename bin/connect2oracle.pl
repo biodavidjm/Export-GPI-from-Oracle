@@ -13,10 +13,10 @@ my $passwd = "CGM_CHADO";
 
 print "\nHellow World!\nTrying to connect to DictyOracle (at dicty-oracle-vm.nubic.northwestern.edu)...";
 my $dbh = DBI->connect("dbi:Oracle:host=dicty-oracle-vm.nubic.northwestern.edu;sid=orcl;port=1521", $user,$passwd,
-	# {
-	# 	PrintError => 0, #don't report errors via warn
-	# 	RaiseError => 1, # Please, report error via die()
-	# }
+	{
+		PrintError => 0, #don't report errors via warn
+		RaiseError => 1, # Please, report error via die()
+	}
 ) or die "\n\nOh no! I could not connect to the Oracle database:" . DBI->errstr . "\n\n";
 
 print " and SUCCESS! \nDude, you are now in. Enjoy your queries\n\n";
@@ -96,19 +96,28 @@ warn "Data fetching terminated early by error: $DBI::errstr\n"
 # }
 
 my $p = 0; #I'll use it at the end
+my $gene = "gene";
+my $taxon = "taxon:44689";
+my $nulldata = "NULL";
+
 #pppppppppppppppppppppppppppppppppppppppppppprint
 for my $ddbs (keys %allnames)
 {
-	print "01:".$ddbs." 02:".$allnames{$ddbs}[0]." 03:NULL ";
+	printf "%-16s %-16s ", $ddbs, $allnames{$ddbs}[0];
+
+	# print "01:".$ddbs." 02:".$allnames{$ddbs}[0]." 03:NULL ";
 	if ($allnames{$ddbs}[1])
 	{
-		"04:". $allnames{$ddbs}[1]." ";
+		my $nocomma = $allnames{$ddbs}[1];
+		$nocomma =~ s/,/\|/g;
+		printf "%-15s ", $nocomma." ";
 	}
 	else
 	{
-		print "04: NULL ";
+		printf "%-15s ", $nulldata;
 	}
-	print "05: gene 06:Taxon:44689 07:".$ddbs." 08:NULL 09:NULL\n";
+	printf "%-15s %-15s %-15s\n",$gene, $taxon, $ddbs;
+	# printf "05: gene 06:Taxon:44689 07:".$ddbs." 08:NULL 09:NULL\n";
 	$p++;
 }
 #pppppppppppppppppppppppppppppppppppppppppppprint

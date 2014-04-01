@@ -11,7 +11,7 @@ use DBI;
 my $user = "CGM_CHADO";
 my $passwd = "CGM_CHADO";
 
-print "Connecting to vm.nubic...";
+print "\nHellow World!\nTrying to connect to DictyOracle (at dicty-oracle-vm.nubic.northwestern.edu)...";
 my $dbh = DBI->connect("dbi:Oracle:host=dicty-oracle-vm.nubic.northwestern.edu;sid=orcl;port=1521", $user,$passwd,
 	# {
 	# 	PrintError => 0, #don't report errors via warn
@@ -19,15 +19,19 @@ my $dbh = DBI->connect("dbi:Oracle:host=dicty-oracle-vm.nubic.northwestern.edu;s
 	# }
 ) or die "\n\nOh no! I could not connect to the Oracle database:" . DBI->errstr . "\n\n";
 
-print " Successfully connected to dicty-oracle-vm.nubic.northwestern.edu\n\n";
+print " and SUCCESS! \nDude, you are now in. Enjoy your queries\n\n";
 
 # Adjusting the LongReadLen to avoid errors:
-print "LongReadLen is '", $dbh->{LongReadLen}, "'\n";
+# Before
+# print "LongReadLen is '", $dbh->{LongReadLen}, "'\n";
 # print "LongTruncOk is ", $dbh->{LongTruncOk}, "\n";
 $dbh->{LongReadLen} = 25000;
-print "LongReadLen is '", $dbh->{LongReadLen}, "'\n";
+# After
+# print "LongReadLen is '", $dbh->{LongReadLen}, "'\n";
 
-# Query to get the alternative names
+# SQL QUERY:
+# Select gene name, gene synonym and protein synonym, DDB_G ID
+# Excluding pseudogenes
 my $query = '
 WITH dicty_coding_genes AS (
 SELECT dbxref.accession gene_id
@@ -46,7 +50,7 @@ ESCAPE \'\\\'
 group by dbxref.accession
 )
 
-SELECT dg.gene_id gene_id, gene.name,wm_concat(syn.name) gsyn
+SELECT dg.gene_id gene_id, gene.name, wm_concat(syn.name) gsyn
 FROM cgm_chado.feature gene
 JOIN cgm_chado.dbxref on gene.dbxref_id=dbxref.dbxref_id
 JOIN dicty_coding_genes dg on dg.gene_id=dbxref.accession
@@ -56,17 +60,14 @@ group by gene.name,dg.gene_id
 order by gene.name DESC
 ';
 
-
-# my $query = '
-# SELECT feature_id, organism_id, uniquename, name FROM cgm_chado.feature WHERE organism_id = 10
-# ';
-
+print "\tRunning first query: ";
 my $results = $dbh->prepare($query);
 $results->execute() 
 	or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
 
-# print "\n\tPrint out query\n\t".$query."\n";
+print "...done\n";
 
+# ADD all the info to a hash (although I could print everything here)
 my %allnames = ();
 my @row;
 my $c = 0;
@@ -74,7 +75,7 @@ my $n = 0;
 
 while (@row = $results->fetchrow_array())
 {
-	foreach (@row) {$_ = '' unless defined};
+	foreach (@row) {$_ = '' unless defined}; # Check point Charlie
 	if ($row[0])
 	{
 		if ( !$allnames{$row[0]} )
@@ -87,35 +88,79 @@ while (@row = $results->fetchrow_array())
 warn "Data fetching terminated early by error: $DBI::errstr\n"
       if $DBI::err;
 
-# Test2Delete: Access one element
-print "\nTest on one element\n";
-foreach ( @{$allnames{'DDB_G0285391'}} )
-{
-    print $_." ";
-}
+#Test2Delete: Access one element
+# print "\nTest on one element\n";
+# foreach ( @{$allnames{'DDB_G0285391'}} )
+# {
+#     print $_." ";
+# }
 
-my $t = 1;
+my $p = 0; #I'll use it at the end
+#pppppppppppppppppppppppppppppppppppppppppppprint
 for my $ddbs (keys %allnames)
 {
-	print $t." ".$ddbs.": ".$allnames{$ddbs}[0];
+	print "01:".$ddbs." 02:".$allnames{$ddbs}[0]." 03:NULL ";
 	if ($allnames{$ddbs}[1])
 	{
-		" -> ". $allnames{$ddbs}[1]."\n";
+		"04:". $allnames{$ddbs}[1]." ";
 	}
 	else
 	{
-		print "\n";
+		print "04: NULL ";
 	}
-	$t++;
+	print "05: gene 06:Taxon:44689 07:".$ddbs." 08:NULL 09:NULL\n";
+	$p++;
 }
+#pppppppppppppppppppppppppppppppppppppppppppprint
 
-# Need stats to check?
-print "\nYes: ".$c."\n";
-say "No: ".$n;
 
 
 my @result = $dbh->selectrow_array("SELECT count(*) FROM feature");
-say "\tNumber of features at dicty: ".$result[0];
+say "\tTotal number of features at dicty: ".$result[0];
+say "\tPrinted here: ".$p."\n";
+$dbh->disconnect();
+say "\nWe are done (and disconnected from DB). Bye bye!\n";
+
+exit;
+
+
+# Just in case I need to use my own query and get something
+# my $newquery = '
+# SELECT uniquename, organism_id FROM cgm_chado.feature WHERE organism_id = 10
+# ';
+
+# my $resultados = $dbh->prepare($newquery);
+# $resultados->execute()
+# 	or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
+
+# my %hashforeverything = ();
+# my @newrow;
+# my ($uniquename,$name);
+# my $c = 0; #for testing purposes
+
+# while ( @newrow = $resultados->fetchrow_array() )
+# {
+# 	($uniquename, $name) = @newrow;
+# 	if ($uniquename =~ /^DDB(.*)/)
+# 	{
+# 		my $yep = $1;
+# 		my $fixit = "DDB_".$yep;
+# 		print $uniquename." -> ".$fixit."\n";
+# 		$c++;
+# 	}
+# 	if ($c==1000)
+# 	{
+# 		last;
+# 	}
+	
+# }
+# warn "Data fetching terminated early by error: $DBI::errstr\n"
+#       if $DBI::err;
+
+
+# Need stats to check?
+# print "\nYes: ".$c."\n";
+# say "No: ".$n;
 
 
 # my $oresults = $dbh->prepare("SELECT fe.uniquename fe.name FROM feature");
@@ -136,9 +181,3 @@ say "\tNumber of features at dicty: ".$result[0];
 # {
 # 	print "\t\tSpecie_ID: $id - $testhash{$id}[1] (".$testhash{$id}[2]." ".$testhash{$id}[3]."\n";
 # }
-
-
-# $dbh->disconnect();
-# say "\nWe are done (and disconnected from DB). Bye bye!\n";
-
-exit;

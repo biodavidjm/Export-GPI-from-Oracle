@@ -27,7 +27,7 @@ my $user = $options{user};
 my $pass = $options{passwd};
 
 # Connecting to the Database
-print "Connecting to the database, ";
+print "Connect to the database, ";
 my $dbh = DBI -> connect("dbi:Oracle:host=$host;sid=orcl;port=1521", $options{user}, $options{passwd}, 
 	{ RaiseError => 1, LongReadLen => 2**20 } );
 
@@ -64,17 +64,15 @@ order by gene.name DESC
 
 print "execute statement ";
 my $results = $dbh->prepare($statement);
-$results->execute() 
-	or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
+$results->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
 print "...done\n";
 
-# ADD all the info to a hash (although I could print everything here)
+
+# ADD all the info to a hash
 my %allnames = ();
 my @row;
-my $c = 0;
-my $n = 0;
 
-while (@row = $results->fetchrow_array())
+while (@row = $results->fetchrow_array() )
 {
 	foreach (@row) {$_ = '' unless defined}; # Check point Charlie
 	if ($row[0])
@@ -82,22 +80,20 @@ while (@row = $results->fetchrow_array())
 		if ( !$allnames{$row[0]} )
 		{
 			my @temp = ($row[1],$row[2]);
-			$allnames{$row[0]} = [@temp]
+			$allnames{$row[0]} = [@temp];
 		}
 	}
 }
 warn "Data fetching terminated early by error: $DBI::errstr\n"
       if $DBI::err;
 
-
 # OUTPUT FILE
 # - - - - - - - - - - - - - - - - -
-# Output file name
+# Output file name (uses date & time)
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
 my $ymd = sprintf("%04d%02d%02d_%02d%02d%02d",$year+1900,$mon+1,$mday,$hour,$min,$sec);
 my $outfile = "$ymd.gpi_dicty";
-
-print $outfile."\n";
+open (FILE, ">".$outfile);
 
 # Head info to the GPI FILE
 my $headinfo = "
@@ -125,9 +121,7 @@ my $headinfo = "
 !
 ";
 
-print $headinfo."\n";
-
-exit;
+print FILE $headinfo."\n";
 
 my $p = 0; #I'll use it at the end
 my $gene = "gene";
@@ -137,51 +131,48 @@ my $nulldata = "NULL";
 #pppppppppppppppppppppppppppppppppppppppppppprint
 for my $ddbs (keys %allnames)
 {
-	printf "%-16s %-16s ", $ddbs, $allnames{$ddbs}[0];
+	print FILE $ddbs."\t".$allnames{$ddbs}[0]."\t";
 
-	# print "01:".$ddbs." 02:".$allnames{$ddbs}[0]." 03:NULL ";
 	if ($allnames{$ddbs}[1])
 	{
 		my $nocomma = $allnames{$ddbs}[1];
 		$nocomma =~ s/,/\|/g;
-		printf "%-15s ", $nocomma." ";
+		print FILE "\t", $nocomma."\t";
 	}
 	else
 	{
-		printf "%-15s ", $nulldata;
+		print FILE $nulldata."\t";
 	}
-	printf "%-15s %-15s %-15s\n",$gene, $taxon, $ddbs;
-	# printf "05: gene 06:Taxon:44689 07:".$ddbs." 08:NULL 09:NULL\n";
+	print FILE $gene."\t".$taxon."\tDictyBase:".$ddbs."\n";
 	$p++;
 }
 #pppppppppppppppppppppppppppppppppppppppppppprint
 
+print "Dicty GPI file: ".$outfile."\n";
 
-my @result = $dbh->selectrow_array("SELECT count(*) FROM feature");
-say "\tTotal number of features at dicty: ".$result[0];
-say "\tPrinted here: ".$p."\n";
+close FILE;
 $dbh->disconnect();
 
 
 =head1 NAME
 
-gen_gpi_file.pl - Generate a GPI file (YYYYMMDD_dicty.gpi) from the dictybase
+gen_gpi_file.pl - Generate a GPI file (YYYYMMDD_HHMMSS.gpi_dicty) from the dictyBase
 
 
 =head1 SYNOPSIS
 
-perl gen_gpi_file.pl  --dsn <Oracle DSN> --user <Oracle user> ---pass <Oracle password>
+perl gen_gpi_file.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle password>
 
 
 =head1 OPTIONS
 
  --dsn           Oracle database DSN
  --user          Database user name
- --pass          Database password
+ --passwd        Database password
 
 =head1 DESCRIPTION
 
-Connect to the dictyOracle database and dump to a file the following information:
+Connect to the dictyOracle database and dump to a file (YYYYMMDD_HHMMSS.gpi_dicty) the following information:
 
 Columns:
 
@@ -195,4 +186,3 @@ Taxon                  required  1             13
 Parent_Object_ID       optional  0 or 1        -         
 DB_Xref(s)             optional  0 or greater  -         
 Properties             optional  0 or greater  -         
-

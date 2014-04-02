@@ -116,11 +116,16 @@ The preliminary conclusion is that now it is possible to develop perl DBI script
 ### Scripts
 * Started with script ``connect2oracle.pl``
 * After Sidd feedback, re-write the script in a more professional way. 
-* As a result: ``gen_gpi_file.pl``, with
-	* Write perldoc
-	* Ready to connect to any Oracle database
-	* to be continued
+* As a result: ``gen_gpi_file.pl``
 
+#### Issues with ``gen_gpi_file.pl``
+
+* Perldoc: problems with the table
+* Content issue. I am not sure about these columns:
+	* 03 DB_Object_Name = Gene Product (take the newest one, or think about it)
+	* 07 Parent_Object_ID = DDB:GeneID (do we have a parent gene name when different variants)
+	* 08 DB_Xref(s) = Not sure about this column
+	* 09 Gene_Product_Properties = Not sure
 
 
 

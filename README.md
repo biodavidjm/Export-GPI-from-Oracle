@@ -121,6 +121,7 @@ The preliminary conclusion is that now it is possible to develop perl DBI script
 #### Issues with ``gen_gpi_file.pl``
 
 * Perldoc: problems with the table
+* Check connection: would it connect to any database?
 * Content issue. I am not sure about these columns:
 	* 03 DB_Object_Name = Gene Product (take the newest one, or think about it)
 	* 07 Parent_Object_ID = DDB:GeneID (do we have a parent gene name when different variants)

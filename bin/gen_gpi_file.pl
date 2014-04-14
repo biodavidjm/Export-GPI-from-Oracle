@@ -12,9 +12,6 @@ use IO::File;
 use autodie qw/open close/;
 use Text::CSV;
 
-use Time::Piece;
-# my $t = Time::Piece->strptime("20111230", "%Y%m%d");
-# print $t->strftime("%d-%b-%Y\n");
 
 # Validation section
 my %options;
@@ -30,45 +27,74 @@ my $user = $options{user};
 my $pass = $options{passwd};
 
 # Connecting to the Database
-print "Connect to the database, ";
+print "Connecting to the database... ";
 my $dbh = DBI -> connect("dbi:Oracle:host=$host;sid=orcl;port=1521", $options{user}, $options{passwd}, 
 	{ RaiseError => 1, LongReadLen => 2**20 } );
+
+print " done!!\n";
 
 
 # Database setup
 # Select gene name, gene synonym and protein synonym, DDB_G ID
 # Excluding pseudogenes
+# my $statement = '
+# WITH dicty_coding_genes AS (
+# SELECT dbxref.accession gene_id
+# FROM cgm_chado.feature gene
+# JOIN organism ON organism.organism_id=gene.organism_id
+# JOIN dbxref on dbxref.dbxref_id=gene.dbxref_id
+# JOIN cgm_chado.cvterm gtype on gtype.cvterm_id=gene.type_id
+# JOIN cgm_chado.feature_relationship frel ON frel.object_id=gene.feature_id
+# JOIN cgm_chado.feature mrna ON frel.subject_id=mrna.feature_id
+# JOIN cgm_chado.cvterm mtype ON mtype.cvterm_id=mrna.type_id
+# WHERE gtype.name=\'gene\'
+# AND mtype.name=\'mRNA\'
+# AND organism.common_name = \'dicty\'
+# AND gene.name NOT LIKE \'%\\_ps%\'
+# ESCAPE \'\\\'
+# group by dbxref.accession
+# )
+# SELECT dg.gene_id gene_id, gene.name, wm_concat(syn.name) gsyn
+# FROM cgm_chado.feature gene
+# JOIN cgm_chado.dbxref on gene.dbxref_id=dbxref.dbxref_id
+# JOIN dicty_coding_genes dg on dg.gene_id=dbxref.accession
+# LEFT JOIN cgm_chado.feature_synonym fsyn on gene.feature_id=fsyn.feature_id
+# LEFT JOIN cgm_chado.synonym_ syn on syn.synonym_id=fsyn.SYNONYM_ID
+# group by gene.name,dg.gene_id
+# order by gene.name DESC
+# ';
+
 my $statement = '
-WITH dicty_coding_genes AS (
-SELECT dbxref.accession gene_id
-FROM cgm_chado.feature gene
-JOIN organism ON organism.organism_id=gene.organism_id
-JOIN dbxref on dbxref.dbxref_id=gene.dbxref_id
-JOIN cgm_chado.cvterm gtype on gtype.cvterm_id=gene.type_id
-JOIN cgm_chado.feature_relationship frel ON frel.object_id=gene.feature_id
-JOIN cgm_chado.feature mrna ON frel.subject_id=mrna.feature_id
-JOIN cgm_chado.cvterm mtype ON mtype.cvterm_id=mrna.type_id
-WHERE gtype.name=\'gene\'
-AND mtype.name=\'mRNA\'
-AND organism.common_name = \'dicty\'
-AND gene.name NOT LIKE \'%\_ps%\'
-ESCAPE \'\\\'
-group by dbxref.accession
-)
+WITH dicty_coding_genes AS ( SELECT dbxref.accession gene_id 
+	  FROM cgm_chado.feature gene 
+	  JOIN organism ON organism.organism_id=gene.organism_id 
+	  JOIN dbxref on dbxref.dbxref_id=gene.dbxref_id 
+	  JOIN cgm_chado.cvterm gtype on gtype.cvterm_id=gene.type_id 
+	  JOIN cgm_chado.feature_relationship frel ON frel.object_id=gene.feature_id 
+	  JOIN cgm_chado.feature mrna ON frel.subject_id=mrna.feature_id 
+	  JOIN cgm_chado.cvterm mtype ON mtype.cvterm_id=mrna.type_id 
+	 WHERE gtype.name=\'gene\' 
+	   AND mtype.name=\'mRNA\' 
+	   AND gene.is_deleted = 0 
+	   AND organism.common_name = \'dicty\' 
+	   AND gene.name NOT LIKE \'%\\_ps%\' ESCAPE \'\\\'
+	 GROUP BY dbxref.accession  )
 SELECT dg.gene_id gene_id, gene.name, wm_concat(syn.name) gsyn
-FROM cgm_chado.feature gene
-JOIN cgm_chado.dbxref on gene.dbxref_id=dbxref.dbxref_id
-JOIN dicty_coding_genes dg on dg.gene_id=dbxref.accession
-LEFT JOIN cgm_chado.feature_synonym fsyn on gene.feature_id=fsyn.feature_id
-LEFT JOIN cgm_chado.synonym_ syn on syn.synonym_id=fsyn.SYNONYM_ID
-group by gene.name,dg.gene_id
-order by gene.name DESC
+  FROM cgm_chado.feature gene 
+  JOIN cgm_chado.dbxref on gene.dbxref_id=dbxref.dbxref_id 
+  JOIN dicty_coding_genes dg on dg.gene_id=dbxref.accession LEFT 
+  JOIN cgm_chado.feature_synonym fsyn on gene.feature_id=fsyn.feature_id LEFT 
+  JOIN cgm_chado.synonym_ syn on syn.synonym_id=fsyn.SYNONYM_ID
+ GROUP BY gene.name,
+       dg.gene_id
+ ORDER BY gene.name DESC
 ';
 
-print "execute statement ";
+
+print "> Execute statement ";
 my $results = $dbh->prepare($statement);
 $results->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
-print "...done ";
+print " done!!";
 
 
 # ADD the data to a hash
@@ -77,21 +103,95 @@ my $row_statement = $results->fetchall_arrayref();
 # My hash to store
 my %allnames = ();
 
+my $count_statement_in = 0;
+my $count_statement_out = 0;
 foreach my $linea (@$row_statement)
 {
 	my ($gene_id, $gene_name, $gsyn) = @$linea;
+
 	if ($gene_id)
 	{
+		$count_statement_in++;
 		if( !$allnames{$gene_id} )
 		{
 			my @temp = ($gene_name,$gsyn);
 			$allnames{$gene_id} = [@temp];
 		}
+		else
+		{
+			$count_statement_out++;
+		}
 	}
 }
-print "...and data in hashes\n";
+print " (and now data in hashes also)\n";
 
+print "IN: ".$count_statement_in." OUT: ".$count_statement_out."\n";
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Get the list of split genes
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+my $statement_splitgenes = '
+WITH split_replaced AS( SELECT dbxref.accession acc 
+	  FROM cgm_chado.featureprop fprop 
+	  JOIN cgm_chado.cvterm on cvterm.cvterm_id=fprop.type_id 
+	  JOIN cgm_chado.feature on feature.feature_id=fprop.feature_id 
+	  JOIN cgm_chado.cvterm ftype on ftype.cvterm_id=feature.type_id 
+	  JOIN cgm_chado.dbxref on feature.dbxref_id=dbxref.dbxref_id 
+	 WHERE ftype.name = \'gene\' 
+	   AND cvterm.name = \'replaced by\' 
+	   AND feature.is_deleted = 1 
+	   AND feature.uniquename like \'DDB_G%\'
+	 GROUP BY dbxref.accession
+	HAVING count(to_char(fprop.value)) > 1  )
+SELECT to_char(fprop.value) split_id 
+  FROM cgm_chado.feature 
+  JOIN cgm_chado.featureprop fprop on fprop.feature_id=feature.feature_id 
+  JOIN cgm_chado.dbxref on dbxref.dbxref_id=feature.dbxref_id 
+  JOIN cgm_chado.cvterm on cvterm.cvterm_id=fprop.type_id 
+  JOIN split_replaced on split_replaced.acc=dbxref.accession 
+ WHERE cvterm.name = \'replaced by\' 
+   AND fprop.value like \'DDB_G%\'
+';
+
+# database handle
+my $result_sliptgenes = $dbh->prepare($statement_splitgenes);
+
+print "> Execute statement_splitgenes ";
+$result_sliptgenes->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
+print " done!!";
+
+# ADD all the info to a hash
+my $rowsplitgenes = $result_sliptgenes->fetchall_arrayref();
+
+# hash to store
+my %hash_splitgenes = ();
+
+# Transverse
+foreach my $line (@$rowsplitgenes)
+{
+	my ($split_id) = @$line;
+	chomp($split_id);	
+
+	if ( !$hash_splitgenes{$split_id} )
+	{
+		$hash_splitgenes{$split_id} = 1;	
+	}
+	else
+	{
+		print "\n\nERROR! \n";
+		print "This gene id".$split_id." is retrieve twice?\n";
+		exit;
+	}
+}
+
+print " (...and now data in hashes also)\n";
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # SQL to get the gen product
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 my $statement_gene_product = '
 SELECT dx.accession AS DDB_G_ID, gp.gene_product, (TO_CHAR(gp.date_created, \'YYYY-MM-DD\'))
 FROM cgm_ddb.gene_product gp
@@ -106,12 +206,13 @@ ORDER BY dx.accession, gp.gene_product
 ';
 
 
+
 # database handle
 my $result_gene_product = $dbh->prepare($statement_gene_product);
 
-print "Execute statement_gene_product ";
+print "> Execute statement_gene_product ";
 $result_gene_product->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
-print "...done ";
+print " done!!";
 
 # ADD all the info to a hash
 my $rowproduct = $result_gene_product->fetchall_arrayref();
@@ -123,6 +224,7 @@ my %hashgenproduct = ();
 foreach my $line (@$rowproduct)
 {
 	my ($ddb_g, $gene_product, $date_created) = @$line;
+	chomp($ddb_g);
 	# print $ddb_g." Gene_product: ".$gene_product." Date: ".$date_created."\n";	
 
 	# If two dates are the same, it must be a weird error
@@ -132,29 +234,41 @@ foreach my $line (@$rowproduct)
 	}
 }
 
-print "...and data in hashes\n";
+print " (and now data in hashes also)\n";
 
-# p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p
-# for my $a (sort keys %hashgenproduct)
-# {
+# Final gen product hash (with only one gen product, the newest)
+my %hash_gen_product = ();
+my $count_one_geneproduct = 0;
+my $count_more_geneproduct = 0;
+
+for my $ddb (sort keys %hashgenproduct)
+{
 	
-# 	my $totalnumber = keys %{$hashgenproduct{$a} };
-# 	if ($totalnumber > 1)
-# 	{
-# 		print $totalnumber." ".$a." ---> \n";
-# 		for my $b (reverse sort keys %{$hashgenproduct{$a} } )
-# 		{
-				
-# 			print "\t".$b."  ".$hashgenproduct{$a}{$b}."\n";
-# 		}
-# 		print "\n";
-# 		my $highest = (reverse sort keys %{$hashgenproduct{$a} } )[0];
-# 		print "\t\t".$highest."\n";
-# 	}
-# }
-# p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p
+	my $totalnumber = keys %{$hashgenproduct{$ddb} };
+	if ($totalnumber > 1)
+	{
+		# printing total		
+		my $last_date = (reverse sort keys %{$hashgenproduct{$ddb} } )[0];
+		my $gene_product_selected = $hashgenproduct{$ddb}{$last_date};
+		$hash_gen_product{$ddb}{$last_date} = $gene_product_selected;
+		$count_more_geneproduct++;
 
+	}
+	else
+	{
+		my $last_date = (keys %{$hashgenproduct{$ddb}} )[0];
+		my $gene_product_selected = $hashgenproduct{$ddb}{$last_date};
+		$hash_gen_product{$ddb}{$last_date} = $gene_product_selected;
+		$count_one_geneproduct++;
+	}
+}
 
+print "\t-DDB_G with only ONE product: ".$count_one_geneproduct."\n";
+print "\t-DDB_G with MORE THAN one pd: ".$count_more_geneproduct."\n";
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Map DDB_G_ID to Uniprot IDs.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 my $statement_ddb2uniprot = '
 SELECT gxref.accession geneid, dbxref.accession uniprot 
 FROM dbxref
@@ -193,9 +307,9 @@ db.name = \'DB:SwissProt\'
 # database handle
 my $results_ddb2uniprot = $dbh->prepare($statement_ddb2uniprot);
 
-print "execute statement_ddb2uniprot ";
+print ">Execute statement_ddb2uniprot ";
 $results_ddb2uniprot->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
-print "...done\n";
+print " done!!";
 
 # ADD all the info to a hash
 my $rowddb2uniprot = $results_ddb2uniprot->fetchall_arrayref();
@@ -206,51 +320,56 @@ my %hash_uniprot2ddb = ();
 
 # check point charlie
 my %noredundancies = ();
-my $n = 1;
+my $cred = 1;
 
 # Transverse
 foreach my $lineddb (@$rowddb2uniprot)
 {
 	my ($ddb_g, $uniprot_id) = @$lineddb;
-	# print $ddb_g." = ".$uniprot_id."\n";
+	chomp($ddb_g);
+	chomp($uniprot_id);
 	if(!$hash_ddb2uniprot{$ddb_g})
 	{
 		$hash_ddb2uniprot{$ddb_g} = $uniprot_id;
 	}
-	else
-	{
-		if ($uniprot_id ne $hash_ddb2uniprot{$ddb_g})
-		{
-			# print $ddb_g." -> ".$uniprot_id." and ".$hash_ddb2uniprot{$ddb_g}."\n";
-			# exit;			
-		}
-	}
+	# Check and delete
+	# else
+	# {
+	# 	if ($uniprot_id ne $hash_ddb2uniprot{$ddb_g})
+	# 	{
+	# 		print $ddb_g." -> ".$uniprot_id." and ".$hash_ddb2uniprot{$ddb_g}."\n";
+	# 		exit;			
+	# 	}
+	# }
 	if (!$hash_uniprot2ddb{$uniprot_id})
 	{
 		$hash_uniprot2ddb{$uniprot_id} = $ddb_g;
 	}
-	else
-	{
-		if ($ddb_g ne $hash_uniprot2ddb{$uniprot_id})
-		{
-			if (!$noredundancies{$uniprot_id})
-			{
-				$noredundancies{$uniprot_id} = 1;	
-				# print $n." ".$uniprot_id." -> ".$ddb_g." ".$hash_uniprot2ddb{$uniprot_id}."\n";
-				$n++;
-			}
-			# exit;
-		}
-	}
+	# else
+	# {
+	# 	if ($ddb_g ne $hash_uniprot2ddb{$uniprot_id})
+	# 	{
+	# 		if (!$noredundancies{$uniprot_id})
+	# 		{
+	# 			$noredundancies{$uniprot_id} = 1;	
+	# 			print $cred." ".$uniprot_id." -> ".$ddb_g." ".$hash_uniprot2ddb{$uniprot_id}."\n";
+	# 			$cred++;
+	# 		}
+	# 		# exit;
+	# 	}
+	# }
 
 }
 
-print "...and data in hashes\n";
+print " (and now data in hashes also)\n";
 
-exit;
+my $number_ddb2uniprot = keys %hash_ddb2uniprot;
+print "\t-DDB_G ids with Uniprot IDS: ".$number_ddb2uniprot."\n";
 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # OUTPUT FILE
-# - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Output file name (uses date & time)
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
 my $ymd = sprintf("%04d%02d%02d_%02d%02d%02d",$year+1900,$mon+1,$mday,$hour,$min,$sec);
@@ -285,36 +404,132 @@ my $headinfo = "
 
 print FILE $headinfo."\n";
 
-my $p = 0; #I'll use it at the end
+my $count_genes = 0; #I'll use it at the end
 my $gene = "gene";
 my $taxon = "taxon:44689";
-my $nulldata = "NULL";
+
+# Checking:
+my $count_geneprod = 0;
+my $count_nogeneprod = 0;
+my $count_altnames = 0;
+my $count_noaltnames = 0;
+my $count_uniprot = 0;
+my $count_nouniprot = 0;
+
+my $count_splitgenes = 0;
 
 #pppppppppppppppppppppppppppppppppppppppppppprint
 for my $ddbs (keys %allnames)
 {
+	if ( $hash_splitgenes{$ddbs} )
+	{
+		# print "01:".$ddbs."\t02:".$allnames{$ddbs}[0]."\t";		
+		
+		# my $date_gene_product = '';
+		# $date_gene_product = (keys %{$hash_gen_product{$ddbs} } )[0];
+
+		# my $gene_product = '';
+		# if ($date_gene_product)
+		# {
+		# 	$gene_product = $hash_gen_product{$ddbs}{$date_gene_product};
+		# }
+		
+		# if ($gene_product)
+		# {
+		# 	print "03:".$gene_product."\t";
+		# }
+		# else
+		# {
+		# 	print "03:No_Gene_product\t";
+		# }
+
+
+		# if ($allnames{$ddbs}[1])
+		# {
+		# 	my $nocomma = $allnames{$ddbs}[1];
+		# 	$nocomma =~ s/,/\|/g;
+		# 	print  "\t04:".$nocomma."\t";
+		# }
+		# else
+		# {
+		# 	print "04:No_Alternative_names\t";
+		# }
+
+		# my $map_uniprot = '';
+		# $map_uniprot = $hash_ddb2uniprot{$ddbs};
+		# if ($map_uniprot)
+		# {
+		# 	print "08:".$map_uniprot."\n";
+		# }
+		# else
+		# {
+		# 	print "08:No_UNIPROT\n";
+		# }
+		$count_splitgenes++;
+
+	}
+
 	print FILE $ddbs."\t".$allnames{$ddbs}[0]."\t";
+	
+	my $date_gene_product = '';
+	$date_gene_product = (keys %{$hash_gen_product{$ddbs} } )[0];
+
+	my $gene_product = '';
+	if ($date_gene_product)
+	{
+		$gene_product = $hash_gen_product{$ddbs}{$date_gene_product};
+	}
+	
+	if ($gene_product)
+	{
+		print FILE $gene_product."\t";
+		$count_geneprod++;
+	}
+	else
+	{
+		print FILE " \t";
+		$count_nogeneprod++;
+	}
 
 	if ($allnames{$ddbs}[1])
 	{
 		my $nocomma = $allnames{$ddbs}[1];
 		$nocomma =~ s/,/\|/g;
-		print FILE "\t", $nocomma."\t";
+		print FILE $nocomma."\t";
+		$count_altnames++;
 	}
 	else
 	{
-		print FILE $nulldata."\t";
+		print FILE " \t";
+		$count_noaltnames++
 	}
-	print FILE $gene."\t".$taxon."\tDictyBase:".$ddbs."\n";
-	$p++;
+
+	print FILE $gene."\t".$taxon."\tDictyBase:".$ddbs."\t";
+	my $map_uniprot = '';
+	$map_uniprot = $hash_ddb2uniprot{$ddbs};
+	if ($map_uniprot)
+	{
+		print FILE $map_uniprot."\n";
+		$count_uniprot++;
+	}
+	else
+	{
+		print FILE " \n";
+		$count_nouniprot++;
+	}
+	$count_genes++;
 }
 #pppppppppppppppppppppppppppppppppppppppppppprint
 
-print "Dicty GPI file (".$p." genes): ".$outfile."\n";
+print "\nDicty GPI file (".$count_genes." genes, $count_splitgenes are split genes)\n";
+print "\t- Gene products: ".$count_geneprod." \tNo Gene Product: ".$count_nogeneprod."\n";
+print "\t- Alternt names: ".$count_altnames." \tNo Alt Names   : ".$count_noaltnames."\n";
+print "\t- Uniprot ids  : ".$count_uniprot. " \tNo uniprot     : ".$count_nouniprot."\n";
 
 close FILE;
 $dbh->disconnect();
 
+exit;
 
 =head1 NAME
 
@@ -332,9 +547,15 @@ perl gen_gpi_file.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle p
  --user          Database user name
  --passwd        Database password
 
+
+=head1 OUTPUT
+
+The output file is 
+
 =head1 DESCRIPTION
 
-Connect to the dictyOracle database and dump to a file (YYYYMMDD_HHMMSS.gpi_dicty) the following information:
+Connect to the dictyOracle database and dump to a file
+(YYYYMMDD_HHMMSS.gpi_dicty) the following information:
 
 Columns:
 
@@ -348,3 +569,28 @@ Taxon                  required  1             13
 Parent_Object_ID       optional  0 or 1        -         
 DB_Xref(s)             optional  0 or greater  -         
 Properties             optional  0 or greater  -         
+
+=head1 DETAILS
+
+The script uses four different SQL statements:
+
+Statement 1: Main query. It selects gene name, gene synonym and protein
+synonym, DDB_G ID, excluding delete genes
+
+Statement 2: statement_splitgenes. It selects split genes. It was going to be
+used as a filter (parsing them out), but it was advised to include them in the
+output
+
+Statement 3: statement_gene_product. It selects gene products. For those genes
+with several gene products, the newest one is selected.
+
+Statement 4: statement_ddb2uniprot. It maps DDB_G_ID into Uniprot IDs. There
+are some problems
+
+=head1 ISSUES
+
+Statement 3 needs to be revised. According to the curation statistics, there
+should be ~9,000 gene products. However this script gets less.
+
+
+

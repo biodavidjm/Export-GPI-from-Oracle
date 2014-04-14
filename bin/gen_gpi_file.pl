@@ -7,11 +7,14 @@ use warnings;
 
 use DBI;
 
-
 use Getopt::Long;
 use IO::File;
 use autodie qw/open close/;
 use Text::CSV;
+
+use Time::Piece;
+# my $t = Time::Piece->strptime("20111230", "%Y%m%d");
+# print $t->strftime("%d-%b-%Y\n");
 
 # Validation section
 my %options;
@@ -19,7 +22,7 @@ GetOptions( \%options, 'dsn=s', 'user=s', 'passwd=s');
 for my $arg (qw/dsn user passwd/)
 {
 	# print "\n\tError: Arguments required! Example:\n";
-	die "\tperl gen_gpi_file.pl --dsn=ORACLE_DNS --user=USERNAME --passwd=PASSWD\n\n" if not defined $options{$arg};
+	die "\tperl gen_gpi_file.pl -dsn=ORACLE_DNS -user=USERNAME -passwd=PASSWD\n\n" if not defined $options{$arg};
 }
 
 my $host = $options{dsn};
@@ -65,27 +68,186 @@ order by gene.name DESC
 print "execute statement ";
 my $results = $dbh->prepare($statement);
 $results->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
-print "...done\n";
+print "...done ";
 
 
-# ADD all the info to a hash
+# ADD the data to a hash
+my $row_statement = $results->fetchall_arrayref();
+
+# My hash to store
 my %allnames = ();
-my @row;
 
-while (@row = $results->fetchrow_array() )
+foreach my $linea (@$row_statement)
 {
-	foreach (@row) {$_ = '' unless defined}; # Check point Charlie
-	if ($row[0])
+	my ($gene_id, $gene_name, $gsyn) = @$linea;
+	if ($gene_id)
 	{
-		if ( !$allnames{$row[0]} )
+		if( !$allnames{$gene_id} )
 		{
-			my @temp = ($row[1],$row[2]);
-			$allnames{$row[0]} = [@temp];
+			my @temp = ($gene_name,$gsyn);
+			$allnames{$gene_id} = [@temp];
 		}
 	}
 }
-warn "Data fetching terminated early by error: $DBI::errstr\n"
-      if $DBI::err;
+print "...and data in hashes\n";
+
+# SQL to get the gen product
+my $statement_gene_product = '
+SELECT dx.accession AS DDB_G_ID, gp.gene_product, (TO_CHAR(gp.date_created, \'YYYY-MM-DD\'))
+FROM cgm_ddb.gene_product gp
+INNER JOIN cgm_ddb.locus_gp lgp 	ON 		lgp.gene_product_no = gp.gene_product_no
+INNER JOIN cgm_chado.v_gene_dictybaseid d      ON 	lgp.locus_no = d.gene_feature_id
+INNER JOIN cgm_chado.v_gene_features g 		ON   g.feature_id = d.gene_feature_id
+INNER JOIN cgm_chado.dbxref dx              ON g.dbxref_id = dx.dbxref_id
+INNER JOIN cgm_chado.organism o             ON o.organism_id    = g.organism_id
+INNER JOIN cgm_chado.feature f 			    ON f.dbxref_id = g.dbxref_id
+WHERE o.common_name = \'dicty\'
+ORDER BY dx.accession, gp.gene_product
+';
+
+
+# database handle
+my $result_gene_product = $dbh->prepare($statement_gene_product);
+
+print "Execute statement_gene_product ";
+$result_gene_product->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
+print "...done ";
+
+# ADD all the info to a hash
+my $rowproduct = $result_gene_product->fetchall_arrayref();
+
+# hash to store
+my %hashgenproduct = ();
+
+# Transverse
+foreach my $line (@$rowproduct)
+{
+	my ($ddb_g, $gene_product, $date_created) = @$line;
+	# print $ddb_g." Gene_product: ".$gene_product." Date: ".$date_created."\n";	
+
+	# If two dates are the same, it must be a weird error
+	if ( !$hashgenproduct{$ddb_g}{$date_created} )
+	{
+		$hashgenproduct{$ddb_g}{$date_created} = $gene_product;
+	}
+}
+
+print "...and data in hashes\n";
+
+# p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p
+# for my $a (sort keys %hashgenproduct)
+# {
+	
+# 	my $totalnumber = keys %{$hashgenproduct{$a} };
+# 	if ($totalnumber > 1)
+# 	{
+# 		print $totalnumber." ".$a." ---> \n";
+# 		for my $b (reverse sort keys %{$hashgenproduct{$a} } )
+# 		{
+				
+# 			print "\t".$b."  ".$hashgenproduct{$a}{$b}."\n";
+# 		}
+# 		print "\n";
+# 		my $highest = (reverse sort keys %{$hashgenproduct{$a} } )[0];
+# 		print "\t\t".$highest."\n";
+# 	}
+# }
+# p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p
+
+
+my $statement_ddb2uniprot = '
+SELECT gxref.accession geneid, dbxref.accession uniprot 
+FROM dbxref
+JOIN db 
+ON db.db_id = dbxref.db_id
+JOIN feature_dbxref fxref ON
+fxref.dbxref_id = dbxref.dbxref_id
+JOIN feature polypeptide ON 
+polypeptide.feature_id = fxref.feature_id
+JOIN feature_relationship frel 
+ON polypeptide.feature_id = frel.subject_id
+JOIN feature transcript 
+ON transcript.feature_id = frel.object_id
+JOIN feature_relationship frel2 
+ON frel2.subject_id = transcript.feature_id
+JOIN feature gene 
+ON frel2.object_id = gene.feature_id
+JOIN cvterm ptype
+ON ptype.cvterm_id = polypeptide.type_id
+JOIN cvterm mtype 
+ON mtype.cvterm_id = transcript.type_id
+JOIN cvterm gtype 
+ON gtype.cvterm_id = gene.type_id
+JOIN dbxref gxref 
+ON gene.dbxref_id = gxref.dbxref_id
+WHERE 
+ptype.name = \'polypeptide\'
+AND
+mtype.name = \'mRNA\'
+AND
+gtype.name = \'gene\'
+AND 
+db.name = \'DB:SwissProt\'
+';
+
+# database handle
+my $results_ddb2uniprot = $dbh->prepare($statement_ddb2uniprot);
+
+print "execute statement_ddb2uniprot ";
+$results_ddb2uniprot->execute() or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
+print "...done\n";
+
+# ADD all the info to a hash
+my $rowddb2uniprot = $results_ddb2uniprot->fetchall_arrayref();
+
+# hash to store
+my %hash_ddb2uniprot = ();
+my %hash_uniprot2ddb = ();
+
+# check point charlie
+my %noredundancies = ();
+my $n = 1;
+
+# Transverse
+foreach my $lineddb (@$rowddb2uniprot)
+{
+	my ($ddb_g, $uniprot_id) = @$lineddb;
+	# print $ddb_g." = ".$uniprot_id."\n";
+	if(!$hash_ddb2uniprot{$ddb_g})
+	{
+		$hash_ddb2uniprot{$ddb_g} = $uniprot_id;
+	}
+	else
+	{
+		if ($uniprot_id ne $hash_ddb2uniprot{$ddb_g})
+		{
+			# print $ddb_g." -> ".$uniprot_id." and ".$hash_ddb2uniprot{$ddb_g}."\n";
+			# exit;			
+		}
+	}
+	if (!$hash_uniprot2ddb{$uniprot_id})
+	{
+		$hash_uniprot2ddb{$uniprot_id} = $ddb_g;
+	}
+	else
+	{
+		if ($ddb_g ne $hash_uniprot2ddb{$uniprot_id})
+		{
+			if (!$noredundancies{$uniprot_id})
+			{
+				$noredundancies{$uniprot_id} = 1;	
+				# print $n." ".$uniprot_id." -> ".$ddb_g." ".$hash_uniprot2ddb{$uniprot_id}."\n";
+				$n++;
+			}
+			# exit;
+		}
+	}
+
+}
+
+print "...and data in hashes\n";
+
+exit;
 
 # OUTPUT FILE
 # - - - - - - - - - - - - - - - - -
@@ -148,7 +310,7 @@ for my $ddbs (keys %allnames)
 }
 #pppppppppppppppppppppppppppppppppppppppppppprint
 
-print "Dicty GPI file: ".$outfile."\n";
+print "Dicty GPI file (".$p." genes): ".$outfile."\n";
 
 close FILE;
 $dbh->disconnect();

@@ -118,15 +118,13 @@ The preliminary conclusion is that now it is possible to develop perl DBI script
 * After Sidd feedback, re-write the script in a more professional way. 
 * As a result: ``gen_gpi_file.pl``
 
-#### Issues with ``gen_gpi_file.pl``
+#### Refactoring
+Incorporate issue's suggestions. 
 
-* Perldoc: problems with the table
-* Check connection: would it connect to any database?
-* Content issue. I am not sure about these columns:
-	* 03 DB_Object_Name = Gene Product (take the newest one, or think about it)
-	* 07 Parent_Object_ID = DDB:GeneID (do we have a parent gene name when different variants)
-	* 08 DB_Xref(s) = Not sure about this column
-	* 09 Gene_Product_Properties = Not sure
+* I made perltidy worked with Sublime Text 2 (it took me too much time to make it work on sublime
+* Create ``gen_gpi_file-v2.pl``: incorporate some of the options before I start the next version, which will follow the issue's suggestions
+
+	
 
 
 

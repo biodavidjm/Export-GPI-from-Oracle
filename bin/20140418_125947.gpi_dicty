@@ -78,7 +78,7 @@ DDB_G0279447	hspJ	putative alpha-crystallin-type heat shock protein	gene	taxon:4
 DDB_G0275613	DDB_G0275613	gene	taxon:44689	DictyBase:DDB_G0275613	Q869B9
 DDB_G0270482	gfm1	mitochondrial translation elongation factor G	gene	taxon:44689	DictyBase:DDB_G0270482	Q55E94
 DDB_G0279237	DDB_G0279237	gene	taxon:44689	DictyBase:DDB_G0279237	Q54X32
-DDB_G0272076	eif3L	eukaryotic translation initiation factor 3 (eIF3) subunit L	eif3eip|eukaryotic translation initiation factor 3 (eIF3) subunit 6-interacting protein|eukaryotic translation initiation factor 3 (eIF3) subunit E-interacting protein|eif3s6ip	gene	taxon:44689	DictyBase:DDB_G0272076	Q86LA2
+DDB_G0272076	eif3L	eukaryotic translation initiation factor 3 (eIF3) subunit L	eif3s6ip|eukaryotic translation initiation factor 3 (eIF3) subunit 6-interacting protein|eukaryotic translation initiation factor 3 (eIF3) subunit E-interacting protein|eif3eip	gene	taxon:44689	DictyBase:DDB_G0272076	Q86LA2
 DDB_G0295743	DDB_G0295743	peptidase M3A and M3B domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0295743	C7G061
 DDB_G0270246	DDB_G0270246	regulator of chromosome condensation (RCC1) domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0270246	Q55C31
 DDB_G0276619	DDB_G0276619	gene	taxon:44689	DictyBase:DDB_G0276619	Q551D1
@@ -367,7 +367,7 @@ DDB_G0267482	DDB_G0267482	gene	taxon:44689	DictyBase:DDB_G0267482	Q55GW4
 DDB_G0277359	DDB_G0277359	Pseudouridylate synthase PUS5	gene	taxon:44689	DictyBase:DDB_G0277359	Q86K31
 DDB_G0271084	DDB_G0271084	glutaredoxin family protein	gene	taxon:44689	DictyBase:DDB_G0271084	Q55BQ6
 DDB_G0272845	DDB_G0272845	AB-hydrolase associated lipase region containing protein	gene	taxon:44689	DictyBase:DDB_G0272845	Q558U2
-DDB_G0278729	repB	transcription factor IIH subunit	XPB|ERCC3|RAD25|TFIIH-XPB	gene	taxon:44689	DictyBase:DDB_G0278729	O00835
+DDB_G0278729	repB	transcription factor IIH subunit	XPB|ERCC3|TFIIH-XPB|RAD25	gene	taxon:44689	DictyBase:DDB_G0278729	O00835
 DDB_G0292666	DDB_G0292666	Phosphomevalonate kinase	gene	taxon:44689	DictyBase:DDB_G0292666	Q54CW0
 DDB_G0349057	DDB_G0349057	unknown	gene	taxon:44689	DictyBase:DDB_G0349057	
 DDB_G0268752	DDB_G0268752	gene	taxon:44689	DictyBase:DDB_G0268752	Q55EU2
@@ -406,7 +406,7 @@ DDB_G0274185	DDB_G0274185	putative oxidoreductase, Gfo/Idh/MocA family	gene	taxo
 DDB_G0283561	DDB_G0283561	gene	taxon:44689	DictyBase:DDB_G0283561	Q54QW8
 DDB_G0290545	DDB_G0290545	gene	taxon:44689	DictyBase:DDB_G0290545	Q54FX5
 DDB_G0274639	DDB_G0274639	gene	taxon:44689	DictyBase:DDB_G0274639	Q554Y0
-DDB_G0285793	cadA	calcium-dependent cell adhesion molecule-1	cad1|DdCAD-1|rcdD|GP24|veg102	gene	taxon:44689	DictyBase:DDB_G0285793	P54657
+DDB_G0285793	cadA	calcium-dependent cell adhesion molecule-1	cad1|rcdD|DdCAD-1|veg102|GP24	gene	taxon:44689	DictyBase:DDB_G0285793	P54657
 DDB_G0287667	DDB_G0287667	gene	taxon:44689	DictyBase:DDB_G0287667	Q54K30
 DDB_G0282951	DDB_G0282951	unknown	gene	taxon:44689	DictyBase:DDB_G0282951	Q54RS6
 DDB_G0289987	DDB_G0289987	Pumilio homology domain family member 4	gene	taxon:44689	DictyBase:DDB_G0289987	Q54GR0
@@ -438,7 +438,7 @@ DDB_G0286341	DDB_G0286341	putative glutathione S-transferase	gene	taxon:44689	Di
 DDB_G0267466	cupA	calcium up-regulated protein	gene	taxon:44689	DictyBase:DDB_G0267466	Q55FW5
 DDB_G0285389	DDB_G0285389	prefoldin alpha subunit family protein	gene	taxon:44689	DictyBase:DDB_G0285389	Q54ND3
 DDB_G0293610	DDB_G0293610	LMBR1-like conserved region-containing protein	gene	taxon:44689	DictyBase:DDB_G0293610	Q54BI3
-DDB_G0275663	ippA	inositol polyphosphate phosphatase A	3'(2')|5'-bisphosphate nucleotidase 1|PAP-inositol-1|4-phosphatase|bisphosphate nucleotidase|bpnt1|putative inositol-1|4-bisphosphate 1-phosphatase|PIP	gene	taxon:44689	DictyBase:DDB_G0275663	Q869K3
+DDB_G0275663	ippA	inositol polyphosphate phosphatase A	PIP|PAP-inositol-1|4-phosphatase|bisphosphate nucleotidase|putative inositol-1|4-bisphosphate 1-phosphatase|bpnt1|3'(2')|5'-bisphosphate nucleotidase 1	gene	taxon:44689	DictyBase:DDB_G0275663	Q869K3
 DDB_G0288443	DDB_G0288443	gene	taxon:44689	DictyBase:DDB_G0288443	Q54IX4
 DDB_G0269202	gdcA	gp64 and disintegrin-like, cysteine-rich protein	Dd-gdcA	gene	taxon:44689	DictyBase:DDB_G0269202	Q8STF9
 DDB_G0281321	DDB_G0281321	gene	taxon:44689	DictyBase:DDB_G0281321	Q54UA5
@@ -898,7 +898,7 @@ DDB_G0282475	gxcF	RhoGEF domain-containing protein	RacGEF	gene	taxon:44689	Dicty
 DDB_G0275133	DDB_G0275133	gene	taxon:44689	DictyBase:DDB_G0275133	Q8T2R0
 DDB_G0276999	DDB_G0276999	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0276999	Q550T1
 DDB_G0276957	DDB_G0276957	gene	taxon:44689	DictyBase:DDB_G0276957	Q86KF2
-DDB_G0270572	pks2	beta-ketoacyl synthase family protein	PKS|dipks2	gene	taxon:44689	DictyBase:DDB_G0270572	Q55DM7
+DDB_G0270572	pks2	beta-ketoacyl synthase family protein	dipks2|PKS	gene	taxon:44689	DictyBase:DDB_G0270572	Q55DM7
 DDB_G0278521	DDB_G0278521	HH498 subfamily protein kinase	gene	taxon:44689	DictyBase:DDB_G0278521	Q54XY6
 DDB_G0283745	DDB_G0283745	transportin 3-like protein	gene	taxon:44689	DictyBase:DDB_G0283745	Q54QV1
 DDB_G0268160	gnt12	putative beta-1,3-N-acetylglucosaminyltransferase	gene	taxon:44689	DictyBase:DDB_G0268160	Q55FD5
@@ -1015,11 +1015,11 @@ DDB_G0267178	DDB_G0267178_RTE	DIRS1 ORF2 fragment	gene	taxon:44689	DictyBase:DDB
 DDB_G0288435	DDB_G0288435	major facilitator superfamily protein	gene	taxon:44689	DictyBase:DDB_G0288435	Q54IX9
 DDB_G0273329	DDB_G0273329_RTE	TRE3-C ORF2	gene	taxon:44689	DictyBase:DDB_G0273329	Q556R6
 DDB_G0278559	DDB_G0278559	unknown	gene	taxon:44689	DictyBase:DDB_G0278559	Q54XW0
-DDB_G0277877	uglA	uracil glycosylase	UNG|DduglA	gene	taxon:44689	DictyBase:DDB_G0277877	P53766
+DDB_G0277877	uglA	uracil glycosylase	DduglA|UNG	gene	taxon:44689	DictyBase:DDB_G0277877	P53766
 DDB_G0280187	DDB_G0280187	cathepsin Z-like protein	gene	taxon:44689	DictyBase:DDB_G0280187	Q54VR1
 DDB_G0274311	DDB_G0274311	GRIM-19 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0274311	Q86IZ2
 DDB_G0294270	DDB_G0294270	gene	taxon:44689	DictyBase:DDB_G0294270	Q54AR1
-DDB_G0283385	splA	dual-specificity protein kinase SplA	DPYK1|non-receptor tyrosine kinase|pyk1	gene	taxon:44689	DictyBase:DDB_G0283385	P18160
+DDB_G0283385	splA	dual-specificity protein kinase SplA	pyk1|non-receptor tyrosine kinase|DPYK1	gene	taxon:44689	DictyBase:DDB_G0283385	P18160
 DDB_G0274881	DDB_G0274881	gene	taxon:44689	DictyBase:DDB_G0274881	Q555H2
 DDB_G0280391	DDB_G0280391	gene	taxon:44689	DictyBase:DDB_G0280391	Q54VI8
 DDB_G0288603	DDB_G0288603	gene	taxon:44689	DictyBase:DDB_G0288603	Q54IR5
@@ -1080,7 +1080,7 @@ DDB_G0295761	nle1	putative notchless	gene	taxon:44689	DictyBase:DDB_G0295761	C7F
 DDB_G0285801	DDB_G0285801	putative transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0285801	B0G152
 DDB_G0285183	DDB_G0285183	gene	taxon:44689	DictyBase:DDB_G0285183	Q54NK4
 DDB_G0289577	DDB_G0289577	cyclin-like F-box containing protein	gene	taxon:44689	DictyBase:DDB_G0289577	Q54HB7
-DDB_G0269168	vps26	vacuolar protein sorting-associated protein 26	veg152|pepA|PEP8|rcdQ	gene	taxon:44689	DictyBase:DDB_G0269168	Q55CA0
+DDB_G0269168	vps26	vacuolar protein sorting-associated protein 26	rcdQ|pepA|PEP8|veg152	gene	taxon:44689	DictyBase:DDB_G0269168	Q55CA0
 DDB_G0267372	DDB_G0267372_RTE	TRE5-A ORF1	gene	taxon:44689	DictyBase:DDB_G0267372	Q55GX1
 DDB_G0286855	gtaD	GATA zinc finger domain-containing protein 4	gene	taxon:44689	DictyBase:DDB_G0286855	Q54L72
 DDB_G0292854	DDB_G0292854	gene	taxon:44689	DictyBase:DDB_G0292854	Q54CM8
@@ -1373,7 +1373,7 @@ DDB_G0282387	DDB_G0282387	3'-5' exonuclease domain-containing protein	gene	taxon
 DDB_G0285677	DDB_G0285677	Protein pigeon homolog	gene	taxon:44689	DictyBase:DDB_G0285677	Q54MT3
 DDB_G0305565	DDB_G0305565_TE	gene	taxon:44689	DictyBase:DDB_G0305565	
 DDB_G0269574	dcd3B	N-acylsphingosine amidohydrolase	gene	taxon:44689	DictyBase:DDB_G0269574	Q55DQ0
-DDB_G0293530	pefB	penta EF hand calcium binding protein	DdPEF-2|alg2|alg2B|alg-2B|ALG-2|pef2	gene	taxon:44689	DictyBase:DDB_G0293530	Q95YL4
+DDB_G0293530	pefB	penta EF hand calcium binding protein	pef2|alg2B|alg2|alg-2B|ALG-2|DdPEF-2	gene	taxon:44689	DictyBase:DDB_G0293530	Q95YL4
 DDB_G0291422	DDB_G0291422	gene	taxon:44689	DictyBase:DDB_G0291422	Q54EP0
 DDB_G0271286	clasp	CLIP-associating protein	DdCLASP	gene	taxon:44689	DictyBase:DDB_G0271286	Q55BD8
 DDB_G0283413	DDB_G0283413	Probable kynurenine formamidase	gene	taxon:44689	DictyBase:DDB_G0283413	Q54R44
@@ -1382,7 +1382,7 @@ DDB_G0289101	DDB_G0289101	gene	taxon:44689	DictyBase:DDB_G0289101	Q54HZ9
 DDB_G0295673	atg17	autophagy-related protein 17	gene	taxon:44689	DictyBase:DDB_G0295673	B0G140
 DDB_G0281259	DDB_G0281259	putative DREV methyltransferase	gene	taxon:44689	DictyBase:DDB_G0281259	Q54U59
 DDB_G0280055	abcC2	ABC transporter C family protein	gene	taxon:44689	DictyBase:DDB_G0280055	Q54VJ0
-DDB_G0274107	sfbA	unknown	DG1008|DG1008|ORF1008	gene	taxon:44689	DictyBase:DDB_G0274107	Q869Q6
+DDB_G0274107	sfbA	unknown	ORF1008|DG1008|DG1008	gene	taxon:44689	DictyBase:DDB_G0274107	Q869Q6
 DDB_G0277731	DDB_G0277731	EGF-like domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0277731	Q86AX2
 DDB_G0293510	gacV	RhoGAP domain-containing protein	RacGAP	gene	taxon:44689	DictyBase:DDB_G0293510	Q54BP9
 DDB_G0277955	nup43	nucleoporin 43	gene	taxon:44689	DictyBase:DDB_G0277955	Q54Z22
@@ -1394,7 +1394,7 @@ DDB_G0273917	DDB_G0273917	gene	taxon:44689	DictyBase:DDB_G0273917	Q556P6
 DDB_G0284357	dduE	unknown	gene	taxon:44689	DictyBase:DDB_G0284357	Q54PS4
 DDB_G0287701	DDB_G0287701	unknown	gene	taxon:44689	DictyBase:DDB_G0287701	Q54K05
 DDB_G0288599	DDB_G0288599	membrane bound O-acyl transferase family protein	gene	taxon:44689	DictyBase:DDB_G0288599	Q54IP9
-DDB_G0292804	arcC	actin related protein 2/3 complex, 21 kDa subunit	ARPC3|p21-Arc|Arc18	gene	taxon:44689	DictyBase:DDB_G0292804	O96624
+DDB_G0292804	arcC	actin related protein 2/3 complex, 21 kDa subunit	ARPC3|Arc18|p21-Arc	gene	taxon:44689	DictyBase:DDB_G0292804	O96624
 DDB_G0277453	DDB_G0277453	gene	taxon:44689	DictyBase:DDB_G0277453	Q8MN55
 DDB_G0269526	argD	acetylornithine transaminase	ARG8|acetylornithine 5-aminotransferase	gene	taxon:44689	DictyBase:DDB_G0269526	Q55DT8
 DDB_G0286259	DDB_G0286259	putative thiol-disulphide oxidoreductase DCC family protein	gene	taxon:44689	DictyBase:DDB_G0286259	Q54M17
@@ -1447,11 +1447,11 @@ DDB_G0271374	DDB_G0271374	Glycerophosphodiester phosphodiesterase domain-contain
 DDB_G0289403	DDB_G0289403	gene	taxon:44689	DictyBase:DDB_G0289403	Q54HK0
 DDB_G0293120	DDB_G0293120	CHR group protein	gene	taxon:44689	DictyBase:DDB_G0293120	Q54C75
 DDB_G0288789	hlcs2	biotin--[acetyl-CoA-carboxylase] ligase 2	gene	taxon:44689	DictyBase:DDB_G0288789	Q54IF6
-DDB_G0268652	ippB	inositol polyphosphate phosphatase B	putative inositol-1|4-bisphosphate 1-phosphatase|inositol monophosphatase|3'(2')|5'-bisphosphonucleoside 3'(2')-phosphohydrolase	gene	taxon:44689	DictyBase:DDB_G0268652	Q55F34
+DDB_G0268652	ippB	inositol polyphosphate phosphatase B	3'(2')|5'-bisphosphonucleoside 3'(2')-phosphohydrolase|inositol monophosphatase|putative inositol-1|4-bisphosphate 1-phosphatase	gene	taxon:44689	DictyBase:DDB_G0268652	Q55F34
 DDB_G0268994	manC	alpha-mannosidase	gene	taxon:44689	DictyBase:DDB_G0268994	Q55ER0
 DDB_G0287887	DDB_G0287887	gene	taxon:44689	DictyBase:DDB_G0287887	Q54JW2
 DDB_G0282139	DDB_G0282139	gene	taxon:44689	DictyBase:DDB_G0282139	Q54SY4
-DDB_G0281567	fhkC	forkhead-associated kinase protein C	pkgA|protein kinase 1|PK1|FHAK-C|CHK2	gene	taxon:44689	DictyBase:DDB_G0281567	P34101
+DDB_G0281567	fhkC	forkhead-associated kinase protein C	pkgA|protein kinase 1|PK1|CHK2|FHAK-C	gene	taxon:44689	DictyBase:DDB_G0281567	P34101
 DDB_G0271680	DDB_G0271680	zinc-containing alcohol dehydrogenase (ADH)	gene	taxon:44689	DictyBase:DDB_G0271680	Q75JD7
 DDB_G0290347	DDB_G0290347	zinc finger RING-type pattern-containing protein	gene	taxon:44689	DictyBase:DDB_G0290347	Q54G67
 DDB_G0271902	pscA	carboxypeptidase	gene	taxon:44689	DictyBase:DDB_G0271902	Q86I79
@@ -1548,7 +1548,7 @@ DDB_G0274909	DDB_G0274909	gene	taxon:44689	DictyBase:DDB_G0274909	Q555E0
 DDB_G0280463	DDB_G0280463	Ribosomal large subunit pseudouridine synthase D	gene	taxon:44689	DictyBase:DDB_G0280463	Q54VB9
 DDB_G0269032	DDB_G0269032	coiled-coil domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0269032	Q55EG1
 DDB_G0280081	exoc2	exocyst complex subunit 2	sec5	gene	taxon:44689	DictyBase:DDB_G0280081	Q54VX5
-DDB_G0273251	fpaB-1	ubiquitin ligase subunit SKP1	fpa2|SKP1|Skp1B|fpaB|FP21	gene	taxon:44689	DictyBase:DDB_G0273251	Q557E4
+DDB_G0273251	fpaB-1	ubiquitin ligase subunit SKP1	FP21|SKP1|Skp1B|fpaB|fpa2	gene	taxon:44689	DictyBase:DDB_G0273251	Q557E4
 DDB_G0273451	DDB_G0273451	AAA+ ATPase, core domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0273451	Q557Q0
 DDB_G0279225	DDB_G0279225	gene	taxon:44689	DictyBase:DDB_G0279225	Q54X40
 DDB_G0286013	repE	UV-damaged DNA binding protein1	XPE|DDB1	gene	taxon:44689	DictyBase:DDB_G0286013	B0M0P5
@@ -1730,7 +1730,7 @@ DDB_G0282497	DDB_G0282497	gene	taxon:44689	DictyBase:DDB_G0282497	Q54SF5
 DDB_G0286149	dnpep	aspartyl aminopeptidase	gene	taxon:44689	DictyBase:DDB_G0286149	Q54M70
 DDB_G0275897	DDB_G0275897	pseudogene	gene	taxon:44689	DictyBase:DDB_G0275897	Q86IE3
 DDB_G0276315	DDB_G0276315	gene	taxon:44689	DictyBase:DDB_G0276315	Q551W5
-DDB_G0287333	eif3J	eukaryotic translation initiation factor 3 (eIF3) subunit J	eIF-3 alpha|eif3s1|eukaryotic translation initiation factor 3 (eIF3) subunit 1	gene	taxon:44689	DictyBase:DDB_G0287333	Q54KI0
+DDB_G0287333	eif3J	eukaryotic translation initiation factor 3 (eIF3) subunit J	eukaryotic translation initiation factor 3 (eIF3) subunit 1|eif3s1|eIF-3 alpha	gene	taxon:44689	DictyBase:DDB_G0287333	Q54KI0
 DDB_G0285937	dhx16	putative RNA splicing factor	gene	taxon:44689	DictyBase:DDB_G0285937	Q54MH3
 DDB_G0277679	DDB_G0277679	alpha/beta hydrolase fold-1 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0277679	Q54ZA6
 DDB_G0272604	cyp508A2-1	cytochrome P450 family protein	cyp508A2	gene	taxon:44689	DictyBase:DDB_G0272604	Q556M4
@@ -1900,7 +1900,7 @@ DDB_G0280611	DDB_G0280611	gene	taxon:44689	DictyBase:DDB_G0280611	Q54V52
 DDB_G0271290	DDB_G0271290	gene	taxon:44689	DictyBase:DDB_G0271290	Q55BE0
 DDB_G0276537	DDB_G0276537	gene	taxon:44689	DictyBase:DDB_G0276537	Q551M9
 DDB_G0289465	DDB_G0289465	Mitochondrial distribution and morphology protein 32	gene	taxon:44689	DictyBase:DDB_G0289465	Q54HH1
-DDB_G0275699	gnt1	UDP-GlcNAc:hydroxyproline polypeptide alpha-N-acetylglucosaminetransferase	GnT51|GlcNAc transferase|glycosyltransferase|gntA	gene	taxon:44689	DictyBase:DDB_G0275699	Q8T1C6
+DDB_G0275699	gnt1	UDP-GlcNAc:hydroxyproline polypeptide alpha-N-acetylglucosaminetransferase	gntA|GlcNAc transferase|glycosyltransferase|GnT51	gene	taxon:44689	DictyBase:DDB_G0275699	Q8T1C6
 DDB_G0280665	DDB_G0280665	gene	taxon:44689	DictyBase:DDB_G0280665	Q54V20
 DDB_G0272470	DDB_G0272470	Protein SMG8	gene	taxon:44689	DictyBase:DDB_G0272470	Q75JP6
 DDB_G0282795	DDB_G0282795	putative lipin	gene	taxon:44689	DictyBase:DDB_G0282795	Q54S57
@@ -2066,7 +2066,7 @@ DDB_G0291111	DDB_G0291111	gene	taxon:44689	DictyBase:DDB_G0291111	Q54F56
 DDB_G0285711	DDB_G0285711	phox - and C2 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0285711	Q54MR5
 DDB_G0289731	DDB_G0289731	N-terminal delta endotoxin domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0289731	Q54H34
 DDB_G0273667	DDB_G0273667	gene	taxon:44689	DictyBase:DDB_G0273667	Q557B9
-DDB_G0276883	canA	calcineurin A	CNA|PP2B|calcineurin	gene	taxon:44689	DictyBase:DDB_G0276883	Q7YSW8
+DDB_G0276883	canA	calcineurin A	calcineurin|PP2B|CNA	gene	taxon:44689	DictyBase:DDB_G0276883	Q7YSW8
 DDB_G0280341	DDB_G0280341	gene	taxon:44689	DictyBase:DDB_G0280341	Q54VG6
 DDB_G0286969	DDB_G0286969	MIF4G-like, type 3 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0286969	C7G046
 DDB_G0283587	csn1	COP9 signalosome complex subunit 1	gene	taxon:44689	DictyBase:DDB_G0283587	Q54QX3
@@ -2371,7 +2371,7 @@ DDB_G0282295	ubqA	ubiquitin A	gene	taxon:44689	DictyBase:DDB_G0282295	P0CG76
 DDB_G0270176	DDB_G0270176	leucine-rich repeat-containing protein (LRR)	PP2C	gene	taxon:44689	DictyBase:DDB_G0270176	Q55C81
 DDB_G0280983	crlA	G-protein-coupled receptor (GPCR) family protein	gene	taxon:44689	DictyBase:DDB_G0280983	Q54U75
 DDB_G0292632	folC	folylpolyglutamate synthase	FPSG	gene	taxon:44689	DictyBase:DDB_G0292632	Q54CY5
-DDB_G0271750	nfaA	Ras GTPase activation domain-containing protein	RasGAP|DdNF1	gene	taxon:44689	DictyBase:DDB_G0271750	Q55AR6
+DDB_G0271750	nfaA	Ras GTPase activation domain-containing protein	DdNF1|RasGAP	gene	taxon:44689	DictyBase:DDB_G0271750	Q55AR6
 DDB_G0280321	fhkE	forkhead-associated kinase protein E	FHAK-E	gene	taxon:44689	DictyBase:DDB_G0280321	Q54VI1
 DDB_G0284147	DDB_G0284147	gene	taxon:44689	DictyBase:DDB_G0284147	Q54Q64
 DDB_G0286613	DDB_G0286613	14-3-3 family protein	gene	taxon:44689	DictyBase:DDB_G0286613	Q54LJ4
@@ -2527,7 +2527,7 @@ DDB_G0287457	DDB_G0287457	gene	taxon:44689	DictyBase:DDB_G0287457	Q54KF2
 DDB_G0272272	DDB_G0272272	gene	taxon:44689	DictyBase:DDB_G0272272	Q559Y3
 DDB_G0291346	mleuS	leucine-tRNA ligase, mitochondrial	LeuRS	gene	taxon:44689	DictyBase:DDB_G0291346	Q54ET5
 DDB_G0294164	DDB_G0294164_RTE	Skipper GAG-PRO	gene	taxon:44689	DictyBase:DDB_G0294164	Q54AW3
-DDB_G0273071	vatD-1	vacuolar ATPase subunit D	DVA41|V-ATPase subunit D|vatD	gene	taxon:44689	DictyBase:DDB_G0273071	P54641
+DDB_G0273071	vatD-1	vacuolar ATPase subunit D	DVA41|vatD|V-ATPase subunit D	gene	taxon:44689	DictyBase:DDB_G0273071	P54641
 DDB_G0276531	DDB_G0276531	putative ribonuclease Z	rnz	gene	taxon:44689	DictyBase:DDB_G0276531	Q86IU3
 DDB_G0278121	DDB_G0278121	Uncharacterized protein KIAA0406	gene	taxon:44689	DictyBase:DDB_G0278121	Q54YQ6
 DDB_G0282721	DDB_G0282721	gene	taxon:44689	DictyBase:DDB_G0282721	Q54S13
@@ -2723,7 +2723,7 @@ DDB_G0278831	DDB_G0278831	gene	taxon:44689	DictyBase:DDB_G0278831	Q54XN5
 DDB_G0281763	DDB_G0281763	La ribonucleoprotein	Lupus La protein	gene	taxon:44689	DictyBase:DDB_G0281763	Q54TG6
 DDB_G0285051	rab32D	Rab GTPase	gene	taxon:44689	DictyBase:DDB_G0285051	Q54P07
 DDB_G0270566	DDB_G0270566	DDHD domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0270566	Q55DP0
-DDB_G0284195	DDB_G0284195	putative negative elongation factor B	NELF-B|cofactor of BRCA1 family protein|putative negative transcription elongation factor NELF subunit	gene	taxon:44689	DictyBase:DDB_G0284195	Q54Q08
+DDB_G0284195	DDB_G0284195	putative negative elongation factor B	NELF-B|putative negative transcription elongation factor NELF subunit|cofactor of BRCA1 family protein	gene	taxon:44689	DictyBase:DDB_G0284195	Q54Q08
 DDB_G0290129	DDB_G0290129_RTE	TRE3-A ORF1	gene	taxon:44689	DictyBase:DDB_G0290129	Q54GI8
 DDB_G0279439	bzpC	putative basic-leucine zipper (bZIP) transcription factor	gene	taxon:44689	DictyBase:DDB_G0279439	Q54WU0
 DDB_G0277207	DDB_G0277207	gene	taxon:44689	DictyBase:DDB_G0277207	Q86K92
@@ -2798,7 +2798,7 @@ DDB_G0291900	DDB_G0291900	gene	taxon:44689	DictyBase:DDB_G0291900	Q54DZ5
 DDB_G0275861	DDB_G0275861	unknown	gene	taxon:44689	DictyBase:DDB_G0275861	Q553C0
 DDB_G0282899	rabV	Rab GTPase	gene	taxon:44689	DictyBase:DDB_G0282899	Q54RY4
 DDB_G0274071	DDB_G0274071	gene	taxon:44689	DictyBase:DDB_G0274071	Q556G8
-DDB_G0272032	gefG	Ras guanine nucleotide exchange factor	RasGEF|RasGEFG	gene	taxon:44689	DictyBase:DDB_G0272032	Q8ST25
+DDB_G0272032	gefG	Ras guanine nucleotide exchange factor	RasGEFG|RasGEF	gene	taxon:44689	DictyBase:DDB_G0272032	Q8ST25
 DDB_G0272196	DDB_G0272196	copine family protein	gene	taxon:44689	DictyBase:DDB_G0272196	Q86IL9
 DDB_G0272012	DDB_G0272012	GNS1/SUR4 family protein	gene	taxon:44689	DictyBase:DDB_G0272012	Q86JM5
 DDB_G0285775	DDB_G0285775	putative transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0285775	Q54MW7
@@ -2872,7 +2872,7 @@ DDB_G0287873	DDB_G0287873	gene	taxon:44689	DictyBase:DDB_G0287873	Q54JY5
 DDB_G0269136	efaAII	elongation factor 1a	tef2|ABP50|EF1-II|ABP-50	gene	taxon:44689	DictyBase:DDB_G0269136	P0CT32
 DDB_G0270068	DDB_G0270068	gene	taxon:44689	DictyBase:DDB_G0270068	Q55CF9
 DDB_G0291754	DDB_G0291754	unknown	gene	taxon:44689	DictyBase:DDB_G0291754	Q54E84
-DDB_G0291992	DDB_G0291992	unknown	DG1003|ORF1003	gene	taxon:44689	DictyBase:DDB_G0291992	Q54DU2
+DDB_G0291992	DDB_G0291992	unknown	ORF1003|DG1003	gene	taxon:44689	DictyBase:DDB_G0291992	Q54DU2
 DDB_G0286511	DDB_G0286511	putative ubiquitin-conjugating enzyme E2	gene	taxon:44689	DictyBase:DDB_G0286511	Q54LP7
 DDB_G0274653	DDB_G0274653	gene	taxon:44689	DictyBase:DDB_G0274653	Q555B8
 DDB_G0275309	DDB_G0275309	gene	taxon:44689	DictyBase:DDB_G0275309	Q553V6
@@ -2940,7 +2940,7 @@ DDB_G0268228	DDB_G0268228	gene	taxon:44689	DictyBase:DDB_G0268228	Q55F74
 DDB_G0273255	DDB_G0273255	gene	taxon:44689	DictyBase:DDB_G0273255	Q557F9
 DDB_G0286461	DDB_G0286461	gene	taxon:44689	DictyBase:DDB_G0286461	Q54LW7
 DDB_G0287647	DDB_G0287647	esterase, SGNH hydrolase-type	gene	taxon:44689	DictyBase:DDB_G0287647	Q54K12
-DDB_G0269906	gtf2h5	transcription initiation factor IIH5	TFIIH5|TF2H5	gene	taxon:44689	DictyBase:DDB_G0269906	Q55CT8
+DDB_G0269906	gtf2h5	transcription initiation factor IIH5	TF2H5|TFIIH5	gene	taxon:44689	DictyBase:DDB_G0269906	Q55CT8
 DDB_G0273435	DDB_G0273435	gene	taxon:44689	DictyBase:DDB_G0273435	Q557K2
 DDB_G0270224	DDB_G0270224	gene	taxon:44689	DictyBase:DDB_G0270224	Q55C54
 DDB_G0274683	DDB_G0274683	gene	taxon:44689	DictyBase:DDB_G0274683	Q555J5
@@ -3027,7 +3027,7 @@ DDB_G0289655	abcG7	ABC transporter G family protein	gene	taxon:44689	DictyBase:D
 DDB_G0283793	DDB_G0283793	gene	taxon:44689	DictyBase:DDB_G0283793	Q54QK5
 DDB_G0280383	DDB_G0280383	gene	taxon:44689	DictyBase:DDB_G0280383	Q54VP5
 DDB_G0287145	DDB_G0287145	gene	taxon:44689	DictyBase:DDB_G0287145	Q54KS5
-DDB_G0273623	hspE-2	heat shock cognate protein Hsc70-2	hsc70|hsc70-2|hsp70|hspE	gene	taxon:44689	DictyBase:DDB_G0273623	Q557E0
+DDB_G0273623	hspE-2	heat shock cognate protein Hsc70-2	hsc70|hsc70-2|hspE|hsp70	gene	taxon:44689	DictyBase:DDB_G0273623	Q557E0
 DDB_G0269890	DDB_G0269890	YjeF N-terminal domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0269890	Q55CV0
 DDB_G0290753	DDB_G0290753	C2 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0290753	Q54FM6
 DDB_G0283577	DDB_G0283577	gene	taxon:44689	DictyBase:DDB_G0283577	Q54QV6
@@ -3137,7 +3137,7 @@ DDB_G0286825	tgrD1	tgrD1	lagD|lagC2	gene	taxon:44689	DictyBase:DDB_G0286825	Q9U8
 DDB_G0286183	agps	alkyldihydroxyacetonephosphate synthase	eapA|alkyl-DHAP|ADPS	gene	taxon:44689	DictyBase:DDB_G0286183	O96759
 DDB_G0269494	DDB_G0269494	gene	taxon:44689	DictyBase:DDB_G0269494	Q55DX0
 DDB_G0272789	rlp24	putative ribosome biogenesis protein rlp24	gene	taxon:44689	DictyBase:DDB_G0272789	Q86B05
-DDB_G0269190	tcp1	t-complex polypeptide 1	chaperonin containing TCP1 alpha subunit|tcp|DdTcp-1|TCP-1|cct1	gene	taxon:44689	DictyBase:DDB_G0269190	Q55BM4
+DDB_G0269190	tcp1	t-complex polypeptide 1	chaperonin containing TCP1 alpha subunit|DdTcp-1|tcp|TCP-1|cct1	gene	taxon:44689	DictyBase:DDB_G0269190	Q55BM4
 DDB_G0290141	rps17	40S ribosomal protein S17	rpgM	gene	taxon:44689	DictyBase:DDB_G0290141	P42520
 DDB_G0286039	DDB_G0286039	gene	taxon:44689	DictyBase:DDB_G0286039	Q54MC5
 DDB_G0285231	DDB_G0285231	gene	taxon:44689	DictyBase:DDB_G0285231	Q54NJ6
@@ -3420,7 +3420,7 @@ DDB_G0283607	eb1	microtubule-associated protein EB1	gene	taxon:44689	DictyBase:D
 DDB_G0281351	DDB_G0281351	gene	taxon:44689	DictyBase:DDB_G0281351	Q54U24
 DDB_G0285147	DDB_G0285147	gene	taxon:44689	DictyBase:DDB_G0285147	Q54NQ2
 DDB_G0293096	DDB_G0293096	gene	taxon:44689	DictyBase:DDB_G0293096	Q54CA0
-DDB_G0269252	gefE	Ras guanine nucleotide exchange factor	RasGEF|RasGEFE	gene	taxon:44689	DictyBase:DDB_G0269252	Q8IS18
+DDB_G0269252	gefE	Ras guanine nucleotide exchange factor	RasGEFE|RasGEF	gene	taxon:44689	DictyBase:DDB_G0269252	Q8IS18
 DDB_G0286361	DDB_G0286361	gene	taxon:44689	DictyBase:DDB_G0286361	Q54LX5
 DDB_G0273653	DDB_G0273653	gene	taxon:44689	DictyBase:DDB_G0273653	Q557C6
 DDB_G0268286	DDB_G0268286	gene	taxon:44689	DictyBase:DDB_G0268286	Q55GP5
@@ -3433,7 +3433,7 @@ DDB_G0280813	DDB_G0280813	FYVE-type zinc finger-containing protein	PI3K	gene	tax
 DDB_G0280851	DDB_G0280851	putative sarcosine/L-pipecolate oxidase	gene	taxon:44689	DictyBase:DDB_G0280851	Q54US8
 DDB_G0287373	DDB_G0287373	gene	taxon:44689	DictyBase:DDB_G0287373	Q54KF0
 DDB_G0293358	hssB	hssA/2C/7E family protein	NK20-like	gene	taxon:44689	DictyBase:DDB_G0293358	Q54BX5
-DDB_G0276455	gpaG	G-protein subunit alpha 7	Galpha7|Ga7|gpa7	gene	taxon:44689	DictyBase:DDB_G0276455	P34045
+DDB_G0276455	gpaG	G-protein subunit alpha 7	gpa7|Ga7|Galpha7	gene	taxon:44689	DictyBase:DDB_G0276455	P34045
 DDB_G0291221	DDB_G0291221_RTE	DIRS1 ORF1	gene	taxon:44689	DictyBase:DDB_G0291221	Q54EZ9
 DDB_G0281425	DDB_G0281425	gene	taxon:44689	DictyBase:DDB_G0281425	Q54TZ4
 DDB_G0288007	DDB_G0288007	Proteasome-associated protein ECM29 homolog	gene	taxon:44689	DictyBase:DDB_G0288007	Q54JJ7
@@ -3505,7 +3505,7 @@ DDB_G0272320	snrpb	LSM (like-Sm) domain-containing protein	gene	taxon:44689	Dict
 DDB_G0287043	DDB_G0287043	gene	taxon:44689	DictyBase:DDB_G0287043	Q54KY0
 DDB_G0287411	DDB_G0287411	gene	taxon:44689	DictyBase:DDB_G0287411	Q54KC8
 DDB_G0278125	DDB_G0278125	regulator of chromosome condensation (RCC1) domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0278125	Q54YQ4
-DDB_G0276335	pyr1-3	glutamine-dependent carbamoyl-phosphate synthase	GATase|CAD|ATCase|CPSase|DHOase	gene	taxon:44689	DictyBase:DDB_G0276335	P20054
+DDB_G0276335	pyr1-3	glutamine-dependent carbamoyl-phosphate synthase	DHOase|CAD|ATCase|CPSase|GATase	gene	taxon:44689	DictyBase:DDB_G0276335	P20054
 DDB_G0279229	DDB_G0279229	gene	taxon:44689	DictyBase:DDB_G0279229	Q54X38
 DDB_G0284381	DDB_G0284381	putative ubiquitin carboxyl-terminal hydrolase (UCH)	gene	taxon:44689	DictyBase:DDB_G0284381	Q54PQ7
 DDB_G0269570	rabggta	Rab geranylgeranyltransferase alpha subunit	gene	taxon:44689	DictyBase:DDB_G0269570	Q55DQ4
@@ -3532,7 +3532,7 @@ DDB_G0288861	DDB_G0288861	heat shock protein Hsp20 domain-containing protein	gen
 DDB_G0269450	DDB_G0269450	gene	taxon:44689	DictyBase:DDB_G0269450	Q55E02
 DDB_G0267544	aslM	AMP-dependent synthetase and ligase domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0267544	Q55GR9
 DDB_G0280405	DDB_G0280405	gene	taxon:44689	DictyBase:DDB_G0280405	Q54VF2
-DDB_G0291404	eif3K	eukaryotic translation initiation factor 3 (eIF3) subunit K	eif3s12|eukaryotic translation initiation factor 3 (eIF3) subunit 12	gene	taxon:44689	DictyBase:DDB_G0291404	Q54EQ1
+DDB_G0291404	eif3K	eukaryotic translation initiation factor 3 (eIF3) subunit K	eukaryotic translation initiation factor 3 (eIF3) subunit 12|eif3s12	gene	taxon:44689	DictyBase:DDB_G0291404	Q54EQ1
 DDB_G0278933	DDB_G0278933	gene	taxon:44689	DictyBase:DDB_G0278933	Q54XH2
 DDB_G0284021	DDB_G0284021	Methylosome subunit pICln	gene	taxon:44689	DictyBase:DDB_G0284021	Q54Q91
 DDB_G0279207	rps19	40S ribosomal protein S19	gene	taxon:44689	DictyBase:DDB_G0279207	Q54X51
@@ -3579,7 +3579,7 @@ DDB_G0289155	DDB_G0289155	gene	taxon:44689	DictyBase:DDB_G0289155	Q54HX5
 DDB_G0280985	udpB	uridine phosphorylase	gene	taxon:44689	DictyBase:DDB_G0280985	Q54UM3
 DDB_G0289445	prmt2	protein arginine methyltransferase	gene	taxon:44689	DictyBase:DDB_G0289445	Q54HI0
 DDB_G0278295	DDB_G0278295	ML domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0278295	Q54YD2
-DDB_G0272813	cdk1	CDC2 subfamily protein kinase	CAK|cdc2|cdcB	gene	taxon:44689	DictyBase:DDB_G0272813	P34112
+DDB_G0272813	cdk1	CDC2 subfamily protein kinase	cdcB|cdc2|CAK	gene	taxon:44689	DictyBase:DDB_G0272813	P34112
 DDB_G0268890	aplJ	amoebapore-like protein J	saposin-like protein J	gene	taxon:44689	DictyBase:DDB_G0268890	Q55EI1
 DDB_G0275335	DDB_G0275335	ssDNA-binding transcriptional regulator	gene	taxon:44689	DictyBase:DDB_G0275335	Q553Q8
 DDB_G0275899	DDB_G0275899	cation-translocating P-type ATPase	gene	taxon:44689	DictyBase:DDB_G0275899	Q552V8
@@ -3594,7 +3594,7 @@ DDB_G0273293	DDB_G0273293	unknown	gene	taxon:44689	DictyBase:DDB_G0273293	Q556W3
 DDB_G0276593	DDB_G0276593	gene	taxon:44689	DictyBase:DDB_G0276593	Q86HF2
 DDB_G0276981	DDB_G0276981_RTE	TRE3-D ORF2	gene	taxon:44689	DictyBase:DDB_G0276981	Q550L0
 DDB_G0292304	mrkA	putative protein kinase MARK-A	MARK-A	gene	taxon:44689	DictyBase:DDB_G0292304	Q54DF2
-DDB_G0287583	gerC	germination protein p109	SPG3|109_3|109 gene 3 protein|pLK109	gene	taxon:44689	DictyBase:DDB_G0287583	P15521
+DDB_G0287583	gerC	germination protein p109	SPG3|109_3|pLK109|109 gene 3 protein	gene	taxon:44689	DictyBase:DDB_G0287583	P15521
 DDB_G0292482	DDB_G0292482	gene	taxon:44689	DictyBase:DDB_G0292482	Q54D49
 DDB_G0268104	gabT	4-aminobutyrate aminotransferase	GABA transferase|ABAT|GABA transaminase|GABAT	gene	taxon:44689	DictyBase:DDB_G0268104	Q55FI1
 DDB_G0291207	DDB_G0291207	gene	taxon:44689	DictyBase:DDB_G0291207	Q54F02
@@ -3656,7 +3656,7 @@ DDB_G0292436	triA	BTB/POZ domain-containing protein	gene	taxon:44689	DictyBase:D
 DDB_G0281803	sma	SAP DNA-binding domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0281803	Q54TP5
 DDB_G0281887	DDB_G0281887	gene	taxon:44689	DictyBase:DDB_G0281887	Q54TA7
 DDB_G0291878	DDB_G0291878_RTE	TRE3-A ORF2	gene	taxon:44689	DictyBase:DDB_G0291878	Q54E15
-DDB_G0278579	dynE	dynactin 25 kDa subunit	Ddp25|DCTN5|p25	gene	taxon:44689	DictyBase:DDB_G0278579	Q54XU5
+DDB_G0278579	dynE	dynactin 25 kDa subunit	DCTN5|Ddp25|p25	gene	taxon:44689	DictyBase:DDB_G0278579	Q54XU5
 DDB_G0272528	DDB_G0272528	gene	taxon:44689	DictyBase:DDB_G0272528	Q559J3
 DDB_G0286373	DDB_G0286373	gene	taxon:44689	DictyBase:DDB_G0286373	Q54LW9
 DDB_G0289701	DDB_G0289701	ezrin/radixin/moesin C-terminal domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0289701	Q54H52
@@ -3800,7 +3800,7 @@ DDB_G0279441	ipo13B	importin 13	gene	taxon:44689	DictyBase:DDB_G0279441	Q54WT9
 DDB_G0268976	DDB_G0268976	gene	taxon:44689	DictyBase:DDB_G0268976	Q55ET0
 DDB_G0278535	DDB_G0278535	ARK family protein kinase	gene	taxon:44689	DictyBase:DDB_G0278535	Q54XX5
 DDB_G0283489	DDB_G0283489	gene	taxon:44689	DictyBase:DDB_G0283489	Q54R08
-DDB_G0284043	aplA	amoebapore-like protein A	rcdHH|sapA|saposin-like protein A|saposin A	gene	taxon:44689	DictyBase:DDB_G0284043	Q54Q68
+DDB_G0284043	aplA	amoebapore-like protein A	saposin A|saposin-like protein A|sapA|rcdHH	gene	taxon:44689	DictyBase:DDB_G0284043	Q54Q68
 DDB_G0291938	DDB_G0291938	gene	taxon:44689	DictyBase:DDB_G0291938	Q54DX0
 DDB_G0267696	DDB_G0267696	gene	taxon:44689	DictyBase:DDB_G0267696	Q55GF1
 DDB_G0275503	DDB_G0275503	gene	taxon:44689	DictyBase:DDB_G0275503	Q86IC7
@@ -3959,8 +3959,8 @@ DDB_G0288105	oxct	3-oxoacid CoA-transferase	gene	taxon:44689	DictyBase:DDB_G0288
 DDB_G0294028	nad6	NADH dehydrogenase subunit 6	ND6	gene	taxon:44689	DictyBase:DDB_G0294028	Q37314
 DDB_G0288465	DDB_G0288465	putative pantetheine-phosphate adenylyltransferase	gene	taxon:44689	DictyBase:DDB_G0288465	Q54IX0
 DDB_G0283149	cotD	spore coat protein SP75	DP87|SP75	gene	taxon:44689	DictyBase:DDB_G0283149	Q04503
-DDB_G0273105	DDB_G0273105	cytochrome b5 domain-containing protein	SCD|des9	gene	taxon:44689	DictyBase:DDB_G0273105	Q556T4
-DDB_G0273059	cak1-1	casein kinase I	CK1|cak1|DdCK1	gene	taxon:44689	DictyBase:DDB_G0273059	Q556Y4
+DDB_G0273105	DDB_G0273105	cytochrome b5 domain-containing protein	des9|SCD	gene	taxon:44689	DictyBase:DDB_G0273105	Q556T4
+DDB_G0273059	cak1-1	casein kinase I	DdCK1|cak1|CK1	gene	taxon:44689	DictyBase:DDB_G0273059	Q556Y4
 DDB_G0279019	DDB_G0279019	Lipase 2	gene	taxon:44689	DictyBase:DDB_G0279019	Q54XE3
 DDB_G0283639	DDB_G0283639	unknown	gene	taxon:44689	DictyBase:DDB_G0283639	Q54QU3
 DDB_G0268024	hdaA	type-1 histone deacetylase	gene	taxon:44689	DictyBase:DDB_G0268024	Q55FN5
@@ -3968,7 +3968,7 @@ DDB_G0270658	acbA	acyl-CoA binding protein	gene	taxon:44689	DictyBase:DDB_G02706
 DDB_G0269596	DDB_G0269596	gene	taxon:44689	DictyBase:DDB_G0269596	Q55DN2
 DDB_G0293526	racC	Rho GTPase racC	gene	taxon:44689	DictyBase:DDB_G0293526	P34149
 DDB_G0273431	DDB_G0273431	gene	taxon:44689	DictyBase:DDB_G0273431	Q557J9
-DDB_G0272344	htt	Huntington's disease protein homolog	hd|huntingtin	gene	taxon:44689	DictyBase:DDB_G0272344	Q76P24
+DDB_G0272344	htt	Huntington's disease protein homolog	huntingtin|hd	gene	taxon:44689	DictyBase:DDB_G0272344	Q76P24
 DDB_G0292470	anapc7	anaphase promoting complex subunit 7	APC7|ANAP7	gene	taxon:44689	DictyBase:DDB_G0292470	Q54D58
 DDB_G0288659	wdr18	WD40 repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0288659	Q54IM3
 DDB_G0292394	DDB_G0292394	gene	taxon:44689	DictyBase:DDB_G0292394	Q54DB4
@@ -4028,7 +4028,7 @@ DDB_G0271368	DDB_G0271368	gene	taxon:44689	DictyBase:DDB_G0271368	Q55BG1
 DDB_G0270138	rasU	Ras GTPase	gene	taxon:44689	DictyBase:DDB_G0270138	Q55CB0
 DDB_G0293180	csn6	COP9 signalosome complex subunit 6	gene	taxon:44689	DictyBase:DDB_G0293180	Q54C92
 DDB_G0270054	DDB_G0270054	ssDNA-binding transcriptional regulator	gene	taxon:44689	DictyBase:DDB_G0270054	Q55CH7
-DDB_G0277561	dynC	putative dynactin 22 kDa subunit	p24|Ddp22|DCTN3	gene	taxon:44689	DictyBase:DDB_G0277561	Q54ZI7
+DDB_G0277561	dynC	putative dynactin 22 kDa subunit	DCTN3|Ddp22|p24	gene	taxon:44689	DictyBase:DDB_G0277561	Q54ZI7
 DDB_G0349319	DDB_G0349319	gene	taxon:44689	DictyBase:DDB_G0349319	
 DDB_G0293582	DDB_G0293582	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase family protein	gene	taxon:44689	DictyBase:DDB_G0293582	Q54BK8
 DDB_G0273091	DDB_G0273091	ZIP family zinc transporter	gene	taxon:44689	DictyBase:DDB_G0273091	Q556U8
@@ -4130,7 +4130,7 @@ DDB_G0279705	aplE	amoebapore-like protein E	saposin-like protein E	gene	taxon:44
 DDB_G0281939	DDB_G0281939	gene	taxon:44689	DictyBase:DDB_G0281939	Q54TC0
 DDB_G0292658	DDB_G0292658	gene	taxon:44689	DictyBase:DDB_G0292658	Q54CW4
 DDB_G0275529	DDB_G0275529	gene	taxon:44689	DictyBase:DDB_G0275529	Q86H58
-DDB_G0282027	pks19	beta-ketoacyl synthase family protein	PKS|dipks19	gene	taxon:44689	DictyBase:DDB_G0282027	Q54T36
+DDB_G0282027	pks19	beta-ketoacyl synthase family protein	dipks19|PKS	gene	taxon:44689	DictyBase:DDB_G0282027	Q54T36
 DDB_G0276749	DDB_G0276749	gene	taxon:44689	DictyBase:DDB_G0276749	Q550Z1
 DDB_G0270070	DDB_G0270070	phospholipase D	gene	taxon:44689	DictyBase:DDB_G0270070	Q55CF8
 DDB_G0287425	DDB_G0287425	gene	taxon:44689	DictyBase:DDB_G0287425	Q54KK4
@@ -4168,7 +4168,7 @@ DDB_G0269414	ebp	putative 3-beta-hydroxysteroid-Delta(8),Delta(7)-isomerase	gene
 DDB_G0291856	gerD	germination protein (270G)	gene	taxon:44689	DictyBase:DDB_G0291856	Q54DY8
 DDB_G0291904	DDB_G0291904	gene	taxon:44689	DictyBase:DDB_G0291904	Q54DZ2
 DDB_G0281111	DDB_G0281111	Folliculin	gene	taxon:44689	DictyBase:DDB_G0281111	Q54UF2
-DDB_G0270024	mgp2	PCH family protein	RacGAP|gacCC|megap2	gene	taxon:44689	DictyBase:DDB_G0270024	Q55CK2
+DDB_G0270024	mgp2	PCH family protein	megap2|gacCC|RacGAP	gene	taxon:44689	DictyBase:DDB_G0270024	Q55CK2
 DDB_G0279297	DDB_G0279297	hssA/2C/7E family protein	sigN170	gene	taxon:44689	DictyBase:DDB_G0279297	Q54WZ8
 DDB_G0273335	DDB_G0273335	gene	taxon:44689	DictyBase:DDB_G0273335	Q556S9
 DDB_G0288967	DDB_G0288967	gene	taxon:44689	DictyBase:DDB_G0288967	Q54I69
@@ -4306,7 +4306,7 @@ DDB_G0290795	hddc2	HD domain-containing protein 2	gene	taxon:44689	DictyBase:DDB
 DDB_G0283357	DDB_G0283357	unknown	gene	taxon:44689	DictyBase:DDB_G0283357	Q54R73
 DDB_G0280871	DDB_G0280871	hssA/2C/7E family protein	gene	taxon:44689	DictyBase:DDB_G0280871	Q54UR6
 DDB_G0287127	vatA	vacuolar ATPase subunit A	V-ATPase subunit A	gene	taxon:44689	DictyBase:DDB_G0287127	P54647
-DDB_G0293248	grpA	golgi reassembly stacking protein	gorasp2|GRASP|GRASP55	gene	taxon:44689	DictyBase:DDB_G0293248	Q54C46
+DDB_G0293248	grpA	golgi reassembly stacking protein	gorasp2|GRASP55|GRASP	gene	taxon:44689	DictyBase:DDB_G0293248	Q54C46
 DDB_G0275379	DDB_G0275379	unknown	gene	taxon:44689	DictyBase:DDB_G0275379	Q553P7
 DDB_G0287691	abcC3	ABC transporter C family protein	gene	taxon:44689	DictyBase:DDB_G0287691	Q54JR2
 DDB_G0286831	DDB_G0286831	gene	taxon:44689	DictyBase:DDB_G0286831	Q54L86
@@ -4376,7 +4376,7 @@ DDB_G0290111	adhfe1	alcohol dehydrogenase iron-containing 1	gene	taxon:44689	Dic
 DDB_G0291386	DDB_G0291386	RNA recognition motif RNP-1 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0291386	Q54ER1
 DDB_G0270830	bopA	unknown	gene	taxon:44689	DictyBase:DDB_G0270830	Q55DC8
 DDB_G0289063	DDB_G0289063	gene	taxon:44689	DictyBase:DDB_G0289063	Q54I20
-DDB_G0275617	tbpA	transcription factor IIIB subunit	TBP|TFIIIB|tfdA|TFIID	gene	taxon:44689	DictyBase:DDB_G0275617	P26355
+DDB_G0275617	tbpA	transcription factor IIIB subunit	TBP|tfdA|TFIIIB|TFIID	gene	taxon:44689	DictyBase:DDB_G0275617	P26355
 DDB_G0287015	DDB_G0287015	TM2 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0287015	Q54KZ0
 DDB_G0293216	DDB_G0293216	gene	taxon:44689	DictyBase:DDB_G0293216	Q54C23
 DDB_G0293206	DDB_G0293206	gene	taxon:44689	DictyBase:DDB_G0293206	Q54C13
@@ -4712,7 +4712,7 @@ DDB_G0273157	iliE-1	concanavalin A-like lectin/glucanase superfamily protein	ili
 DDB_G0272186	DDB_G0272186	TPR_1 repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0272186	Q75JW7
 DDB_G0273881	DDB_G0273881_RTE	TRE3-C ORF1	gene	taxon:44689	DictyBase:DDB_G0273881	Q556R4
 DDB_G0272684	qdpr	dihydropteridine reductase	DHPR|quinoid dihydropteridine reductase	gene	taxon:44689	DictyBase:DDB_G0272684	Q86A17
-DDB_G0286185	gpaE	G-protein subunit alpha 5	Ga5|Galpha5|gpa5|Ga5	gene	taxon:44689	DictyBase:DDB_G0286185	P34043
+DDB_G0286185	gpaE	G-protein subunit alpha 5	Ga5|Galpha5|Ga5|gpa5	gene	taxon:44689	DictyBase:DDB_G0286185	P34043
 DDB_G0273325	DDB_G0273325_RTE	TRE3-C ORF1	gene	taxon:44689	DictyBase:DDB_G0273325	Q556R4
 DDB_G0271732	DDB_G0271732	AN1-type zinc finger-containing protein	gene	taxon:44689	DictyBase:DDB_G0271732	Q75JA0
 DDB_G0288111	DDB_G0288111	Nurim	gene	taxon:44689	DictyBase:DDB_G0288111	Q54JG5
@@ -4749,7 +4749,7 @@ DDB_G0269066	DDB_G0269066	gene	taxon:44689	DictyBase:DDB_G0269066	Q55EW8
 DDB_G0271708	ddx31	DEAD/DEAH box helicase	gene	taxon:44689	DictyBase:DDB_G0271708	Q869P0
 DDB_G0290991	DDB_G0290991	gene	taxon:44689	DictyBase:DDB_G0290991	Q54F97
 DDB_G0278885	sec61a	SecY family protein	gene	taxon:44689	DictyBase:DDB_G0278885	Q54XK2
-DDB_G0285995	pdsA	cAMP/cGMP phosphodiesterase	pde1|pdeA|PDE|DdPDE1	gene	taxon:44689	DictyBase:DDB_G0285995	P12019
+DDB_G0285995	pdsA	cAMP/cGMP phosphodiesterase	DdPDE1|pdeA|PDE|pde1	gene	taxon:44689	DictyBase:DDB_G0285995	P12019
 DDB_G0288911	DDB_G0288911	unknown	gene	taxon:44689	DictyBase:DDB_G0288911	Q54I96
 DDB_G0270666	gdt2	MLK family protein kinase Gdt2	gene	taxon:44689	DictyBase:DDB_G0270666	Q55CZ1
 DDB_G0277299	DDB_G0277299_RTE	TRE5-B ORF2 fragment	gene	taxon:44689	DictyBase:DDB_G0277299	Q550B5
@@ -4858,7 +4858,7 @@ DDB_G0274395	adcB	C2 calcium-dependent membrane targeting domain-containing prot
 DDB_G0294204	DDB_G0294204_RTE	DIRS1 ORF1 fragment	gene	taxon:44689	DictyBase:DDB_G0294204	Q54AU4
 DDB_G0278243	rliB	unknown	gene	taxon:44689	DictyBase:DDB_G0278243	Q54YG8
 DDB_G0267542	DDB_G0267542	gene	taxon:44689	DictyBase:DDB_G0267542	Q55GS1
-DDB_G0292996	rasD	Ras GTPase	rasA|Ddras|ras|Dd-ras|12E2	gene	taxon:44689	DictyBase:DDB_G0292996	P03967
+DDB_G0292996	rasD	Ras GTPase	rasA|ras|Ddras|Dd-ras|12E2	gene	taxon:44689	DictyBase:DDB_G0292996	P03967
 DDB_G0289529	DDB_G0289529	gene	taxon:44689	DictyBase:DDB_G0289529	Q54HF4
 DDB_G0285603	DDB_G0285603	unknown	gene	taxon:44689	DictyBase:DDB_G0285603	Q54MZ2
 DDB_G0275407	txnl4a	DIM1-like protein	gene	taxon:44689	DictyBase:DDB_G0275407	Q553S5
@@ -4870,7 +4870,7 @@ DDB_G0273525	gtf2e1-1	transcription factor IIE	TFIIE|gtf2e1	gene	taxon:44689	Dic
 DDB_G0295847	DDB_G0295847	EGF-like domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0295847	C7FZW2
 DDB_G0268454	DDB_G0268454	unknown	gene	taxon:44689	DictyBase:DDB_G0268454	Q55FC6
 DDB_G0279587	DDB_G0279587	Uncharacterized protein C7orf50	gene	taxon:44689	DictyBase:DDB_G0279587	Q54WK3
-DDB_G0284845	gxcC	Rac guanine nucleotide exchange factor GxcC	RacGEF3|grfA|RacGEF	gene	taxon:44689	DictyBase:DDB_G0284845	Q54P24
+DDB_G0284845	gxcC	Rac guanine nucleotide exchange factor GxcC	RacGEF3|RacGEF|grfA	gene	taxon:44689	DictyBase:DDB_G0284845	Q54P24
 DDB_G0270622	DDB_G0270622	gene	taxon:44689	DictyBase:DDB_G0270622	Q55DB5
 DDB_G0269952	DDB_G0269952	Protein fem-1 homolog B	gene	taxon:44689	DictyBase:DDB_G0269952	Q55CQ5
 DDB_G0278293	ileS	isoleucine-tRNA ligase	IleRS	gene	taxon:44689	DictyBase:DDB_G0278293	Q54YD4
@@ -4918,7 +4918,7 @@ DDB_G0292696	colA	colossin A	gene	taxon:44689	DictyBase:DDB_G0292696	Q54CU4
 DDB_G0292434	DDB_G0292434	gene	taxon:44689	DictyBase:DDB_G0292434	Q54D85
 DDB_G0276871	rpl10a	S60 ribosomal protein L10a	gene	taxon:44689	DictyBase:DDB_G0276871	Q86L05
 DDB_G0286157	DDB_G0286157	gene	taxon:44689	DictyBase:DDB_G0286157	Q54M66
-DDB_G0289877	rps9	40S ribosomal protein S9	rp1024|V12	gene	taxon:44689	DictyBase:DDB_G0289877	P14132
+DDB_G0289877	rps9	40S ribosomal protein S9	V12|rp1024	gene	taxon:44689	DictyBase:DDB_G0289877	P14132
 DDB_G0289087	DDB_G0289087	gene	taxon:44689	DictyBase:DDB_G0289087	Q54I09
 DDB_G0282405	DDB_G0282405_RTE	TRE5-A ORF2	gene	taxon:44689	DictyBase:DDB_G0282405	Q54SL0
 DDB_G0288251	roco4	LRRK family protein kinase Roco4	gene	taxon:44689	DictyBase:DDB_G0288251	Q6XHB2
@@ -4959,7 +4959,7 @@ DDB_G0275157	limF	LIM-type zinc finger-containing protein	gene	taxon:44689	Dicty
 DDB_G0294304	DDB_G0294304	gene	taxon:44689	DictyBase:DDB_G0294304	Q54AP4
 DDB_G0305372	DDB_G0305372	BAR/IMD domain-like superfamily protein DDB_G0305372	gene	taxon:44689	DictyBase:DDB_G0305372	
 DDB_G0268744	act23	actin	gene	taxon:44689	DictyBase:DDB_G0268744	Q55EU6
-DDB_G0276267	gpaB	G-protein subunit alpha 2	Galpha2|Ga2|gpa2	gene	taxon:44689	DictyBase:DDB_G0276267	P16051
+DDB_G0276267	gpaB	G-protein subunit alpha 2	gpa2|Ga2|Galpha2	gene	taxon:44689	DictyBase:DDB_G0276267	P16051
 DDB_G0282591	omt7	O-methyltransferase family 2 protein	gene	taxon:44689	DictyBase:DDB_G0282591	Q54S95
 DDB_G0273763	DDB_G0273763	gene	taxon:44689	DictyBase:DDB_G0273763	Q556X1
 DDB_G0281813	DDB_G0281813	unknown	gene	taxon:44689	DictyBase:DDB_G0281813	Q54TJ6
@@ -4981,7 +4981,7 @@ DDB_G0273519	nit1-2	nitrilase 1	nit1	gene	taxon:44689	DictyBase:DDB_G0273519	Q55
 DDB_G0277991	etfb	electron transfer flavoprotein beta subunit	gene	taxon:44689	DictyBase:DDB_G0277991	Q54YZ4
 DDB_G0271362	DDB_G0271362	gene	taxon:44689	DictyBase:DDB_G0271362	Q55BH0
 DDB_G0291862	rpl3	60S ribosomal protein L3	L3	gene	taxon:44689	DictyBase:DDB_G0291862	P34113
-DDB_G0269100	abpC	gelation factor	actin binding protein|FLN|ABP-120|gelA|filamin|ABP120|ddFLN	gene	taxon:44689	DictyBase:DDB_G0269100	P13466
+DDB_G0269100	abpC	gelation factor	actin binding protein|FLN|ABP-120|gelA|filamin|ddFLN|ABP120	gene	taxon:44689	DictyBase:DDB_G0269100	P13466
 DDB_G0292660	DDB_G0292660	gene	taxon:44689	DictyBase:DDB_G0292660	Q54CW3
 DDB_G0287513	jcdG	cupin region-containing protein	gene	taxon:44689	DictyBase:DDB_G0287513	Q54K96
 DDB_G0269632	irlD	IRE family protein kinase	gene	taxon:44689	DictyBase:DDB_G0269632	Q55DJ9
@@ -5012,7 +5012,7 @@ DDB_G0280165	DDB_G0280165	vacuolar sorting protein 9 domain-containing protein	g
 DDB_G0292688	commd8	COMM domain-containing protein 8	gene	taxon:44689	DictyBase:DDB_G0292688	Q54CU8
 DDB_G0272290	DDB_G0272290_RTE	TRE3-A ORF2	gene	taxon:44689	DictyBase:DDB_G0272290	Q559S0
 DDB_G0275643	DDB_G0275643	gene	taxon:44689	DictyBase:DDB_G0275643	Q869K8
-DDB_G0267468	adprt4	BRCT domain-containing protein	pARTe|PARP4|parp-4	gene	taxon:44689	DictyBase:DDB_G0267468	Q55GU8
+DDB_G0267468	adprt4	BRCT domain-containing protein	parp-4|PARP4|pARTe	gene	taxon:44689	DictyBase:DDB_G0267468	Q55GU8
 DDB_G0267586	DDB_G0267586	gene	taxon:44689	DictyBase:DDB_G0267586	Q55GN7
 DDB_G0279371	utp14	U3 small nucleolar ribonucleoprotein	gene	taxon:44689	DictyBase:DDB_G0279371	Q54WV7
 DDB_G0290801	DDB_G0290801	Transmembrane protein 199	gene	taxon:44689	DictyBase:DDB_G0290801	Q54FJ8
@@ -5281,15 +5281,15 @@ DDB_G0268288	DDB_G0268288	Putative ATP-dependent helicase HRQ1	gene	taxon:44689	
 DDB_G0277035	DDB_G0277035	gene	taxon:44689	DictyBase:DDB_G0277035	Q7KWX6
 DDB_G0274293	DDB_G0274293	gene	taxon:44689	DictyBase:DDB_G0274293	Q86J21
 DDB_G0288381	DDB_G0288381	gene	taxon:44689	DictyBase:DDB_G0288381	Q54J12
-DDB_G0276939	pspB	prespore protein	psB|SP85|14E6	gene	taxon:44689	DictyBase:DDB_G0276939	P54704
+DDB_G0276939	pspB	prespore protein	14E6|SP85|psB	gene	taxon:44689	DictyBase:DDB_G0276939	P54704
 DDB_G0281389	abcG6	ABC transporter G family protein	gene	taxon:44689	DictyBase:DDB_G0281389	Q54TV1
 DDB_G0277117	DDB_G0277117	gene	taxon:44689	DictyBase:DDB_G0277117	Q550F0
 DDB_G0282637	DDB_G0282637	gene	taxon:44689	DictyBase:DDB_G0282637	Q54S72
 DDB_G0277505	hbx6	homeodomain (HOX) containing protein	gene	taxon:44689	DictyBase:DDB_G0277505	Q54ZP8
-DDB_G0290009	sr	sepiapterin reductase	SR|SPR	gene	taxon:44689	DictyBase:DDB_G0290009	Q54GP3
+DDB_G0290009	sr	sepiapterin reductase	SPR|SR	gene	taxon:44689	DictyBase:DDB_G0290009	Q54GP3
 DDB_G0285689	DDB_G0285689	Dolichol kinase	gene	taxon:44689	DictyBase:DDB_G0285689	Q54MS7
 DDB_G0286345	zntB	zinc transporter	gene	taxon:44689	DictyBase:DDB_G0286345	Q54LY6
-DDB_G0277139	apm2	clathrin-adaptor medium chain AP-2	DdApm1|AP-2&mu;2|AP2M2	gene	taxon:44689	DictyBase:DDB_G0277139	P54672
+DDB_G0277139	apm2	clathrin-adaptor medium chain AP-2	AP2M2|AP-2&mu;2|DdApm1	gene	taxon:44689	DictyBase:DDB_G0277139	P54672
 DDB_G0283241	DDB_G0283241	gene	taxon:44689	DictyBase:DDB_G0283241	Q54RF8
 DDB_G0286757	DDB_G0286757	gene	taxon:44689	DictyBase:DDB_G0286757	Q54L99
 DDB_G0288805	DDB_G0288805	gene	taxon:44689	DictyBase:DDB_G0288805	Q54IE7
@@ -5311,12 +5311,12 @@ DDB_G0286097	DDB_G0286097_RTE	TRE5-A ORF1	gene	taxon:44689	DictyBase:DDB_G028609
 DDB_G0291318	DDB_G0291318	putative mitochondrial protein	gene	taxon:44689	DictyBase:DDB_G0291318	Q1ZXB5
 DDB_G0278861	DDB_G0278861	gene	taxon:44689	DictyBase:DDB_G0278861	Q54XL8
 DDB_G0276375	DDB_G0276375	phospholipid-translocating P-type ATPase family protein	gene	taxon:44689	DictyBase:DDB_G0276375	Q551T0
-DDB_G0278727	pikA	phosphatidylinositol-4,5-diphosphate 3-kinase	PI3kinase|PI3K1|PIK1|PI3K	gene	taxon:44689	DictyBase:DDB_G0278727	P54673
+DDB_G0278727	pikA	phosphatidylinositol-4,5-diphosphate 3-kinase	PI3K|PI3K1|PIK1|PI3kinase	gene	taxon:44689	DictyBase:DDB_G0278727	P54673
 DDB_G0290025	DDB_G0290025	DCUN1 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0290025	Q54GP1
 DDB_G0292472	DDB_G0292472	gene	taxon:44689	DictyBase:DDB_G0292472	Q54D57
 DDB_G0275011	pikC	PI3kinase	PI3K3|PIK3	gene	taxon:44689	DictyBase:DDB_G0275011	P54675
 DDB_G0293528	arsA	arsenite-translocating ATPase	gene	taxon:44689	DictyBase:DDB_G0293528	Q8T662
-DDB_G0268802	gpaJ	G-protein subunit alpha 10	Ga10|Galpha10|gpa10	gene	taxon:44689	DictyBase:DDB_G0268802	Q55EP5
+DDB_G0268802	gpaJ	G-protein subunit alpha 10	gpa10|Galpha10|Ga10	gene	taxon:44689	DictyBase:DDB_G0268802	Q55EP5
 DDB_G0290575	DDB_G0290575	LIM-type zinc finger-containing protein	gene	taxon:44689	DictyBase:DDB_G0290575	Q54FV6
 DDB_G0278155	mai	maleylacetoacetate isomerase	gene	taxon:44689	DictyBase:DDB_G0278155	Q54YN2
 DDB_G0293646	mcfN	putative mitochondrial phosphate carrier protein	slc25a3	gene	taxon:44689	DictyBase:DDB_G0293646	Q54BF6
@@ -5340,7 +5340,7 @@ DDB_G0286653	aplO	amoebapore-like protein O	saposin-like protein O	gene	taxon:44
 DDB_G0285021	DDB_G0285021	putative NADH dehydrogenase (ubiquinone) protein 9	gene	taxon:44689	DictyBase:DDB_G0285021	Q54NR3
 DDB_G0277357	DDB_G0277357	RmlC-like cupin family protein	gene	taxon:44689	DictyBase:DDB_G0277357	Q54ZU4
 DDB_G0269764	cnrC	putative cell number regulator	gene	taxon:44689	DictyBase:DDB_G0269764	Q55D71
-DDB_G0276369	kif5	kinesin family member 5	DdKin5|kin5	gene	taxon:44689	DictyBase:DDB_G0276369	Q8T135
+DDB_G0276369	kif5	kinesin family member 5	kin5|DdKin5	gene	taxon:44689	DictyBase:DDB_G0276369	Q8T135
 DDB_G0289021	ube2s	ubiquitin-conjugating enzyme E2 S	gene	taxon:44689	DictyBase:DDB_G0289021	Q54I43
 DDB_G0279669	fncE	Fanconi anemia group E protein	FANCE	gene	taxon:44689	DictyBase:DDB_G0279669	Q54WG5
 DDB_G0289073	csaA	cell adhesion molecule	csA|gp80	gene	taxon:44689	DictyBase:DDB_G0289073	P08796
@@ -5405,7 +5405,7 @@ DDB_G0276161	DDB_G0276161	unknown	gene	taxon:44689	DictyBase:DDB_G0276161	Q75JF1
 DDB_G0286795	DDB_G0286795	unknown	gene	taxon:44689	DictyBase:DDB_G0286795	Q54LK3
 DDB_G0272120	rcaA	peptidase M41, FtsH domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0272120	Q75JS8
 DDB_G0269016	cyp524A1	cytochrome P450 family protein	gene	taxon:44689	DictyBase:DDB_G0269016	Q55EK2
-DDB_G0291994	abcA1	ABC transporter A family protein	DG1025|abcA	gene	taxon:44689	DictyBase:DDB_G0291994	Q8T5Z7
+DDB_G0291994	abcA1	ABC transporter A family protein	abcA|DG1025	gene	taxon:44689	DictyBase:DDB_G0291994	Q8T5Z7
 DDB_G0267450	pakC	PAKA subfamily protein kinase	gene	taxon:44689	DictyBase:DDB_G0267450	Q55GV3
 DDB_G0283961	DDB_G0283961	gene	taxon:44689	DictyBase:DDB_G0283961	Q54QB6
 DDB_G0270426	DDB_G0270426	gene	taxon:44689	DictyBase:DDB_G0270426	Q55BN6
@@ -5419,7 +5419,7 @@ DDB_G0279427	DDB_G0279427	sestrin-like protein	gene	taxon:44689	DictyBase:DDB_G0
 DDB_G0290623	DDB_G0290623	Zinc phosphodiesterase ELAC protein 2	gene	taxon:44689	DictyBase:DDB_G0290623	Q54FR8
 DDB_G0275627	sky1	SRPK family protein kinase	SRPK1	gene	taxon:44689	DictyBase:DDB_G0275627	Q86A12
 DDB_G0289463	srr	serine racemase	DdSR	gene	taxon:44689	DictyBase:DDB_G0289463	Q54HH2
-DDB_G0269114	numA	nucleomorphin	numB|numA3|numA1|cmbA|numC|numA2	gene	taxon:44689	DictyBase:DDB_G0269114	Q9U7C9
+DDB_G0269114	numA	nucleomorphin	numA2|numA1|numA3|cmbA|numC|numB	gene	taxon:44689	DictyBase:DDB_G0269114	Q9U7C9
 DDB_G0289457	DDB_G0289457	gene	taxon:44689	DictyBase:DDB_G0289457	Q54HH6
 DDB_G0276509	DDB_G0276509	unknown	gene	taxon:44689	DictyBase:DDB_G0276509	Q86HV5
 DDB_G0275501	omt6	O-methyltransferase family 3 protein	gene	taxon:44689	DictyBase:DDB_G0275501	Q86IC8
@@ -5629,7 +5629,7 @@ DDB_G0267998	psiS	PA14 domain-containing protein	gene	taxon:44689	DictyBase:DDB_
 DDB_G0287121	nat4	arylamine N-acetyltransferase 4	gene	taxon:44689	DictyBase:DDB_G0287121	Q54KU4
 DDB_G0270304	DDB_G0270304	gene	taxon:44689	DictyBase:DDB_G0270304	Q55BZ0
 DDB_G0277251	DDB_G0277251	gene	taxon:44689	DictyBase:DDB_G0277251	Q86K41
-DDB_G0287585	rgaA	Ras GTPase-activating-like protein rgaA	rasGAP|rasGAP1|iqgA|IQGAP1|DG1029|RIP2|DGAP1	gene	taxon:44689	DictyBase:DDB_G0287585	Q54K32
+DDB_G0287585	rgaA	Ras GTPase-activating-like protein rgaA	RIP2|rasGAP1|DG1029|IQGAP1|iqgA|rasGAP|DGAP1	gene	taxon:44689	DictyBase:DDB_G0287585	Q54K32
 DDB_G0282467	DDB_G0282467	ACC synthase	gene	taxon:44689	DictyBase:DDB_G0282467	Q54SH3
 DDB_G0279817	DDB_G0279817	gene	taxon:44689	DictyBase:DDB_G0279817	Q54W93
 DDB_G0280211	DDB_G0280211	gene	taxon:44689	DictyBase:DDB_G0280211	Q54VP7
@@ -5695,7 +5695,7 @@ DDB_G0273891	DDB_G0273891	gene	taxon:44689	DictyBase:DDB_G0273891	Q556Q9
 DDB_G0271506	pitrm1	peptidase M16 family protein	gene	taxon:44689	DictyBase:DDB_G0271506	Q8MP58
 DDB_G0269298	gefX	protein kinase, TKL group	gene	taxon:44689	DictyBase:DDB_G0269298	Q55EC7
 DDB_G0348834	DDB_G0348834	gene	taxon:44689	DictyBase:DDB_G0348834	Q54N62
-DDB_G0277173	vamp7B	vesicle-associated membrane protein 7B	SYBL|DdVamp7B|synaptobrevin|v-SNARE family protein	gene	taxon:44689	DictyBase:DDB_G0277173	Q86AQ7
+DDB_G0277173	vamp7B	vesicle-associated membrane protein 7B	v-SNARE family protein|DdVamp7B|synaptobrevin|SYBL	gene	taxon:44689	DictyBase:DDB_G0277173	Q86AQ7
 DDB_G0280057	grp94	heat shock protein Hsp90 family protein	Dd-grp94	gene	taxon:44689	DictyBase:DDB_G0280057	Q9NKX1
 DDB_G0272678	DDB_G0272678	Phosphatidylethanolamine N-methyltransferase	gene	taxon:44689	DictyBase:DDB_G0272678	Q86IF9
 DDB_G0293710	DDB_G0293710	gene	taxon:44689	DictyBase:DDB_G0293710	Q54BK6
@@ -6034,7 +6034,7 @@ DDB_G0282195	timm16	mitochondrial import inner membrane translocase subunit 16	p
 DDB_G0271636	DDB_G0271636	gene	taxon:44689	DictyBase:DDB_G0271636	Q55AW5
 DDB_G0291996	gxcU	FYVE-type zinc finger-containing protein	RacGEF	gene	taxon:44689	DictyBase:DDB_G0291996	Q54DW7
 DDB_G0284867	abcC8	ABC transporter C family protein	gene	taxon:44689	DictyBase:DDB_G0284867	Q54P13
-DDB_G0268620	pkbA	AKT/PKB protein kinase PkbA	Akt|AktPKB|DK1|PKB|pkfC	gene	taxon:44689	DictyBase:DDB_G0268620	P54644
+DDB_G0268620	pkbA	AKT/PKB protein kinase PkbA	pkfC|DK1|AktPKB|PKB|Akt	gene	taxon:44689	DictyBase:DDB_G0268620	P54644
 DDB_G0273895	DDB_G0273895	gene	taxon:44689	DictyBase:DDB_G0273895	Q556Q7
 DDB_G0284207	DDB_G0284207	short-chain dehydrogenase/reductase (SDR) family protein	gene	taxon:44689	DictyBase:DDB_G0284207	Q54Q01
 DDB_G0277857	helB2	putative U5 small nuclear ribonucleoprotein	prp28|Hel2B|ddx23	gene	taxon:44689	DictyBase:DDB_G0277857	Q54Y81
@@ -6063,7 +6063,7 @@ DDB_G0293246	fxn	frataxin	gene	taxon:44689	DictyBase:DDB_G0293246	Q54C45
 DDB_G0278273	ptcF	pentatricopeptide repeat-containing protein F	gene	taxon:44689	DictyBase:DDB_G0278273	Q54YE8
 DDB_G0276555	DDB_G0276555	gene	taxon:44689	DictyBase:DDB_G0276555	Q551L2
 DDB_G0293550	DDB_G0293550	gene	taxon:44689	DictyBase:DDB_G0293550	Q54BM9
-DDB_G0276141	pdi1	protein disulfide isomerase	Dd-PDI|PDI|dis	gene	taxon:44689	DictyBase:DDB_G0276141	Q86IA3
+DDB_G0276141	pdi1	protein disulfide isomerase	dis|PDI|Dd-PDI	gene	taxon:44689	DictyBase:DDB_G0276141	Q86IA3
 DDB_G0288321	dgtA	dolichyl phosphate glucosyltransferase	alg5	gene	taxon:44689	DictyBase:DDB_G0288321	Q54J42
 DDB_G0285149	DDB_G0285149	TRAF-type zinc finger-containing protein	gene	taxon:44689	DictyBase:DDB_G0285149	Q54NN4
 DDB_G0288787	vps29	vacuolar sorting protein 29	gene	taxon:44689	DictyBase:DDB_G0288787	Q54IF7
@@ -6341,8 +6341,8 @@ DDB_G0276417	pdhB	pyruvate dehydrogenase E1 beta subunit	gene	taxon:44689	DictyB
 DDB_G0281191	DDB_G0281191	gene	taxon:44689	DictyBase:DDB_G0281191	Q54UA2
 DDB_G0268096	DDB_G0268096	gene	taxon:44689	DictyBase:DDB_G0268096	Q55FI5
 DDB_G0284983	colD	Cna B-type domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0284983	Q54NU3
-DDB_G0289489	act18	actin	actin3|act3-2|actin3-sub2	gene	taxon:44689	DictyBase:DDB_G0289489	P07828
-DDB_G0277537	DDB_G0277537	phosphatidylinositol 4-kinase catalytic subunit, alpha polypeptide	PI4K|PI4Kalpha	gene	taxon:44689	DictyBase:DDB_G0277537	Q54ZN9
+DDB_G0289489	act18	actin	actin3-sub2|act3-2|actin3	gene	taxon:44689	DictyBase:DDB_G0289489	P07828
+DDB_G0277537	DDB_G0277537	phosphatidylinositol 4-kinase catalytic subunit, alpha polypeptide	PI4Kalpha|PI4K	gene	taxon:44689	DictyBase:DDB_G0277537	Q54ZN9
 DDB_G0295833	DDB_G0295833	short-chain dehydrogenase/reductase (SDR) family protein	gene	taxon:44689	DictyBase:DDB_G0295833	Q556S5
 DDB_G0275927	DDB_G0275927	gene	taxon:44689	DictyBase:DDB_G0275927	Q552Q8
 DDB_G0287119	pks24	beta-ketoacyl synthase family protein	dipks24|PKS	gene	taxon:44689	DictyBase:DDB_G0287119	Q54KU5
@@ -6413,7 +6413,7 @@ DDB_G0268450	DDB_G0268450	gene	taxon:44689	DictyBase:DDB_G0268450	Q55FD1
 DDB_G0281001	DDB_G0281001	hssA/2C/7E family protein	gene	taxon:44689	DictyBase:DDB_G0281001	Q54UL5
 DDB_G0277511	hpd	4-hydroxyphenylpyruvate dioxygenase	gene	taxon:44689	DictyBase:DDB_G0277511	Q76NV5
 DDB_G0283877	dus2l	tRNA-dihydrouridine synthase 2-like protein	gene	taxon:44689	DictyBase:DDB_G0283877	Q54QJ2
-DDB_G0287095	pks25	beta-ketoacyl synthase family protein	PKS|dipks25	gene	taxon:44689	DictyBase:DDB_G0287095	Q54KU3
+DDB_G0287095	pks25	beta-ketoacyl synthase family protein	dipks25|PKS	gene	taxon:44689	DictyBase:DDB_G0287095	Q54KU3
 DDB_G0291027	DDB_G0291027	gene	taxon:44689	DictyBase:DDB_G0291027	Q54F76
 DDB_G0276031	DDB_G0276031	WD40 repeat-containing protein	AAC3	gene	taxon:44689	DictyBase:DDB_G0276031	P14197
 DDB_G0276973	nramp1	solute carrier family 11 member 1	Slc11a1|NRAMP	gene	taxon:44689	DictyBase:DDB_G0276973	Q869V1
@@ -6448,7 +6448,7 @@ DDB_G0277663	DDB_G0277663	Transforming growth factor-beta receptor-associated pr
 DDB_G0291716	DDB_G0291716	gene	taxon:44689	DictyBase:DDB_G0291716	Q54E65
 DDB_G0282737	DDB_G0282737	unknown	gene	taxon:44689	DictyBase:DDB_G0282737	Q54S05
 DDB_G0274809	mppA1	mitochondrial processing peptidase alpha subunit	alpha-MPP|&alpha;-MPP|mppA	gene	taxon:44689	DictyBase:DDB_G0274809	Q86A84
-DDB_G0288319	arcE	actin related protein 2/3 complex, 16 kDa subunit	ARPC5|p16-Arc|Arc15	gene	taxon:44689	DictyBase:DDB_G0288319	O96626
+DDB_G0288319	arcE	actin related protein 2/3 complex, 16 kDa subunit	ARPC5|Arc15|p16-Arc	gene	taxon:44689	DictyBase:DDB_G0288319	O96626
 DDB_G0282727	mcfU	mitochondrial substrate carrier family protein	gene	taxon:44689	DictyBase:DDB_G0282727	Q54S10
 DDB_G0289103	racM	Rho GTPase	gene	taxon:44689	DictyBase:DDB_G0289103	Q54HZ7
 DDB_G0282999	maoD	amine oxidase (flavin-containing)	gene	taxon:44689	DictyBase:DDB_G0282999	Q54RP5
@@ -6577,7 +6577,7 @@ DDB_G0289511	act28	poly P kinase component	gene	taxon:44689	DictyBase:DDB_G02895
 DDB_G0290195	DDB_G0290195	gene	taxon:44689	DictyBase:DDB_G0290195	Q54GF4
 DDB_G0271970	DDB_G0271970	gene	taxon:44689	DictyBase:DDB_G0271970	Q86AH5
 DDB_G0293826	DDB_G0293826	cyclin-like F-box containing protein	gene	taxon:44689	DictyBase:DDB_G0293826	Q54B96
-DDB_G0267408	psmA3	proteasome subunit alpha type 3	veg108|prtD|20S proteasome subunit C8|20S proteasome subunit alpha-3|rcdX	gene	taxon:44689	DictyBase:DDB_G0267408	Q27563
+DDB_G0267408	psmA3	proteasome subunit alpha type 3	veg108|prtD|rcdX|20S proteasome subunit alpha-3|20S proteasome subunit C8	gene	taxon:44689	DictyBase:DDB_G0267408	Q27563
 DDB_G0293324	DDB_G0293324	gene	taxon:44689	DictyBase:DDB_G0293324	Q54BZ1
 DDB_G0291492	DDB_G0291492	gene	taxon:44689	DictyBase:DDB_G0291492	Q54EJ0
 DDB_G0268898	wdr75	U3 small nucleolar ribonucleoprotein	UTP17	gene	taxon:44689	DictyBase:DDB_G0268898	Q55EH5
@@ -6625,8 +6625,8 @@ DDB_G0281447	DDB_G0281447	gene	taxon:44689	DictyBase:DDB_G0281447	Q54TX9
 DDB_G0269432	DDB_G0269432	Sel1-like protein	gene	taxon:44689	DictyBase:DDB_G0269432	Q55E18
 DDB_G0276709	DDB_G0276709	gene	taxon:44689	DictyBase:DDB_G0276709	Q551C3
 DDB_G0275367	DDB_G0275367	4F5  family protein	gene	taxon:44689	DictyBase:DDB_G0275367	Q553T6
-DDB_G0291728	arpE	actin related protein 5	Arp5|Actr5	gene	taxon:44689	DictyBase:DDB_G0291728	Q54E71
-DDB_G0274315	dpiA	protein phosphatase inhibitor 2	IPP-2|DdI-2	gene	taxon:44689	DictyBase:DDB_G0274315	Q86IZ4
+DDB_G0291728	arpE	actin related protein 5	Actr5|Arp5	gene	taxon:44689	DictyBase:DDB_G0291728	Q54E71
+DDB_G0274315	dpiA	protein phosphatase inhibitor 2	DdI-2|IPP-2	gene	taxon:44689	DictyBase:DDB_G0274315	Q86IZ4
 DDB_G0288921	hspI	putative alpha-crystallin-type heat shock protein	gene	taxon:44689	DictyBase:DDB_G0288921	Q54I91
 DDB_G0292538	gtpbp1	GTP-binding protein 1	gene	taxon:44689	DictyBase:DDB_G0292538	Q54D77
 DDB_G0268200	DDB_G0268200	gene	taxon:44689	DictyBase:DDB_G0268200	Q55FA1
@@ -6843,7 +6843,7 @@ DDB_G0287857	DDB_G0287857	SET domain-containing protein 4	gene	taxon:44689	Dicty
 DDB_G0276049	DDB_G0276049	unknown	gene	taxon:44689	DictyBase:DDB_G0276049	Q8MYJ1
 DDB_G0292890	DDB_G0292890	gene	taxon:44689	DictyBase:DDB_G0292890	Q54CK0
 DDB_G0288267	thrS1	threonine-tRNA ligase	ThrRS|thrS	gene	taxon:44689	DictyBase:DDB_G0288267	Q54J66
-DDB_G0280995	mps1	TTK family protein kinase Mps1	TtkA|DdMps1	gene	taxon:44689	DictyBase:DDB_G0280995	Q54UL8
+DDB_G0280995	mps1	TTK family protein kinase Mps1	DdMps1|TtkA	gene	taxon:44689	DictyBase:DDB_G0280995	Q54UL8
 DDB_G0275323	tipD	autophagy protein 16	apg161|atg16l1|DG1035	gene	taxon:44689	DictyBase:DDB_G0275323	O15736
 DDB_G0269862	DDB_G0269862	gene	taxon:44689	DictyBase:DDB_G0269862	Q55CX5
 DDB_G0294142	DDB_G0294142	gene	taxon:44689	DictyBase:DDB_G0294142	
@@ -6872,7 +6872,7 @@ DDB_G0292044	DDB_G0292044	gene	taxon:44689	DictyBase:DDB_G0292044	Q54DT5
 DDB_G0291838	xpo2	exportin 2	gene	taxon:44689	DictyBase:DDB_G0291838	Q54E36
 DDB_G0277927	mybH	SWIRM domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0277927	Q54Z40
 DDB_G0269898	DDB_G0269898	gene	taxon:44689	DictyBase:DDB_G0269898	Q55CU4
-DDB_G0269160	nxnA	annexin VII	ANN7|quit3|synexin|annexin C1|DdANN7	gene	taxon:44689	DictyBase:DDB_G0269160	P24639
+DDB_G0269160	nxnA	annexin VII	ANN7|synexin|quit3|annexin C1|DdANN7	gene	taxon:44689	DictyBase:DDB_G0269160	P24639
 DDB_G0274323	DDB_G0274323	gene	taxon:44689	DictyBase:DDB_G0274323	Q86IZ8
 DDB_G0274401	DDB_G0274401	unknown	gene	taxon:44689	DictyBase:DDB_G0274401	Q86KA4
 DDB_G0275467	DDB_G0275467	5'-nucleotidase	gene	taxon:44689	DictyBase:DDB_G0275467	Q75K12
@@ -6896,7 +6896,7 @@ DDB_G0283669	DDB_G0283669	ubiquinol-cytochrome-c reductase subunit	gene	taxon:44
 DDB_G0292812	mipA	putative transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0292812	Q54CK5
 DDB_G0290615	DDB_G0290615	gene	taxon:44689	DictyBase:DDB_G0290615	Q54FS3
 DDB_G0273077	DDB_G0273077	gene	taxon:44689	DictyBase:DDB_G0273077	Q556W9
-DDB_G0288483	pgmA	phosphoglucomutase A	veg142|rcdE	gene	taxon:44689	DictyBase:DDB_G0288483	Q23919
+DDB_G0288483	pgmA	phosphoglucomutase A	rcdE|veg142	gene	taxon:44689	DictyBase:DDB_G0288483	Q23919
 DDB_G0283553	DDB_G0283553	patatin family protein	gene	taxon:44689	DictyBase:DDB_G0283553	Q54QX5
 DDB_G0268452	DDB_G0268452	v-SNARE family protein	gene	taxon:44689	DictyBase:DDB_G0268452	Q55FD0
 DDB_G0271774	uqcrh	ubiquinol-cytochrome-c reductase hinge protein	gene	taxon:44689	DictyBase:DDB_G0271774	Q1ZXP3
@@ -6932,7 +6932,7 @@ DDB_G0284415	psmC3	26S protease regulatory subunit 6A	gene	taxon:44689	DictyBase
 DDB_G0290449	DDB_G0290449	GCN5-related N-acetyltransferase	gene	taxon:44689	DictyBase:DDB_G0290449	Q54G61
 DDB_G0285419	cryS	crystal protein	CP	gene	taxon:44689	DictyBase:DDB_G0285419	P21837
 DDB_G0291287	tmem184D	transmembrane protein 184D	gene	taxon:44689	DictyBase:DDB_G0291287	Q54EX3
-DDB_G0273553	atg4-2	peptidase C54 family protein	APG4|atg4	gene	taxon:44689	DictyBase:DDB_G0273553	Q557H7
+DDB_G0273553	atg4-2	peptidase C54 family protein	atg4|APG4	gene	taxon:44689	DictyBase:DDB_G0273553	Q557H7
 DDB_G0276001	DDB_G0276001	gene	taxon:44689	DictyBase:DDB_G0276001	Q552L0
 DDB_G0280157	DDB_G0280157	gene	taxon:44689	DictyBase:DDB_G0280157	Q54VS9
 DDB_G0292574	DDB_G0292574	glucose/ribitol dehydrogenase family protein	gene	taxon:44689	DictyBase:DDB_G0292574	Q54D21
@@ -6942,7 +6942,7 @@ DDB_G0274359	cbpK	NCS-1/frequenin-related protein	CBP11	gene	taxon:44689	DictyBa
 DDB_G0287731	DDB_G0287731	PLAC8 family protein	gene	taxon:44689	DictyBase:DDB_G0287731	Q54JY8
 DDB_G0277467	DDB_G0277467	gene	taxon:44689	DictyBase:DDB_G0277467	Q8MN45
 DDB_G0281623	upf2	eukaryotic initiation factor 4 gamma, middle domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0281623	Q54TQ1
-DDB_G0293228	gtf2h4	TFIIH subunit	TF2H4|TFIIH4	gene	taxon:44689	DictyBase:DDB_G0293228	Q54C29
+DDB_G0293228	gtf2h4	TFIIH subunit	TFIIH4|TF2H4	gene	taxon:44689	DictyBase:DDB_G0293228	Q54C29
 DDB_G0275207	DDB_G0275207	gene	taxon:44689	DictyBase:DDB_G0275207	Q554F2
 DDB_G0274593	dst1	STE20 family protein kinase Dst1	DstA	gene	taxon:44689	DictyBase:DDB_G0274593	Q86IX1
 DDB_G0294286	DDB_G0294286_RTE	DIRS1 ORF2 fragment	gene	taxon:44689	DictyBase:DDB_G0294286	Q54AQ3
@@ -7026,7 +7026,7 @@ DDB_G0277601	DDB_G0277601	gene	taxon:44689	DictyBase:DDB_G0277601	Q86KR2
 DDB_G0289681	DDB_G0289681	gene	taxon:44689	DictyBase:DDB_G0289681	Q54H65
 DDB_G0275359	DDB_G0275359	gene	taxon:44689	DictyBase:DDB_G0275359	Q553T0
 DDB_G0278841	DDB_G0278841	cytidine deaminase-like protein	gene	taxon:44689	DictyBase:DDB_G0278841	Q54XN0
-DDB_G0274133	act2	actin	actin2|act2-1|actin2-sub1	gene	taxon:44689	DictyBase:DDB_G0274133	P07830
+DDB_G0274133	act2	actin	actin2|actin2-sub1|act2-1	gene	taxon:44689	DictyBase:DDB_G0274133	P07830
 DDB_G0282155	DDB_G0282155	gene	taxon:44689	DictyBase:DDB_G0282155	Q54SX6
 DDB_G0278793	DDB_G0278793	Regulator of microtubule dynamics protein 1	gene	taxon:44689	DictyBase:DDB_G0278793	Q54XR4
 DDB_G0286779	DDB_G0286779	hssA/2C/7E family protein	sigN181	gene	taxon:44689	DictyBase:DDB_G0286779	Q54LE0
@@ -7034,7 +7034,7 @@ DDB_G0285403	DDB_G0285403	RNA recognition motif-containing protein RRM	gene	taxo
 DDB_G0283687	DDB_G0283687	RNA recognition motif-containing protein RRM	gene	taxon:44689	DictyBase:DDB_G0283687	Q54QQ7
 DDB_G0287067	DDB_G0287067	gene	taxon:44689	DictyBase:DDB_G0287067	Q54KW1
 DDB_G0292978	DDB_G0292978	GRAM domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0292978	Q54CJ1
-DDB_G0275443	helB1	putative RNA splicing factor	prp5|ddx46|Hel2A	gene	taxon:44689	DictyBase:DDB_G0275443	Q553B1
+DDB_G0275443	helB1	putative RNA splicing factor	prp5|Hel2A|ddx46	gene	taxon:44689	DictyBase:DDB_G0275443	Q553B1
 DDB_G0273277	DDB_G0273277	gene	taxon:44689	DictyBase:DDB_G0273277	Q556T8
 DDB_G0292334	DDB_G0292334	unknown	gene	taxon:44689	DictyBase:DDB_G0292334	Q54DC6
 DDB_G0270646	DDB_G0270646	gene	taxon:44689	DictyBase:DDB_G0270646	Q55D30
@@ -7098,7 +7098,7 @@ DDB_G0290649	DDB_G0290649	RNA recognition motif-containing protein RRM	gene	taxo
 DDB_G0284439	DDB_G0284439	gene	taxon:44689	DictyBase:DDB_G0284439	Q54PM3
 DDB_G0271060	DDB_G0271060	gene	taxon:44689	DictyBase:DDB_G0271060	Q55C02
 DDB_G0268378	DDB_G0268378	gene	taxon:44689	DictyBase:DDB_G0268378	Q55FZ3
-DDB_G0273097	ptpA1-1	protein-tyrosine phosphatase 1	ptpA1|PTP1	gene	taxon:44689	DictyBase:DDB_G0273097	P34137
+DDB_G0273097	ptpA1-1	protein-tyrosine phosphatase 1	PTP1|ptpA1	gene	taxon:44689	DictyBase:DDB_G0273097	P34137
 DDB_G0279039	DDB_G0279039	gene	taxon:44689	DictyBase:DDB_G0279039	Q54XC9
 DDB_G0294567	DDB_G0294567	unknown	gene	taxon:44689	DictyBase:DDB_G0294567	Q1ZXH6
 DDB_G0270406	eIF4e3	eukaryotic translation initiation factor 4E member 3	gene	taxon:44689	DictyBase:DDB_G0270406	Q55BQ5
@@ -7262,7 +7262,7 @@ DDB_G0288133	DDB_G0288133	hyaluronan/mRNA binding family protein	gene	taxon:4468
 DDB_G0283017	DDB_G0283017	gene	taxon:44689	DictyBase:DDB_G0283017	Q54RN3
 DDB_G0290591	DDB_G0290591	winged helix DNA-binding domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0290591	Q54FU1
 DDB_G0267562	DDB_G0267562	gene	taxon:44689	DictyBase:DDB_G0267562	Q55GQ4
-DDB_G0285589	forH	formin H	drf2|diaphanous related formin H|dDia2	gene	taxon:44689	DictyBase:DDB_G0285589	Q54N00
+DDB_G0285589	forH	formin H	drf2|dDia2|diaphanous related formin H	gene	taxon:44689	DictyBase:DDB_G0285589	Q54N00
 DDB_G0278985	DDB_G0278985	gene	taxon:44689	DictyBase:DDB_G0278985	Q54XG1
 DDB_G0288193	DDB_G0288193	gene	taxon:44689	DictyBase:DDB_G0288193	Q54JA7
 DDB_G0270420	DDB_G0270420	sucraseferredoxin-like family protein	gene	taxon:44689	DictyBase:DDB_G0270420	Q55BP2
@@ -7274,7 +7274,7 @@ DDB_G0268022	DDB_G0268022	gene	taxon:44689	DictyBase:DDB_G0268022	Q55FN6
 DDB_G0274553	vatH	vacuolar ATPase subunit H	V-ATPase subunit H	gene	taxon:44689	DictyBase:DDB_G0274553	Q8MML6
 DDB_G0277611	ptcK	pentatricopeptide repeat-containing protein K	gene	taxon:44689	DictyBase:DDB_G0277611	Q76P42
 DDB_G0286571	DDB_G0286571	gene	taxon:44689	DictyBase:DDB_G0286571	Q54LM3
-DDB_G0284331	regA	cAMP phosphodiesterase RegA	response regulator receiver domain-containing protein|DdPDE2|DG1030|pde2	gene	taxon:44689	DictyBase:DDB_G0284331	Q23917
+DDB_G0284331	regA	cAMP phosphodiesterase RegA	response regulator receiver domain-containing protein|DG1030|DdPDE2|pde2	gene	taxon:44689	DictyBase:DDB_G0284331	Q23917
 DDB_G0293064	DDB_G0293064	gene	taxon:44689	DictyBase:DDB_G0293064	Q54CB8
 DDB_G0273275	DDB_G0273275	gene	taxon:44689	DictyBase:DDB_G0273275	Q556T6
 DDB_G0267520	DDB_G0267520	gene	taxon:44689	DictyBase:DDB_G0267520	Q55GT7
@@ -7311,7 +7311,7 @@ DDB_G0289683	DDB_G0289683	gene	taxon:44689	DictyBase:DDB_G0289683	Q54H64
 DDB_G0281311	DDB_G0281311	gene	taxon:44689	DictyBase:DDB_G0281311	Q54UC4
 DDB_G0290245	psiC	PA14 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0290245	Q1ZXC5
 DDB_G0289779	fmoA	dimethylaniline monooxygenase [N-oxide-forming]	gene	taxon:44689	DictyBase:DDB_G0289779	Q54H02
-DDB_G0268616	cepJ	centrosomal protein 224 kDa	CP224|mtaA|XMAP215 family protein|DdCP224	gene	taxon:44689	DictyBase:DDB_G0268616	Q1ZXQ8
+DDB_G0268616	cepJ	centrosomal protein 224 kDa	DdCP224|mtaA|XMAP215 family protein|CP224	gene	taxon:44689	DictyBase:DDB_G0268616	Q1ZXQ8
 DDB_G0281999	DDB_G0281999	gene	taxon:44689	DictyBase:DDB_G0281999	Q54T52
 DDB_G0293808	DDB_G0293808	gene	taxon:44689	DictyBase:DDB_G0293808	Q54B95
 DDB_G0290003	DDB_G0290003	gene	taxon:44689	DictyBase:DDB_G0290003	Q54GQ9
@@ -7412,7 +7412,7 @@ DDB_G0283851	DDB_G0283851	gene	taxon:44689	DictyBase:DDB_G0283851	Q54QF3
 DDB_G0267924	DDB_G0267924	sodium/potassium-transporting ATPase subunit alpha 2	P-type ATPase|Na+/K+ ATPase	gene	taxon:44689	DictyBase:DDB_G0267924	Q55FW3
 DDB_G0290913	mcfS	putative mitochondrial carnitine/acylcarnitine transporter	gene	taxon:44689	DictyBase:DDB_G0290913	Q54FE6
 DDB_G0284801	DDB_G0284801	gene	taxon:44689	DictyBase:DDB_G0284801	Q54P44
-DDB_G0272116	ppp4c	protein phosphatase 4 catalytic subunit	PP4C|pppc	gene	taxon:44689	DictyBase:DDB_G0272116	Q9Y0B7
+DDB_G0272116	ppp4c	protein phosphatase 4 catalytic subunit	pppc|PP4C	gene	taxon:44689	DictyBase:DDB_G0272116	Q9Y0B7
 DDB_G0283765	hgd	homogentisic acid oxidase	HGO|bwnA	gene	taxon:44689	DictyBase:DDB_G0283765	Q54QI4
 DDB_G0271814	DDB_G0271814	gene	taxon:44689	DictyBase:DDB_G0271814	Q55AM9
 DDB_G0274255	DDB_G0274255	gene	taxon:44689	DictyBase:DDB_G0274255	Q8T148
@@ -7435,7 +7435,7 @@ DDB_G0291261	DDB_G0291261	putative thiol-disulphide oxidoreductase DCC family pr
 DDB_G0284023	bzpL	putative basic-leucine zipper (bZIP) transcription factor	gene	taxon:44689	DictyBase:DDB_G0284023	Q54Q90
 DDB_G0269086	DDB_G0269086	alpha/beta hydrolase fold-1 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0269086	Q55EQ3
 DDB_G0293556	mcfG	putative mitochondrial carnitine/acylcarnitine transporter	slc25a20	gene	taxon:44689	DictyBase:DDB_G0293556	Q54BM3
-DDB_G0278735	fps	farnesyl diphosphate synthase	FPP|FPPS|FDPS|geranyltranstransferase|FDP synthase|Dfps	gene	taxon:44689	DictyBase:DDB_G0278735	Q9NH03
+DDB_G0278735	fps	farnesyl diphosphate synthase	geranyltranstransferase|FPPS|FDPS|FPP|Dfps|FDP synthase	gene	taxon:44689	DictyBase:DDB_G0278735	Q9NH03
 DDB_G0270674	DDB_G0270674	gene	taxon:44689	DictyBase:DDB_G0270674	Q55CX4
 DDB_G0282319	DDB_G0282319	hssA/2C/7E family protein	gene	taxon:44689	DictyBase:DDB_G0282319	Q54SP7
 DDB_G0295771	DDB_G0295771	unknown	gene	taxon:44689	DictyBase:DDB_G0295771	C7G027
@@ -7455,7 +7455,7 @@ DDB_G0273727	DDB_G0273727	mitotic spindle assembly checkpoint protein 2	gene	tax
 DDB_G0271992	DDB_G0271992	gene	taxon:44689	DictyBase:DDB_G0271992	Q86JN6
 DDB_G0280015	DDB_G0280015	gene	taxon:44689	DictyBase:DDB_G0280015	Q54W22
 DDB_G0285669	DDB_G0285669	gene	taxon:44689	DictyBase:DDB_G0285669	Q54MT7
-DDB_G0283349	gpaA	G protein alpha subunit Galpha1	Galpha1|gpa1|Ga1	gene	taxon:44689	DictyBase:DDB_G0283349	P16894
+DDB_G0283349	gpaA	G protein alpha subunit Galpha1	Galpha1|Ga1|gpa1	gene	taxon:44689	DictyBase:DDB_G0283349	P16894
 DDB_G0290133	DDB_G0290133	gene	taxon:44689	DictyBase:DDB_G0290133	Q54GI6
 DDB_G0277773	DDB_G0277773	solute carrier family 2 member protein	gene	taxon:44689	DictyBase:DDB_G0277773	Q54Z55
 DDB_G0269742	cdsA	phosphatidate cytidylyltransferase	CDS1	gene	taxon:44689	DictyBase:DDB_G0269742	Q55D90
@@ -7508,7 +7508,7 @@ DDB_G0270596	DDB_G0270596	gene	taxon:44689	DictyBase:DDB_G0270596	Q55DH4
 DDB_G0293168	ddx17	DEAD/DEAH box helicase	gene	taxon:44689	DictyBase:DDB_G0293168	Q54CE0
 DDB_G0288479	lsm8	putative U6 small nuclear ribonucleoparticle-associated protein	gene	taxon:44689	DictyBase:DDB_G0288479	Q1ZXD5
 DDB_G0281793	DDB_G0281793	gene	taxon:44689	DictyBase:DDB_G0281793	Q54TE4
-DDB_G0290157	pkgB	SGK family protein kinase PkgB	pkbR1|PKBR-1|PK2|Dd kinase 2|pkfA|protein kinase 2|DK2	gene	taxon:44689	DictyBase:DDB_G0290157	P28178
+DDB_G0290157	pkgB	SGK family protein kinase PkgB	pkbR1|PKBR-1|PK2|pkfA|Dd kinase 2|DK2|protein kinase 2	gene	taxon:44689	DictyBase:DDB_G0290157	P28178
 DDB_G0277939	DDB_G0277939	gene	taxon:44689	DictyBase:DDB_G0277939	Q54Z31
 DDB_G0273563	dpp3-2	dipeptidyl-peptidase III	dpp3	gene	taxon:44689	DictyBase:DDB_G0273563	Q557H1
 DDB_G0268062	DDB_G0268062	gene	taxon:44689	DictyBase:DDB_G0268062	Q55FK5
@@ -7648,7 +7648,7 @@ DDB_G0277103	DDB_G0277103	gene	taxon:44689	DictyBase:DDB_G0277103	Q550H5
 DDB_G0278903	DDB_G0278903	gene	taxon:44689	DictyBase:DDB_G0278903	Q54XJ2
 DDB_G0285881	rpl18a	S60 ribosomal protein L18a	gene	taxon:44689	DictyBase:DDB_G0285881	Q54MK8
 DDB_G0288015	arrH	ADP-ribosylation factor-related	gene	taxon:44689	DictyBase:DDB_G0288015	Q54JJ3
-DDB_G0291648	lpd	glycine cleavage system L-protein	bkdD|pdhD|odhC	gene	taxon:44689	DictyBase:DDB_G0291648	Q54EW8
+DDB_G0291648	lpd	glycine cleavage system L-protein	odhC|pdhD|bkdD	gene	taxon:44689	DictyBase:DDB_G0291648	Q54EW8
 DDB_G0282071	DDB_G0282071	gene	taxon:44689	DictyBase:DDB_G0282071	Q54T72
 DDB_G0276097	DDB_G0276097	putative transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0276097	Q75JI6
 DDB_G0269334	DDB_G0269334	C2 calcium-dependent membrane targeting domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0269334	Q55E97
@@ -7682,7 +7682,7 @@ DDB_G0286489	DDB_G0286489	gene	taxon:44689	DictyBase:DDB_G0286489	Q54LQ5
 DDB_G0292496	cyp520A1	cytochrome P450 family protein	gene	taxon:44689	DictyBase:DDB_G0292496	Q54D38
 DDB_G0281785	DDB_G0281785	gene	taxon:44689	DictyBase:DDB_G0281785	Q54TF1
 DDB_G0287809	DDB_G0287809	gene	taxon:44689	DictyBase:DDB_G0287809	Q54JT1
-DDB_G0291081	pefA	penta EF hand calcium binding protein	ALG-2|DdPEF-1|pef1|alg2|alg2A	gene	taxon:44689	DictyBase:DDB_G0291081	Q95YL5
+DDB_G0291081	pefA	penta EF hand calcium binding protein	alg2A|DdPEF-1|pef1|alg2|ALG-2	gene	taxon:44689	DictyBase:DDB_G0291081	Q95YL5
 DDB_G0286767	DDB_G0286767	gene	taxon:44689	DictyBase:DDB_G0286767	Q54L94
 DDB_G0269064	DDB_G0269064_RTE	TRE3-B ORF1	gene	taxon:44689	DictyBase:DDB_G0269064	Q55EX1
 DDB_G0269968	DDB_G0269968	ARM repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0269968	Q55CP4
@@ -7715,7 +7715,7 @@ DDB_G0280403	bloc1s4	biogenesis of lysosome-related organelles complex 1, subuni
 DDB_G0290401	DDB_G0290401	pantothenate kinase	gene	taxon:44689	DictyBase:DDB_G0290401	Q54G51
 DDB_G0270392	cpsf2	cleavage and polyadenylation specificity factor 100 kDa subunit	gene	taxon:44689	DictyBase:DDB_G0270392	Q55BS1
 DDB_G0293792	DDB_G0293792	gene	taxon:44689	DictyBase:DDB_G0293792	Q54BA8
-DDB_G0295667	pks35	beta-ketoacyl synthase family protein	PKS|dipks35	gene	taxon:44689	DictyBase:DDB_G0295667	B0G101
+DDB_G0295667	pks35	beta-ketoacyl synthase family protein	dipks35|PKS	gene	taxon:44689	DictyBase:DDB_G0295667	B0G101
 DDB_G0275395	eIF4g	eukaryotic translation initiation factor 4 gamma	gene	taxon:44689	DictyBase:DDB_G0275395	Q553R3
 DDB_G0293670	DDB_G0293670	gene	taxon:44689	DictyBase:DDB_G0293670	Q54BE2
 DDB_G0273391	DDB_G0273391	gene	taxon:44689	DictyBase:DDB_G0273391	Q557F5
@@ -7851,7 +7851,7 @@ DDB_G0292508	aplP	amoebapore-like protein P	saposin-like protein P	gene	taxon:44
 DDB_G0288669	DDB_G0288669	gene	taxon:44689	DictyBase:DDB_G0288669	Q54IL8
 DDB_G0277859	mlcE	essential myosin light chain (ELC)	EMLC	gene	taxon:44689	DictyBase:DDB_G0277859	P09402
 DDB_G0267406	lmpA	lysosomal integral membrane glycoprotein	gene	taxon:44689	DictyBase:DDB_G0267406	Q9XYS8
-DDB_G0279413	pkaR	protein kinase A regulatory subunit	cAK|rdeC|PKA	gene	taxon:44689	DictyBase:DDB_G0279413	P05987
+DDB_G0279413	pkaR	protein kinase A regulatory subunit	cAK|PKA|rdeC	gene	taxon:44689	DictyBase:DDB_G0279413	P05987
 DDB_G0280281	DDB_G0280281	gene	taxon:44689	DictyBase:DDB_G0280281	Q54VK5
 DDB_G0286803	vps41	7-fold repeat in clathrin and VPS proteins repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0286803	Q54LI4
 DDB_G0283849	DDB_G0283849	Methylmalonic aciduria and homocystinuria type D protein, mitochondrial	gene	taxon:44689	DictyBase:DDB_G0283849	Q54QF8
@@ -7917,7 +7917,7 @@ DDB_G0284231	DDB_G0284231	gene	taxon:44689	DictyBase:DDB_G0284231	Q54PY4
 DDB_G0277559	DDB_G0277559	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0277559	Q54ZJ0
 DDB_G0269784	DDB_G0269784	Uncharacterized Nudix hydrolase yfcD	gene	taxon:44689	DictyBase:DDB_G0269784	Q55D56
 DDB_G0275905	DDB_G0275905	gene	taxon:44689	DictyBase:DDB_G0275905	Q552V3
-DDB_G0275429	syn8A	t-SNARE family protein	syn8|DdSyn8A	gene	taxon:44689	DictyBase:DDB_G0275429	Q553P5
+DDB_G0275429	syn8A	t-SNARE family protein	DdSyn8A|syn8	gene	taxon:44689	DictyBase:DDB_G0275429	Q553P5
 DDB_G0291814	hao	hydroxyacid oxidase	gene	taxon:44689	DictyBase:DDB_G0291814	Q54E41
 DDB_G0279203	DDB_G0279203	gene	taxon:44689	DictyBase:DDB_G0279203	Q54X56
 DDB_G0287341	DDB_G0287341	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0287341	Q54KH5
@@ -8003,7 +8003,7 @@ DDB_G0272550	DDB_G0272550	putative peptide/oligopeptide transporter	gene	taxon:4
 DDB_G0274489	DDB_G0274489	gene	taxon:44689	DictyBase:DDB_G0274489	Q86HP7
 DDB_G0293366	DDB_G0293366	NLP/P60 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0293366	Q54BX0
 DDB_G0270030	DDB_G0270030	gene	taxon:44689	DictyBase:DDB_G0270030	Q55CJ7
-DDB_G0273615	fpaB-2	ubiquitin ligase subunit SKP1	FP21|Skp1B|SKP1|fpaB|fpa2	gene	taxon:44689	DictyBase:DDB_G0273615	Q557E4
+DDB_G0273615	fpaB-2	ubiquitin ligase subunit SKP1	FP21|Skp1B|SKP1|fpa2|fpaB	gene	taxon:44689	DictyBase:DDB_G0273615	Q557E4
 DDB_G0293210	sgmB	sphingomyelinase B	gene	taxon:44689	DictyBase:DDB_G0293210	Q54C16
 DDB_G0270114	DDB_G0270114	gene	taxon:44689	DictyBase:DDB_G0270114	Q55CC9
 DDB_G0279483	pldB	phospholipase D1	PLD1	gene	taxon:44689	DictyBase:DDB_G0279483	Q54WR4
@@ -8143,7 +8143,7 @@ DDB_G0281927	DDB_G0281927	gene	taxon:44689	DictyBase:DDB_G0281927	Q54T84
 DDB_G0294234	DDB_G0294234	gene	taxon:44689	DictyBase:DDB_G0294234	Q54AS9
 DDB_G0275469	DDB_G0275469	putative endonuclease V	DNaseV	gene	taxon:44689	DictyBase:DDB_G0275469	Q75K22
 DDB_G0281703	nedd8l1	neddylin-like protein	gene	taxon:44689	DictyBase:DDB_G0281703	Q54TK0
-DDB_G0269388	corB	coronin 7	CRN7|coronin B|DdCRN7	gene	taxon:44689	DictyBase:DDB_G0269388	Q55E54
+DDB_G0269388	corB	coronin 7	DdCRN7|coronin B|CRN7	gene	taxon:44689	DictyBase:DDB_G0269388	Q55E54
 DDB_G0284311	DDB_G0284311	unknown	gene	taxon:44689	DictyBase:DDB_G0284311	Q54PY9
 DDB_G0279661	DDB_G0279661	HMG1/2 (high mobility group) box-containing protein	gene	taxon:44689	DictyBase:DDB_G0279661	Q54WG9
 DDB_G0279937	DDB_G0279937	gene	taxon:44689	DictyBase:DDB_G0279937	Q54W41
@@ -8152,7 +8152,7 @@ DDB_G0282651	rsmN	small GTPase	gene	taxon:44689	DictyBase:DDB_G0282651	Q54S63
 DDB_G0283111	cepD	centrosomal protein 75 kDa	CP75	gene	taxon:44689	DictyBase:DDB_G0283111	Q54RJ3
 DDB_G0269854	amdhd1	amidohydrolase domain containing protein 1	gene	taxon:44689	DictyBase:DDB_G0269854	Q55CY3
 DDB_G0272114	orfR1062	Uncharacterized protein RSN1	R1062	gene	taxon:44689	DictyBase:DDB_G0272114	Q75JR4
-DDB_G0289763	forF	formin F	drf1|diaphanous related formin F|dDia1	gene	taxon:44689	DictyBase:DDB_G0289763	Q5TJ56
+DDB_G0289763	forF	formin F	drf1|dDia1|diaphanous related formin F	gene	taxon:44689	DictyBase:DDB_G0289763	Q5TJ56
 DDB_G0271212	DDB_G0271212	gene	taxon:44689	DictyBase:DDB_G0271212	Q55B82
 DDB_G0286723	ponC5	ponticulin-related protein	gene	taxon:44689	DictyBase:DDB_G0286723	Q54LB9
 DDB_G0270526	DDB_G0270526	gene	taxon:44689	DictyBase:DDB_G0270526	Q55E00
@@ -8223,7 +8223,7 @@ DDB_G0269280	DDB_G0269280	gene	taxon:44689	DictyBase:DDB_G0269280	Q55ED7
 DDB_G0269846	DDB_G0269846	gene	taxon:44689	DictyBase:DDB_G0269846	Q55CZ3
 DDB_G0276187	zak2	protein tyrosine kinase ZAK2	ZAK2|DPYK4|pyk4	gene	taxon:44689	DictyBase:DDB_G0276187	Q552C6
 DDB_G0295741	DDB_G0295741	putative acyl-CoA N-acyltransferase	gene	taxon:44689	DictyBase:DDB_G0295741	C7G073
-DDB_G0291614	pks40	beta-ketoacyl synthase family protein	PKS|dipks40	gene	taxon:44689	DictyBase:DDB_G0291614	Q54ED7
+DDB_G0291614	pks40	beta-ketoacyl synthase family protein	dipks40|PKS	gene	taxon:44689	DictyBase:DDB_G0291614	Q54ED7
 DDB_G0271886	DDB_G0271886	bromodomain-containing protein	gene	taxon:44689	DictyBase:DDB_G0271886	Q1ZXP1
 DDB_G0271990	DDB_G0271990	gene	taxon:44689	DictyBase:DDB_G0271990	Q86JN5
 DDB_G0287073	DDB_G0287073	HMG1/2 (high mobility group) box-containing protein	gene	taxon:44689	DictyBase:DDB_G0287073	Q54KV8
@@ -8373,7 +8373,7 @@ DDB_G0277971	vatG	vacuolar ATPase subunit G	V-ATPase subunit G	gene	taxon:44689	
 DDB_G0267536	hibch	3-hydroxyisobutyryl-coenzyme A hydrolase	gene	taxon:44689	DictyBase:DDB_G0267536	Q55GS6
 DDB_G0285059	DDB_G0285059	gene	taxon:44689	DictyBase:DDB_G0285059	Q54NW2
 DDB_G0292182	mybR	myb domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0292182	Q54DP7
-DDB_G0288481	gchA	GTP cyclohydrolase I	folE|GCH|GTPCH|gtoC	gene	taxon:44689	DictyBase:DDB_G0288481	Q94465
+DDB_G0288481	gchA	GTP cyclohydrolase I	gtoC|GCH|GTPCH|folE	gene	taxon:44689	DictyBase:DDB_G0288481	Q94465
 DDB_G0280431	rio1	RIO1 subfamily protein kinase	gene	taxon:44689	DictyBase:DDB_G0280431	Q54VD8
 DDB_G0285023	alrF	aldo-keto reductase	gene	taxon:44689	DictyBase:DDB_G0285023	Q54NR2
 DDB_G0271010	DDB_G0271010	UPF0459 protein C19orf50	gene	taxon:44689	DictyBase:DDB_G0271010	Q55CL7
@@ -8620,7 +8620,7 @@ DDB_G0272903	DDB_G0272903	unknown	gene	taxon:44689	DictyBase:DDB_G0272903	Q556M3
 DDB_G0277187	DDB_G0277187	gene	taxon:44689	DictyBase:DDB_G0277187	Q86K73
 DDB_G0268032	DDB_G0268032	gene	taxon:44689	DictyBase:DDB_G0268032	Q55FM8
 DDB_G0293472	DDB_G0293472	gene	taxon:44689	DictyBase:DDB_G0293472	Q54BR7
-DDB_G0275445	mybB	myb domain-containing protein	Ddmyb2|myb2	gene	taxon:44689	DictyBase:DDB_G0275445	O15816
+DDB_G0275445	mybB	myb domain-containing protein	myb2|Ddmyb2	gene	taxon:44689	DictyBase:DDB_G0275445	O15816
 DDB_G0267580	DDB_G0267580	gene	taxon:44689	DictyBase:DDB_G0267580	Q55GP0
 DDB_G0281251	DDB_G0281251	unknown	gene	taxon:44689	DictyBase:DDB_G0281251	Q54U64
 DDB_G0290297	xrcc2	putative DNA repair protein XRCC2	gene	taxon:44689	DictyBase:DDB_G0290297	Q54G98
@@ -8721,7 +8721,7 @@ DDB_G0278649	iliK	TatD-related DNase	gene	taxon:44689	DictyBase:DDB_G0278649	Q54
 DDB_G0284131	DDB_G0284131	gene	taxon:44689	DictyBase:DDB_G0284131	Q54Q22
 DDB_G0293536	cupD	calcium up-regulated protein	gene	taxon:44689	DictyBase:DDB_G0293536	Q54BF5
 DDB_G0269958	DDB_G0269958	gene	taxon:44689	DictyBase:DDB_G0269958	Q55CQ2
-DDB_G0284951	vamp7A	vesicle-associated membrane protein 7A	v-SNARE family protein|vamp7|synaptobrevin|DdVamp7A	gene	taxon:44689	DictyBase:DDB_G0284951	Q54NW7
+DDB_G0284951	vamp7A	vesicle-associated membrane protein 7A	v-SNARE family protein|vamp7|DdVamp7A|synaptobrevin	gene	taxon:44689	DictyBase:DDB_G0284951	Q54NW7
 DDB_G0294102	DDB_G0294102	gene	taxon:44689	DictyBase:DDB_G0294102	
 DDB_G0288337	DDB_G0288337	gene	taxon:44689	DictyBase:DDB_G0288337	Q54J32
 DDB_G0281335	DDB_G0281335	gene	taxon:44689	DictyBase:DDB_G0281335	Q54U36
@@ -8821,7 +8821,7 @@ DDB_G0285647	nagE	N-acetylglucosaminidase	gene	taxon:44689	DictyBase:DDB_G028564
 DDB_G0289897	DDB_G0289897	gene	taxon:44689	DictyBase:DDB_G0289897	Q54GW1
 DDB_G0284259	DDB_G0284259	4-alpha-glucanotransferase	gene	taxon:44689	DictyBase:DDB_G0284259	Q54PW3
 DDB_G0287607	pcna	proliferating cell nuclear antigen	gene	taxon:44689	DictyBase:DDB_G0287607	Q54K47
-DDB_G0288679	myoE	myosin IE	myoIE|DMIE|myosin-1E	gene	taxon:44689	DictyBase:DDB_G0288679	Q03479
+DDB_G0288679	myoE	myosin IE	myosin-1E|DMIE|myoIE	gene	taxon:44689	DictyBase:DDB_G0288679	Q03479
 DDB_G0289077	DDB_G0289077	gene	taxon:44689	DictyBase:DDB_G0289077	Q54I14
 DDB_G0281245	DDB_G0281245_RTE	TRE5-B ORF2 fragment	gene	taxon:44689	DictyBase:DDB_G0281245	Q54U69
 DDB_G0281067	DDB_G0281067	putative transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0281067	Q54UI0
@@ -8906,7 +8906,7 @@ DDB_G0290911	DDB_G0290911	gene	taxon:44689	DictyBase:DDB_G0290911	Q54FE7
 DDB_G0285029	sfxn	sideroflexin	gene	taxon:44689	DictyBase:DDB_G0285029	Q54NQ9
 DDB_G0280469	psrA	serine/threonine-protein phosphatase 2A 56 kDa regulatory subunit	B56|DB56|protein phosphatase 2A regulatory subunit	gene	taxon:44689	DictyBase:DDB_G0280469	Q54VB6
 DDB_G0281599	ccdc130	coiled-coil domain-containing protein 130	gene	taxon:44689	DictyBase:DDB_G0281599	Q54TR4
-DDB_G0272867	argS1	arginine-tRNA ligase	ArgRS|argS	gene	taxon:44689	DictyBase:DDB_G0272867	Q558Z0
+DDB_G0272867	argS1	arginine-tRNA ligase	argS|ArgRS	gene	taxon:44689	DictyBase:DDB_G0272867	Q558Z0
 DDB_G0288147	DDB_G0288147	protein kinase, TKL group	gene	taxon:44689	DictyBase:DDB_G0288147	Q54JC7
 DDB_G0287599	DDB_G0287599	gene	taxon:44689	DictyBase:DDB_G0287599	Q54K54
 DDB_G0283633	DDB_G0283633	Major facilitator superfamily domain-containing protein 5	gene	taxon:44689	DictyBase:DDB_G0283633	Q54QU6
@@ -8965,7 +8965,7 @@ DDB_G0289285	DDB_G0289285	unknown	gene	taxon:44689	DictyBase:DDB_G0289285	Q54HR1
 DDB_G0283613	cbpC	calcium-binding protein	CBP3	gene	taxon:44689	DictyBase:DDB_G0283613	Q54QT7
 DDB_G0273633	DDB_G0273633	gene	taxon:44689	DictyBase:DDB_G0273633	Q869V8
 DDB_G0285637	glb2	beta-galactosidase 2	gene	taxon:44689	DictyBase:DDB_G0285637	Q54MV6
-DDB_G0293742	rps2	ribosomal protein S2	DdLLRep3|rp29	gene	taxon:44689	DictyBase:DDB_G0293742	P27685
+DDB_G0293742	rps2	ribosomal protein S2	rp29|DdLLRep3	gene	taxon:44689	DictyBase:DDB_G0293742	P27685
 DDB_G0290237	acbd6	acyl-CoA-binding domain-containing protein 6	gene	taxon:44689	DictyBase:DDB_G0290237	Q54GC8
 DDB_G0274847	DDB_G0274847	nucleotidyltransferase domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0274847	Q555M9
 DDB_G0285521	isy1	ISY1-like protein	gene	taxon:44689	DictyBase:DDB_G0285521	Q54N41
@@ -8993,7 +8993,7 @@ DDB_G0288031	DDB_G0288031	putative actin binding protein	gene	taxon:44689	DictyB
 DDB_G0270762	fimD	fimbrin-4	gene	taxon:44689	DictyBase:DDB_G0270762	Q55C43
 DDB_G0270358	DDB_G0270358	ubiquitin interacting motif (UIM) domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0270358	Q55BU7
 DDB_G0283125	uduD2	N-terminal delta endotoxin domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0283125	Q54RI3
-DDB_G0272799	icmA-1	protein-S-isoprenylcysteine O-methyltransferase	icmA|ICMT	gene	taxon:44689	DictyBase:DDB_G0272799	Q558K8
+DDB_G0272799	icmA-1	protein-S-isoprenylcysteine O-methyltransferase	ICMT|icmA	gene	taxon:44689	DictyBase:DDB_G0272799	Q558K8
 DDB_G0283721	DDB_G0283721	pyridoxal phosphate-dependent decarboxylase family protein	gene	taxon:44689	DictyBase:DDB_G0283721	Q54QN9
 DDB_G0291177	tspE	tetraspanin family protein	gene	taxon:44689	DictyBase:DDB_G0291177	Q54F08
 DDB_G0286809	DDB_G0286809	gene	taxon:44689	DictyBase:DDB_G0286809	Q54LH2
@@ -9243,7 +9243,7 @@ DDB_G0269642	mak16l	MAK16-like protein	gene	taxon:44689	DictyBase:DDB_G0269642	Q
 DDB_G0269750	DDB_G0269750	gene	taxon:44689	DictyBase:DDB_G0269750	Q55D84
 DDB_G0276735	DDB_G0276735	gene	taxon:44689	DictyBase:DDB_G0276735	Q550Y3
 DDB_G0277405	DDB_G0277405	SAP DNA-binding domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0277405	Q8T2H8
-DDB_G0291356	grlE	GAB receptor GrlE	GABA-B receptor protein|GluPR|DdmGluPR|G-protein-coupled receptor (GPCR) family 3 protein 5	gene	taxon:44689	DictyBase:DDB_G0291356	Q54ET0
+DDB_G0291356	grlE	GAB receptor GrlE	G-protein-coupled receptor (GPCR) family 3 protein 5|GluPR|DdmGluPR|GABA-B receptor protein	gene	taxon:44689	DictyBase:DDB_G0291356	Q54ET0
 DDB_G0272781	pmmB	phosphomannomutase B	PMM	gene	taxon:44689	DictyBase:DDB_G0272781	Q86B09
 DDB_G0267706	DDB_G0267706	E2F-associated phosphoprotein	gene	taxon:44689	DictyBase:DDB_G0267706	Q55GE0
 DDB_G0269786	ccdc25	coiled-coil domain-containing protein 25	gene	taxon:44689	DictyBase:DDB_G0269786	Q55D55
@@ -9300,7 +9300,7 @@ DDB_G0289215	DDB_G0289215	gene	taxon:44689	DictyBase:DDB_G0289215	Q54HU7
 DDB_G0280083	mcfJ	mitochondrial substrate carrier family protein	gene	taxon:44689	DictyBase:DDB_G0280083	Q54VX4
 DDB_G0291526	rps14	40S ribosomal protein S14	gene	taxon:44689	DictyBase:DDB_G0291526	Q54EG3
 DDB_G0271094	fah	fumarylacetoacetase	gene	taxon:44689	DictyBase:DDB_G0271094	Q1ZXQ1
-DDB_G0287803	argS2	arginine-tRNA ligase	ArgRS|argS	gene	taxon:44689	DictyBase:DDB_G0287803	Q54JT6
+DDB_G0287803	argS2	arginine-tRNA ligase	argS|ArgRS	gene	taxon:44689	DictyBase:DDB_G0287803	Q54JT6
 DDB_G0276613	DDB_G0276613	unknown	gene	taxon:44689	DictyBase:DDB_G0276613	Q551C9
 DDB_G0291866	ndufab1	NADH dehydrogenase ubiquinone 1, alpha/beta subcomplex	gene	taxon:44689	DictyBase:DDB_G0291866	Q54E22
 DDB_G0285409	DDB_G0285409	gene	taxon:44689	DictyBase:DDB_G0285409	Q54NA5
@@ -9311,7 +9311,7 @@ DDB_G0285193	hprT	hypoxanthine phosphoribosyltransferase	HGPRT|HPT	gene	taxon:44
 DDB_G0285687	DDB_G0285687	gene	taxon:44689	DictyBase:DDB_G0285687	Q54MS8
 DDB_G0285157	DDB_G0285157	gene	taxon:44689	DictyBase:DDB_G0285157	Q54NN0
 DDB_G0273543	DDB_G0273543	gene	taxon:44689	DictyBase:DDB_G0273543	Q557I2
-DDB_G0284471	kif8	kinesin family member 8	kinesin-4|K8|ksnH	gene	taxon:44689	DictyBase:DDB_G0284471	Q6S003
+DDB_G0284471	kif8	kinesin family member 8	kinesin-4|ksnH|K8	gene	taxon:44689	DictyBase:DDB_G0284471	Q6S003
 DDB_G0273561	hspF-2	putative alpha-crystallin-type heat shock protein	hspF	gene	taxon:44689	DictyBase:DDB_G0273561	Q1ZXL6
 DDB_G0281675	DDB_G0281675	gene	taxon:44689	DictyBase:DDB_G0281675	Q54TL9
 DDB_G0282977	DDB_G0282977	gene	taxon:44689	DictyBase:DDB_G0282977	Q54RR0
@@ -9447,7 +9447,7 @@ DDB_G0279591	glnA3	putative glutamine synthetase type III	putative glutamate-amm
 DDB_G0293844	csn4	COP9 signalosome complex subunit 4	gene	taxon:44689	DictyBase:DDB_G0293844	Q54B82
 DDB_G0284971	DDB_G0284971	putative transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0284971	Q54NV2
 DDB_G0271122	ufd1	ubiquitin fusion degradation protein UFD1 family protein	gene	taxon:44689	DictyBase:DDB_G0271122	Q55BK0
-DDB_G0279409	cbfA	C-module-binding factor	CMBF|transcription factor jumonji|cbf|jmjC domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0279409	O97101
+DDB_G0279409	cbfA	C-module-binding factor	jmjC domain-containing protein|transcription factor jumonji|cbf|CMBF	gene	taxon:44689	DictyBase:DDB_G0279409	O97101
 DDB_G0270272	uae1	ubiquitin activating enzyme E1	DdUAE1	gene	taxon:44689	DictyBase:DDB_G0270272	Q55C16
 DDB_G0276257	DDB_G0276257	gene	taxon:44689	DictyBase:DDB_G0276257	Q551X8
 DDB_G0267464	polA	mitochondrial DNA polymerase A	DNA polymerase A family protein	gene	taxon:44689	DictyBase:DDB_G0267464	Q8I7W9
@@ -9472,7 +9472,7 @@ DDB_G0273865	pakH-2	STE20 family protein kinase PakH	pakH	gene	taxon:44689	Dicty
 DDB_G0282555	DDB_G0282555	gene	taxon:44689	DictyBase:DDB_G0282555	Q54SB6
 DDB_G0274551	rcdBB	random cDNA clone veg113	veg113	gene	taxon:44689	DictyBase:DDB_G0274551	Q8MML4
 DDB_G0288903	cox19	cytochrome oxidase subunit 19	gene	taxon:44689	DictyBase:DDB_G0288903	Q54IA0
-DDB_G0284171	chdA	chromodomain-helicase-DNA-binding protein A	SNF2-related domain-containing protein|helicase| C-terminal domain-containing protein|chromo (CHRomatin Organization MOdifier) domain-containing protein|CHR group protein	gene	taxon:44689	DictyBase:DDB_G0284171	Q54Q16
+DDB_G0284171	chdA	chromodomain-helicase-DNA-binding protein A	CHR group protein|helicase| C-terminal domain-containing protein|chromo (CHRomatin Organization MOdifier) domain-containing protein|SNF2-related domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0284171	Q54Q16
 DDB_G0279649	acapA	Arf GTPase activating protein A	arfGAP|ACAP-A	gene	taxon:44689	DictyBase:DDB_G0279649	Q54WI0
 DDB_G0276875	hspG5	heat shock protein Hsp20 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0276875	Q8MPA7
 DDB_G0293818	DDB_G0293818_RTE	TRE3-C ORF2	gene	taxon:44689	DictyBase:DDB_G0293818	Q54BA4
@@ -9487,7 +9487,7 @@ DDB_G0276785	DDB_G0276785	gene	taxon:44689	DictyBase:DDB_G0276785	Q7KWX3
 DDB_G0279561	DDB_G0279561	AMP-dependent synthetase and ligase domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0279561	Q54WL7
 DDB_G0273047	cyp508A3-1	cytochrome P450 family protein	cyp508A3	gene	taxon:44689	DictyBase:DDB_G0273047	Q1ZXL7
 DDB_G0273441	DDB_G0273441	gene	taxon:44689	DictyBase:DDB_G0273441	Q557K6
-DDB_G0269364	stlA	polyketide synthase StlA	PKS|pks1|steely1|dipks1	gene	taxon:44689	DictyBase:DDB_G0269364	Q55E72
+DDB_G0269364	stlA	polyketide synthase StlA	PKS|steely1|pks1|dipks1	gene	taxon:44689	DictyBase:DDB_G0269364	Q55E72
 DDB_G0274417	DDB_G0274417	gene	taxon:44689	DictyBase:DDB_G0274417	Q86HU1
 DDB_G0281171	oxaB	putative oxidase assembly protein	gene	taxon:44689	DictyBase:DDB_G0281171	Q54UB7
 DDB_G0277101	rab11C	Rab GTPase	gene	taxon:44689	DictyBase:DDB_G0277101	Q550H6
@@ -9516,7 +9516,7 @@ DDB_G0290791	rabK2	Rab GTPase domain-containing protein	gene	taxon:44689	DictyBa
 DDB_G0276221	fam21	WASH complex subunit FAM21	gene	taxon:44689	DictyBase:DDB_G0276221	Q552E2
 DDB_G0268210	DDB_G0268210	unknown	gene	taxon:44689	DictyBase:DDB_G0268210	Q55F85
 DDB_G0291117	noxC	flavocytochrome b large subunit	gp91phox	gene	taxon:44689	DictyBase:DDB_G0291117	Q54F44
-DDB_G0284329	gefA	Ras guanine nucleotide exchange factor	aimless|aimless|RasGEFA|aleA|RasGEF	gene	taxon:44689	DictyBase:DDB_G0284329	Q54PQ4
+DDB_G0284329	gefA	Ras guanine nucleotide exchange factor	aimless|aimless|aleA|RasGEFA|RasGEF	gene	taxon:44689	DictyBase:DDB_G0284329	Q54PQ4
 DDB_G0281253	rsmB	small GTPase	gene	taxon:44689	DictyBase:DDB_G0281253	Q54U62
 DDB_G0287139	DDB_G0287139	gene	taxon:44689	DictyBase:DDB_G0287139	Q54KT0
 DDB_G0289723	abhd	abhydrolase domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0289723	Q54H38
@@ -9591,7 +9591,7 @@ DDB_G0289381	DDB_G0289381	FNIP repeat-containing protein	gene	taxon:44689	DictyB
 DDB_G0286441	DDB_G0286441	gene	taxon:44689	DictyBase:DDB_G0286441	Q54LR8
 DDB_G0280975	racE	Rho GTPase racE	gene	taxon:44689	DictyBase:DDB_G0280975	Q23862
 DDB_G0289113	DDB_G0289113	gene	taxon:44689	DictyBase:DDB_G0289113	Q54HZ6
-DDB_G0280967	kif3	kinesin-1	K3|ksnC	gene	taxon:44689	DictyBase:DDB_G0280967	Q54UC9
+DDB_G0280967	kif3	kinesin-1	ksnC|K3	gene	taxon:44689	DictyBase:DDB_G0280967	Q54UC9
 DDB_G0290707	cyp514A4	cytochrome P450 family protein	gene	taxon:44689	DictyBase:DDB_G0290707	Q54FP9
 DDB_G0295825	mrpl34	ribosomal protein L34, mitochondrial	rpl34	gene	taxon:44689	DictyBase:DDB_G0295825	P0C7W4
 DDB_G0277421	DDB_G0277421	unknown	gene	taxon:44689	DictyBase:DDB_G0277421	Q8MP81
@@ -9648,7 +9648,7 @@ DDB_G0295705	DDB_G0295705	unknown	gene	taxon:44689	DictyBase:DDB_G0295705	B0G187
 DDB_G0288943	DDB_G0288943	gene	taxon:44689	DictyBase:DDB_G0288943	Q54I75
 DDB_G0286073	DDB_G0286073	ankyrin repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0286073	Q54MA7
 DDB_G0277087	purH	AICAR transformylase / IMP cyclohydrolase	gene	taxon:44689	DictyBase:DDB_G0277087	Q86L14
-DDB_G0290257	cfrA	cell surface glycoprotein GP138 A	DdFRP2|GP138A|fusA	gene	taxon:44689	DictyBase:DDB_G0290257	P34115
+DDB_G0290257	cfrA	cell surface glycoprotein GP138 A	DdFRP2|fusA|GP138A	gene	taxon:44689	DictyBase:DDB_G0290257	P34115
 DDB_G0277995	DDB_G0277995	gene	taxon:44689	DictyBase:DDB_G0277995	Q54YZ2
 DDB_G0273401	DDB_G0273401	gene	taxon:44689	DictyBase:DDB_G0273401	
 DDB_G0293342	DDB_G0293342_RTE	TRE3-A ORF2	gene	taxon:44689	DictyBase:DDB_G0293342	Q54BY3
@@ -9680,7 +9680,7 @@ DDB_G0269926	DDB_G0269926	splicing factor PWI domain-containing protein	gene	tax
 DDB_G0272178	DDB_G0272178	DUF1715 family protein	gene	taxon:44689	DictyBase:DDB_G0272178	Q75JW3
 DDB_G0276255	DDB_G0276255	Pumilio domain-containing protein C14orf21	gene	taxon:44689	DictyBase:DDB_G0276255	Q551Y5
 DDB_G0278835	DDB_G0278835	gene	taxon:44689	DictyBase:DDB_G0278835	Q54XN3
-DDB_G0281483	ppr1	protein phosphatase 4 regulatory subunit 1	PP4R1|ppp4r1	gene	taxon:44689	DictyBase:DDB_G0281483	Q54TV3
+DDB_G0281483	ppr1	protein phosphatase 4 regulatory subunit 1	ppp4r1|PP4R1	gene	taxon:44689	DictyBase:DDB_G0281483	Q54TV3
 DDB_G0275487	DDB_G0275487	gene	taxon:44689	DictyBase:DDB_G0275487	Q86ID4
 DDB_G0278259	manB	alpha-mannosidase	gene	taxon:44689	DictyBase:DDB_G0278259	Q54YF7
 DDB_G0289909	DDB_G0289909	Syntaxin-binding protein 5	gene	taxon:44689	DictyBase:DDB_G0289909	Q54GV1
@@ -9732,7 +9732,7 @@ DDB_G0293636	DDB_G0293636	putative splicing factor	gene	taxon:44689	DictyBase:DD
 DDB_G0278207	DDB_G0278207	gene	taxon:44689	DictyBase:DDB_G0278207	Q54YJ5
 DDB_G0280477	DDB_G0280477	leucine-rich repeat-containing protein (LRR)	gene	taxon:44689	DictyBase:DDB_G0280477	Q54VB1
 DDB_G0290351	DDB_G0290351	gene	taxon:44689	DictyBase:DDB_G0290351	Q54GB0
-DDB_G0283601	pppA	protein phosphatase 2A subunit A	veg124|rcdB|PP2A	gene	taxon:44689	DictyBase:DDB_G0283601	Q54QR9
+DDB_G0283601	pppA	protein phosphatase 2A subunit A	veg124|PP2A|rcdB	gene	taxon:44689	DictyBase:DDB_G0283601	Q54QR9
 DDB_G0280991	DDB_G0280991	gene	taxon:44689	DictyBase:DDB_G0280991	Q54UM0
 DDB_G0291480	DDB_G0291480	gene	taxon:44689	DictyBase:DDB_G0291480	Q54EJ6
 DDB_G0280415	DDB_G0280415	profilin/allergen superfamily protein	gene	taxon:44689	DictyBase:DDB_G0280415	Q54VE6
@@ -9750,7 +9750,7 @@ DDB_G0270888	DDB_G0270888_RTE	TRE3-D ORF1	gene	taxon:44689	DictyBase:DDB_G027088
 DDB_G0290563	cupH	cup family protein	gene	taxon:44689	DictyBase:DDB_G0290563	Q54FW5
 DDB_G0287835	DDB_G0287835	gene	taxon:44689	DictyBase:DDB_G0287835	Q54JR6
 DDB_G0268672	DDB_G0268672	gene	taxon:44689	DictyBase:DDB_G0268672	Q55F17
-DDB_G0280351	gpaL	G-protein subunit alpha 12	Galpha12|Ga12|gpa12	gene	taxon:44689	DictyBase:DDB_G0280351	Q54VG1
+DDB_G0280351	gpaL	G-protein subunit alpha 12	gpa12|Ga12|Galpha12	gene	taxon:44689	DictyBase:DDB_G0280351	Q54VG1
 DDB_G0270746	DDB_G0270746	WD40 repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0270746	Q55C95
 DDB_G0267606	fcf1	FCF1 family protein	UTP24	gene	taxon:44689	DictyBase:DDB_G0267606	Q55GM5
 DDB_G0267872	DDB_G0267872	NOL1/NOP2/Sun family protein	gene	taxon:44689	DictyBase:DDB_G0267872	Q55G09
@@ -9902,7 +9902,7 @@ DDB_G0270822	DDB_G0270822_TE	DDT-A	gene	taxon:44689	DictyBase:DDB_G0270822	Q55BL
 DDB_G0289539	DDB_G0289539	Acyl-CoA synthetase family member 3, mitochondrial	gene	taxon:44689	DictyBase:DDB_G0289539	Q54HD3
 DDB_G0267722	DDB_G0267722	gene	taxon:44689	DictyBase:DDB_G0267722	Q55GC9
 DDB_G0292448	DDB_G0292448	Putative methyltransferase KIAA1456	gene	taxon:44689	DictyBase:DDB_G0292448	Q54D70
-DDB_G0272564	psmD8-1	26S proteasome non-ATPase regulatory subunit 8	M4|psmD8	gene	taxon:44689	DictyBase:DDB_G0272564	P02889
+DDB_G0272564	psmD8-1	26S proteasome non-ATPase regulatory subunit 8	psmD8|M4	gene	taxon:44689	DictyBase:DDB_G0272564	P02889
 DDB_G0290635	DDB_G0290635	gene	taxon:44689	DictyBase:DDB_G0290635	Q54FR2
 DDB_G0281747	DDB_G0281747	OPI10 family protein	gene	taxon:44689	DictyBase:DDB_G0281747	Q54TH5
 DDB_G0278823	DDB_G0278823	putative farnesyl pyrophosphate synthetase	gene	taxon:44689	DictyBase:DDB_G0278823	Q54XP1
@@ -9941,7 +9941,7 @@ DDB_G0293266	gxcY	armadillo repeat-containing protein	RacGEF	gene	taxon:44689	Di
 DDB_G0273305	aslJ-1	putative acetyl-CoA synthetase	aslJ	gene	taxon:44689	DictyBase:DDB_G0273305	Q557A7
 DDB_G0282383	DDB_G0282383	gene	taxon:44689	DictyBase:DDB_G0282383	Q54SM2
 DDB_G0283199	DDB_G0283199	isochorismatase family protein	gene	taxon:44689	DictyBase:DDB_G0283199	Q54RC7
-DDB_G0282813	arcB	actin related protein 2/3 complex, subunit 2	p34-Arc|arpE|ARPC2|Arc35	gene	taxon:44689	DictyBase:DDB_G0282813	O96623
+DDB_G0282813	arcB	actin related protein 2/3 complex, subunit 2	p34-Arc|ARPC2|arpE|Arc35	gene	taxon:44689	DictyBase:DDB_G0282813	O96623
 DDB_G0267332	DDB_G0267332	unknown	gene	taxon:44689	DictyBase:DDB_G0267332	Q55GZ0
 DDB_G0269244	atg6A	autophagy protein Apg6 family protein	APG6|atg6	gene	taxon:44689	DictyBase:DDB_G0269244	Q55CC5
 DDB_G0286049	zntC	zinc transporter	gene	taxon:44689	DictyBase:DDB_G0286049	Q54MB9
@@ -10008,7 +10008,7 @@ DDB_G0280495	fumH	fumarase	FH	gene	taxon:44689	DictyBase:DDB_G0280495	Q54VA2
 DDB_G0290931	DDB_G0290931	TRAF-type zinc finger-containing protein	gene	taxon:44689	DictyBase:DDB_G0290931	Q54FD5
 DDB_G0283583	DDB_G0283583	gene	taxon:44689	DictyBase:DDB_G0283583	Q54QY6
 DDB_G0289019	DDB_G0289019	gene	taxon:44689	DictyBase:DDB_G0289019	Q54I44
-DDB_G0269102	arcD	actin-related protein 2/3 complex, subunit 4	Arc19|arpG|p20-Arc|ARPC4	gene	taxon:44689	DictyBase:DDB_G0269102	O96625
+DDB_G0269102	arcD	actin-related protein 2/3 complex, subunit 4	ARPC4|arpG|p20-Arc|Arc19	gene	taxon:44689	DictyBase:DDB_G0269102	O96625
 DDB_G0269950	serC	phosphoserine aminotransferase	PSAT	gene	taxon:44689	DictyBase:DDB_G0269950	Q55CQ6
 DDB_G0284247	DDB_G0284247	gene	taxon:44689	DictyBase:DDB_G0284247	Q54PX2
 DDB_G0288439	syn8B	putative t-SNARE family protein	DdSyn8B	gene	taxon:44689	DictyBase:DDB_G0288439	Q54IX6
@@ -10099,7 +10099,7 @@ DDB_G0269840	DDB_G0269840	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G
 DDB_G0285163	gacT	RhoGAP domain-containing protein	RacGAP|DG1094	gene	taxon:44689	DictyBase:DDB_G0285163	Q54NL0
 DDB_G0277009	DDB_G0277009	gene	taxon:44689	DictyBase:DDB_G0277009	Q550W5
 DDB_G0279615	DDB_G0279615	gene	taxon:44689	DictyBase:DDB_G0279615	Q54WJ8
-DDB_G0273951	DDB_G0273951	Hermansky-Pudlak syndrome 5 protein ortholog	hps5|WD40 repeat-containing protein|RING zinc finger-containing protein	gene	taxon:44689	DictyBase:DDB_G0273951	Q556N8
+DDB_G0273951	DDB_G0273951	Hermansky-Pudlak syndrome 5 protein ortholog	RING zinc finger-containing protein|WD40 repeat-containing protein|hps5	gene	taxon:44689	DictyBase:DDB_G0273951	Q556N8
 DDB_G0282493	aatB	aspartate transaminase	gene	taxon:44689	DictyBase:DDB_G0282493	Q54SF7
 DDB_G0286851	tgrE1	tgrE1	lagE1	gene	taxon:44689	DictyBase:DDB_G0286851	Q54L75
 DDB_G0281977	DDB_G0281977	gene	taxon:44689	DictyBase:DDB_G0281977	Q54T64
@@ -10231,7 +10231,7 @@ DDB_G0305150	DDB_G0305150	unknown	gene	taxon:44689	DictyBase:DDB_G0305150
 DDB_G0282063	DDB_G0282063	unknown	gene	taxon:44689	DictyBase:DDB_G0282063	Q54T08
 DDB_G0277311	DDB_G0277311	gene	taxon:44689	DictyBase:DDB_G0277311	Q550C4
 DDB_G0274805	ibrA	IRSp53/MIM homology domain-containing protein (IMD)	mimd|IBARa	gene	taxon:44689	DictyBase:DDB_G0274805	C7FZZ0
-DDB_G0290233	mgp1	PCH family protein	RacGAP|gacBB|megap1	gene	taxon:44689	DictyBase:DDB_G0290233	Q54GD0
+DDB_G0290233	mgp1	PCH family protein	RacGAP|megap1|gacBB	gene	taxon:44689	DictyBase:DDB_G0290233	Q54GD0
 DDB_G0276069	hapA	HAP2-GCS1 protein	Hap2	gene	taxon:44689	DictyBase:DDB_G0276069	Q75JL6
 DDB_G0290013	DDB_G0290013	gene	taxon:44689	DictyBase:DDB_G0290013	Q54GP9
 DDB_G0273935	rabF1-2	Rab GTPase	rabF1	gene	taxon:44689	DictyBase:DDB_G0273935	Q558I0
@@ -10311,7 +10311,7 @@ DDB_G0277531	DDB_G0277531	EGF-like domain-containing protein	gene	taxon:44689	Di
 DDB_G0269616	aplG	saposin B domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0269616	B0G0Z5
 DDB_G0271558	DDB_G0271558	gene	taxon:44689	DictyBase:DDB_G0271558	Q86JF8
 DDB_G0286729	DDB_G0286729	gene	taxon:44689	DictyBase:DDB_G0286729	Q54LB5
-DDB_G0281825	comB	Rab GTPase domain-containing protein	DG1016|DG1016|ORF1016	gene	taxon:44689	DictyBase:DDB_G0281825	Q54T92
+DDB_G0281825	comB	Rab GTPase domain-containing protein	DG1016|ORF1016|DG1016	gene	taxon:44689	DictyBase:DDB_G0281825	Q54T92
 DDB_G0281891	rbg3	Rab GTPase-activating protein Rbg3	rabGAP|RabGAP/TBC domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0281891	Q54TA5
 DDB_G0279927	Dd5P1	inositol 5-phosphatase	PI5P1	gene	taxon:44689	DictyBase:DDB_G0279927	Q54W40
 DDB_G0278053	ilvB	2-hydroxyphytanoyl-CoA lyase	gene	taxon:44689	DictyBase:DDB_G0278053	B0G117
@@ -10370,7 +10370,7 @@ DDB_G0278249	DDB_G0278249	Uncharacterized protein yggC	gene	taxon:44689	DictyBas
 DDB_G0283941	DDB_G0283941	gene	taxon:44689	DictyBase:DDB_G0283941	Q54QC6
 DDB_G0288329	DDB_G0288329	gene	taxon:44689	DictyBase:DDB_G0288329	Q54J36
 DDB_G0269540	DDB_G0269540	gene	taxon:44689	DictyBase:DDB_G0269540	Q55DT0
-DDB_G0289791	drkA	tyrosine kinase-like protein DrkA	rk1|DRK subfamily protein kinase|vsk1|protein kinase| TKL group	gene	taxon:44689	DictyBase:DDB_G0289791	Q54H46
+DDB_G0289791	drkA	tyrosine kinase-like protein DrkA	rk1|vsk1|DRK subfamily protein kinase|protein kinase| TKL group	gene	taxon:44689	DictyBase:DDB_G0289791	Q54H46
 DDB_G0271486	DDB_G0271486	gene	taxon:44689	DictyBase:DDB_G0271486	Q55B12
 DDB_G0284155	DDB_G0284155	phospholipase D	gene	taxon:44689	DictyBase:DDB_G0284155	Q54Q49
 DDB_G0277093	DDB_G0277093	gene	taxon:44689	DictyBase:DDB_G0277093	Q550I3
@@ -10389,7 +10389,7 @@ DDB_G0274581	DDB_G0274581	BRD group protein	gene	taxon:44689	DictyBase:DDB_G0274
 DDB_G0287931	DDB_G0287931	gene	taxon:44689	DictyBase:DDB_G0287931	Q54JN4
 DDB_G0292858	DDB_G0292858	patatin family protein	gene	taxon:44689	DictyBase:DDB_G0292858	Q54CM2
 DDB_G0276351	DDB_G0276351	putative glutathione S-transferase	gene	taxon:44689	DictyBase:DDB_G0276351	Q8SSN4
-DDB_G0267376	acrA	adenylate cyclase	ACB|DG1100|ACR|DG1100|adenylyl cyclase	gene	taxon:44689	DictyBase:DDB_G0267376	Q55F68
+DDB_G0267376	acrA	adenylate cyclase	adenylyl cyclase|DG1100|ACR|DG1100|ACB	gene	taxon:44689	DictyBase:DDB_G0267376	Q55F68
 DDB_G0283525	arl8	ADP-ribosylation factor-like protein	arlE	gene	taxon:44689	DictyBase:DDB_G0283525	Q54R04
 DDB_G0285139	gtaL	GATA zinc finger domain-containing protein 12	gene	taxon:44689	DictyBase:DDB_G0285139	Q54NM5
 DDB_G0281655	DDB_G0281655	gene	taxon:44689	DictyBase:DDB_G0281655	Q54TN0
@@ -10557,7 +10557,7 @@ DDB_G0292908	ubqO	ubiquitin O	gene	taxon:44689	DictyBase:DDB_G0292908	Q54CI0
 DDB_G0286999	DDB_G0286999	gene	taxon:44689	DictyBase:DDB_G0286999	Q54L03
 DDB_G0294473	staA	cellulose-binding domain-containing protein	pDd26	gene	taxon:44689	DictyBase:DDB_G0294473	P08797
 DDB_G0286927	nedd8l2	neddylin-like protein	gene	taxon:44689	DictyBase:DDB_G0286927	Q54L35
-DDB_G0286125	pkgC	AGC group protein kinase PkgC	PK3|Dd kinase 3|protein kinase 3	gene	taxon:44689	DictyBase:DDB_G0286125	P34102
+DDB_G0286125	pkgC	AGC group protein kinase PkgC	protein kinase 3|Dd kinase 3|PK3	gene	taxon:44689	DictyBase:DDB_G0286125	P34102
 DDB_G0293058	DDB_G0293058	gene	taxon:44689	DictyBase:DDB_G0293058	Q54CC2
 DDB_G0284519	forI	formin homology domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0284519	Q54PI9
 DDB_G0290217	glb1	beta-galactosidase 1	gene	taxon:44689	DictyBase:DDB_G0290217	Q54GE1
@@ -10652,7 +10652,7 @@ DDB_G0280965	gbqA	G-protein alpha subunit family protein	DG1120|DG1120	gene	taxo
 DDB_G0293674	DDB_G0293674	heat shock cognate protein Hsc70-3	gene	taxon:44689	DictyBase:DDB_G0293674	Q54BE0
 DDB_G0273835	DDB_G0273835	gene	taxon:44689	DictyBase:DDB_G0273835	Q556T5
 DDB_G0274799	cpsf3	cleavage and polyadenylation specificity factor 73 kDa subunit	gene	taxon:44689	DictyBase:DDB_G0274799	Q86A79
-DDB_G0269138	fttB	14-3-3-like protein	14-3-3|Dd14-3-3	gene	taxon:44689	DictyBase:DDB_G0269138	P54632
+DDB_G0269138	fttB	14-3-3-like protein	Dd14-3-3|14-3-3	gene	taxon:44689	DictyBase:DDB_G0269138	P54632
 DDB_G0275559	DDB_G0275559	glucose/ribitol dehydrogenase family protein	gene	taxon:44689	DictyBase:DDB_G0275559	Q869L6
 DDB_G0288375	lis1	lissencephaly-1 homolog protein	gene	taxon:44689	DictyBase:DDB_G0288375	Q8I0F4
 DDB_G0293832	DDB_G0293832	PA14 domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0293832	Q54B88
@@ -10708,7 +10708,7 @@ DDB_G0280467	DDB_G0280467	hssA/2C/7E family protein	sigN163	gene	taxon:44689	Dic
 DDB_G0290075	DDB_G0290075	protein phosphatase 2C	PP2C	gene	taxon:44689	DictyBase:DDB_G0290075	Q54GL8
 DDB_G0292246	DDB_G0292246	gene	taxon:44689	DictyBase:DDB_G0292246	Q54DH6
 DDB_G0290695	DDB_G0290695	gene	taxon:44689	DictyBase:DDB_G0290695	Q54FQ5
-DDB_G0279189	rpl11	S60 ribosomal protein L11	V18|rplK|rpgC	gene	taxon:44689	DictyBase:DDB_G0279189	P16168
+DDB_G0279189	rpl11	S60 ribosomal protein L11	rpgC|rplK|V18	gene	taxon:44689	DictyBase:DDB_G0279189	P16168
 DDB_G0294218	DDB_G0294218_RTE	DIRS1 ORF1 fragment	gene	taxon:44689	DictyBase:DDB_G0294218	Q54AT7
 DDB_G0293014	DDB_G0293014	peptidase S28 family protein	gene	taxon:44689	DictyBase:DDB_G0293014	Q54CF7
 DDB_G0279697	DDB_G0279697	gene	taxon:44689	DictyBase:DDB_G0279697	Q54WE8
@@ -10722,7 +10722,7 @@ DDB_G0291950	DDB_G0291950	gene	taxon:44689	DictyBase:DDB_G0291950	Q54DX4
 DDB_G0273739	DDB_G0273739	PH domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0273739	Q556Y3
 DDB_G0274265	DDB_G0274265	gene	taxon:44689	DictyBase:DDB_G0274265	Q86AU2
 DDB_G0271862	eif2s1	eIF-2 alpha	eIF2A	gene	taxon:44689	DictyBase:DDB_G0271862	Q869N9
-DDB_G0277865	ptpB	protein-tyrosine phosphatase 2	DdPTPa|phosphotyrosine phosphatase ptp2	gene	taxon:44689	DictyBase:DDB_G0277865	P34138
+DDB_G0277865	ptpB	protein-tyrosine phosphatase 2	phosphotyrosine phosphatase ptp2|DdPTPa	gene	taxon:44689	DictyBase:DDB_G0277865	P34138
 DDB_G0293088	rtnlc	reticulon family protein	RTN	gene	taxon:44689	DictyBase:DDB_G0293088	Q54CA6
 DDB_G0282827	DDB_G0282827	gene	taxon:44689	DictyBase:DDB_G0282827	Q54RZ1
 DDB_G0270410	DDB_G0270410	SET domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0270410	Q55BQ0
@@ -10802,7 +10802,7 @@ DDB_G0289533	act27	actin	gene	taxon:44689	DictyBase:DDB_G0289533	Q54HE9
 DDB_G0291039	kif11	kinesin family member 11	kinesin-7	gene	taxon:44689	DictyBase:DDB_G0291039	Q6S001
 DDB_G0268734	DDB_G0268734	gene	taxon:44689	DictyBase:DDB_G0268734	Q55EW1
 DDB_G0275565	DDB_G0275565	gene	taxon:44689	DictyBase:DDB_G0275565	Q86HA0
-DDB_G0287801	ncstn	nicastrin	gamma-secretase subunit Ncstn|nct	gene	taxon:44689	DictyBase:DDB_G0287801	Q54JT7
+DDB_G0287801	ncstn	nicastrin	nct|gamma-secretase subunit Ncstn	gene	taxon:44689	DictyBase:DDB_G0287801	Q54JT7
 DDB_G0271692	comC	EGF-like domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0271692	Q55AP8
 DDB_G0284465	cudA	transcriptional regulator CudA	gene	taxon:44689	DictyBase:DDB_G0284465	O00841
 DDB_G0281709	DDB_G0281709	gene	taxon:44689	DictyBase:DDB_G0281709	Q54TJ5
@@ -10837,7 +10837,7 @@ DDB_G0278859	DDB_G0278859	gene	taxon:44689	DictyBase:DDB_G0278859	Q54XL9
 DDB_G0292588	rer1	retention in endoplasmic reticulum 1 homolog	gene	taxon:44689	DictyBase:DDB_G0292588	Q54D10
 DDB_G0273129	fnkD-1	FNIPK subfamily protein kinase	FNIPK-D	gene	taxon:44689	DictyBase:DDB_G0273129	Q557D1
 DDB_G0288083	DDB_G0288083	gene	taxon:44689	DictyBase:DDB_G0288083	Q54JF4
-DDB_G0290853	stlB	polyketide synthase StlB	pks37|steely2|PKS|dipks37	gene	taxon:44689	DictyBase:DDB_G0290853	Q54FI3
+DDB_G0290853	stlB	polyketide synthase StlB	dipks37|steely2|PKS|pks37	gene	taxon:44689	DictyBase:DDB_G0290853	Q54FI3
 DDB_G0292704	DDB_G0292704	gene	taxon:44689	DictyBase:DDB_G0292704	Q54CZ5
 DDB_G0274349	DDB_G0274349	ubiquitin interacting motif (UIM) domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0274349	Q86A73
 DDB_G0288247	aif	apoptosis inducing factor	aifA|DdAIF	gene	taxon:44689	DictyBase:DDB_G0288247	Q9GRX6
@@ -10907,7 +10907,7 @@ DDB_G0277105	DDB_G0277105	gene	taxon:44689	DictyBase:DDB_G0277105	Q550H0
 DDB_G0272246	prsB	phosphoribosyl pyrophosphate synthetase	PRS	gene	taxon:44689	DictyBase:DDB_G0272246	Q75JN8
 DDB_G0267524	ssr3	translocon-associated protein TRAP gamma subunit	TRAP-gamma	gene	taxon:44689	DictyBase:DDB_G0267524	Q55GT5
 DDB_G0288213	DDB_G0288213	gene	taxon:44689	DictyBase:DDB_G0288213	Q54J90
-DDB_G0276761	cotB	spore coat protein SP70	2H3|SP70|2B1	gene	taxon:44689	DictyBase:DDB_G0276761	P15269
+DDB_G0276761	cotB	spore coat protein SP70	2B1|SP70|2H3	gene	taxon:44689	DictyBase:DDB_G0276761	P15269
 DDB_G0285385	DDB_G0285385	gene	taxon:44689	DictyBase:DDB_G0285385	Q54N94
 DDB_G0280879	DDB_G0280879	CCHC-type zinc finger-containing protein	gene	taxon:44689	DictyBase:DDB_G0280879	Q54UR1
 DDB_G0268280	DDB_G0268280	gene	taxon:44689	DictyBase:DDB_G0268280	Q55GQ8
@@ -10925,7 +10925,7 @@ DDB_G0275153	gpdA	NAD+-dependent glyceraldehyde phosphate dehydrogenase	GAPDH	ge
 DDB_G0287169	DDB_G0287169	gene	taxon:44689	DictyBase:DDB_G0287169	Q54KQ5
 DDB_G0282337	DDB_G0282337	putative phosphatidylserine decarboxylase	gene	taxon:44689	DictyBase:DDB_G0282337	Q54SN5
 DDB_G0272995	DDB_G0272995	gene	taxon:44689	DictyBase:DDB_G0272995	Q558Z1
-DDB_G0273249	hspE-1	heat shock cognate protein Hsc70-2	hsc70|hsp70|hsc70-2|hspE	gene	taxon:44689	DictyBase:DDB_G0273249	Q557E0
+DDB_G0273249	hspE-1	heat shock cognate protein Hsc70-2	hspE|hsp70|hsc70-2|hsc70	gene	taxon:44689	DictyBase:DDB_G0273249	Q557E0
 DDB_G0291820	DDB_G0291820	gene	taxon:44689	DictyBase:DDB_G0291820	Q54E38
 DDB_G0283141	DDB_G0283141	gene	taxon:44689	DictyBase:DDB_G0283141	Q54RK0
 DDB_G0291984	DDB_G0291984	putative glutaminase	gene	taxon:44689	DictyBase:DDB_G0291984	Q54DN5
@@ -11227,7 +11227,7 @@ DDB_G0271982	DDB_G0271982	gene	taxon:44689	DictyBase:DDB_G0271982	Q86AH4
 DDB_G0272742	DDB_G0272742	gene	taxon:44689	DictyBase:DDB_G0272742	Q7KWP5
 DDB_G0289907	DDB_G0289907	C-type lectin domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0289907	Q54GV4
 DDB_G0278767	DDB_G0278767	cyclin-like F-box containing protein	gene	taxon:44689	DictyBase:DDB_G0278767	Q54XT0
-DDB_G0274137	act14	actin	actinB1|actITL1|actB1	gene	taxon:44689	DictyBase:DDB_G0274137	P07830
+DDB_G0274137	act14	actin	actinB1|actB1|actITL1	gene	taxon:44689	DictyBase:DDB_G0274137	P07830
 DDB_G0287827	pfdn1	prefoldin subunit 1	gene	taxon:44689	DictyBase:DDB_G0287827	Q54JS0
 DDB_G0272602	DDB_G0272602	gene	taxon:44689	DictyBase:DDB_G0272602	Q556P0
 DDB_G0277887	dhkK	histidine kinase K	sombrero|smbA	gene	taxon:44689	DictyBase:DDB_G0277887	Q86CZ2
@@ -11243,7 +11243,7 @@ DDB_G0288341	DDB_G0288341	gene	taxon:44689	DictyBase:DDB_G0288341	Q54J30
 DDB_G0282621	DDB_G0282621	gene	taxon:44689	DictyBase:DDB_G0282621	Q54S80
 DDB_G0295777	DDB_G0295777	UbiA prenyltransferase family protein	gene	taxon:44689	DictyBase:DDB_G0295777	C7G049
 DDB_G0292228	DDB_G0292228	unknown	gene	taxon:44689	DictyBase:DDB_G0292228	Q54DJ6
-DDB_G0269234	act8	actin	actin8|actinIEL1|actinISR1	gene	taxon:44689	DictyBase:DDB_G0269234	P07830
+DDB_G0269234	act8	actin	actinISR1|actinIEL1|actin8	gene	taxon:44689	DictyBase:DDB_G0269234	P07830
 DDB_G0283769	hbs1	HBS1-like protein	gene	taxon:44689	DictyBase:DDB_G0283769	Q54QJ0
 DDB_G0271574	DDB_G0271574	gene	taxon:44689	DictyBase:DDB_G0271574	Q55AV6
 DDB_G0267626	DDB_G0267626	gene	taxon:44689	DictyBase:DDB_G0267626	Q55GL0
@@ -11253,7 +11253,7 @@ DDB_G0274955	etnkA	ethanolamine kinase A	gene	taxon:44689	DictyBase:DDB_G0274955
 DDB_G0285045	DDB_G0285045	EGF-like domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0285045	Q54P15
 DDB_G0269112	celB	cellulose-binding protein	spore germination protein 270-11	gene	taxon:44689	DictyBase:DDB_G0269112	P22698
 DDB_G0279213	DDB_G0279213	gene	taxon:44689	DictyBase:DDB_G0279213	Q54X47
-DDB_G0289179	thyB	thymidine kinase	TDK|DdTK1|TK1|rcdKK|veg149	gene	taxon:44689	DictyBase:DDB_G0289179	Q27564
+DDB_G0289179	thyB	thymidine kinase	TDK|TK1|DdTK1|rcdKK|veg149	gene	taxon:44689	DictyBase:DDB_G0289179	Q27564
 DDB_G0295811	DDB_G0295811	thioredoxin fold domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0295811	C7G009
 DDB_G0278191	dak	deoxyadenosine kinase	gene	taxon:44689	DictyBase:DDB_G0278191	Q54YL2
 DDB_G0271988	DDB_G0271988	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0271988	Q86JN4
@@ -11301,7 +11301,7 @@ DDB_G0288293	DDB_G0288293	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G
 DDB_G0275797	DDB_G0275797	unknown	gene	taxon:44689	DictyBase:DDB_G0275797	Q553G9
 DDB_G0286693	adcD	arrestin domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0286693	Q54LD5
 DDB_G0278483	ngap	C2 domain-containing protein	DdNGAP|RasGAP	gene	taxon:44689	DictyBase:DDB_G0278483	Q54Y08
-DDB_G0286199	tfb1m	mitochondrial transcription factor B	rRNA adenosine dimethyltransferase|Dimethyladenosine transferase 1| mitochondrial	gene	taxon:44689	DictyBase:DDB_G0286199	Q54M56
+DDB_G0286199	tfb1m	mitochondrial transcription factor B	Dimethyladenosine transferase 1| mitochondrial|rRNA adenosine dimethyltransferase	gene	taxon:44689	DictyBase:DDB_G0286199	Q54M56
 DDB_G0275875	DDB_G0275875	unknown	gene	taxon:44689	DictyBase:DDB_G0275875	Q552Z5
 DDB_G0275383	DDB_G0275383	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0275383	Q553P4
 DDB_G0294110	DDB_G0294110	gene	taxon:44689	DictyBase:DDB_G0294110	
@@ -11390,7 +11390,7 @@ DDB_G0280135	DDB_G0280135	methionine adenosyltransferase regulatory beta subunit
 DDB_G0269300	DDB_G0269300	CD2 antigen cytoplasmic tail-binding protein 2	gene	taxon:44689	DictyBase:DDB_G0269300	Q55EC6
 DDB_G0277803	rpl4	60S ribosomal protein L4	gene	taxon:44689	DictyBase:DDB_G0277803	Q54Z69
 DDB_G0287441	DDB_G0287441	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0287441	Q54KH2
-DDB_G0289667	gefD	Ras guanine nucleotide exchange factor	RasGEF|RacGAP|RasGEFD	gene	taxon:44689	DictyBase:DDB_G0289667	Q8IS19
+DDB_G0289667	gefD	Ras guanine nucleotide exchange factor	RasGEF|RasGEFD|RacGAP	gene	taxon:44689	DictyBase:DDB_G0289667	Q8IS19
 DDB_G0290529	cpnE	copine E	gene	taxon:44689	DictyBase:DDB_G0290529	Q54FY7
 DDB_G0273807	DDB_G0273807	unknown	gene	taxon:44689	DictyBase:DDB_G0273807	Q556U9
 DDB_G0291057	DDB_G0291057	gene	taxon:44689	DictyBase:DDB_G0291057	Q54FA9
@@ -11525,7 +11525,7 @@ DDB_G0288153	DDB_G0288153	thioredoxin-like protein	gene	taxon:44689	DictyBase:DD
 DDB_G0277801	gtpbp5	GTP-binding protein 5	gene	taxon:44689	DictyBase:DDB_G0277801	Q54Z70
 DDB_G0291157	cln3	Batten's disease protein Cln3 family protein	gene	taxon:44689	DictyBase:DDB_G0291157	Q54F25
 DDB_G0284265	ppa1	inorganic pyrophosphatase	gene	taxon:44689	DictyBase:DDB_G0284265	Q54PV8
-DDB_G0268678	DDB_G0268678	putative negative elongation factor D	NELF-C/D|putative negative transcription elongation factor NELF subunit|TH1 family protein|NELF-D	gene	taxon:44689	DictyBase:DDB_G0268678	Q55F13
+DDB_G0268678	DDB_G0268678	putative negative elongation factor D	NELF-D|putative negative transcription elongation factor NELF subunit|TH1 family protein|NELF-C/D	gene	taxon:44689	DictyBase:DDB_G0268678	Q55F13
 DDB_G0281339	DDB_G0281339	gene	taxon:44689	DictyBase:DDB_G0281339	Q54U35
 DDB_G0275499	omt5	O-methyltransferase family 3 protein	gene	taxon:44689	DictyBase:DDB_G0275499	Q86IC9
 DDB_G0287359	DDB_G0287359	gene	taxon:44689	DictyBase:DDB_G0287359	Q54KG4
@@ -11533,7 +11533,7 @@ DDB_G0282181	nvl	valosin-containing protein	gene	taxon:44689	DictyBase:DDB_G0282
 DDB_G0285001	DDB_G0285001	gene	taxon:44689	DictyBase:DDB_G0285001	Q54NT0
 DDB_G0286563	sigM	serglycin domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0286563	Q54LI9
 DDB_G0274943	ranB	GTP-binding nuclear protein Ran	gene	taxon:44689	DictyBase:DDB_G0274943	Q554Y4
-DDB_G0291075	warA	homeodomain (HOX) containing protein	wariai|wri|hbx1	gene	taxon:44689	DictyBase:DDB_G0291075	Q54F46
+DDB_G0291075	warA	homeodomain (HOX) containing protein	hbx1|wri|wariai	gene	taxon:44689	DictyBase:DDB_G0291075	Q54F46
 DDB_G0287149	DDB_G0287149	UMUC-like DNA-repair protein	gene	taxon:44689	DictyBase:DDB_G0287149	Q54KS3
 DDB_G0267630	kil1	sulfotransferase	gene	taxon:44689	DictyBase:DDB_G0267630	Q55GK8
 DDB_G0274941	omt2	O-methyltransferase family 2 protein	gene	taxon:44689	DictyBase:DDB_G0274941	Q86HS9
@@ -11583,7 +11583,7 @@ DDB_G0279461	DDB_G0279461	protein phosphatase 2C	PP2C	gene	taxon:44689	DictyBase
 DDB_G0284855	DDB_G0284855	gene	taxon:44689	DictyBase:DDB_G0284855	Q54P28
 DDB_G0279681	DDB_G0279681	calcium-binding EF-hand domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0279681	Q1ZXH5
 DDB_G0273909	psmB4-2	20S proteasome subunit alpha-4	gene	taxon:44689	DictyBase:DDB_G0273909	Q556Q0
-DDB_G0267442	cdk8	cyclin-dependent kinase 8	Ddcdk8|CDK|CTD kinase	gene	taxon:44689	DictyBase:DDB_G0267442	Q95YH0
+DDB_G0267442	cdk8	cyclin-dependent kinase 8	CTD kinase|CDK|Ddcdk8	gene	taxon:44689	DictyBase:DDB_G0267442	Q95YH0
 DDB_G0285093	DDB_G0285093	gene	taxon:44689	DictyBase:DDB_G0285093	Q54P17
 DDB_G0285471	DDB_G0285471	glutaredoxin family protein	gene	taxon:44689	DictyBase:DDB_G0285471	Q54N68
 DDB_G0278549	gacB	RhoGAP domain-containing protein	RacGAP	gene	taxon:44689	DictyBase:DDB_G0278549	Q54XW7
@@ -11637,7 +11637,7 @@ DDB_G0292342	DDB_G0292342	gene	taxon:44689	DictyBase:DDB_G0292342	Q54DE9
 DDB_G0287257	DDB_G0287257	unknown	gene	taxon:44689	DictyBase:DDB_G0287257	Q54KM5
 DDB_G0275585	DDB_G0275585	gene	taxon:44689	DictyBase:DDB_G0275585	Q869M2
 DDB_G0276843	DDB_G0276843	gene	taxon:44689	DictyBase:DDB_G0276843	Q86L24
-DDB_G0272110	gskA	glycogen synthase kinase 3	GSK-3|GSK3	gene	taxon:44689	DictyBase:DDB_G0272110	P51136
+DDB_G0272110	gskA	glycogen synthase kinase 3	GSK3|GSK-3	gene	taxon:44689	DictyBase:DDB_G0272110	P51136
 DDB_G0280953	DDB_G0280953	hssA/2C/7E family protein	gene	taxon:44689	DictyBase:DDB_G0280953	Q54UM6
 DDB_G0281439	DDB_G0281439	gene	taxon:44689	DictyBase:DDB_G0281439	Q54TY3
 DDB_G0279221	DDB_G0279221	gene	taxon:44689	DictyBase:DDB_G0279221	Q54X43
@@ -11698,7 +11698,7 @@ DDB_G0286237	DDB_G0286237	gene	taxon:44689	DictyBase:DDB_G0286237	Q54M30
 DDB_G0283929	cyp517A1	cytochrome P450 family protein	ostA	gene	taxon:44689	DictyBase:DDB_G0283929	Q54QD2
 DDB_G0290173	bzpI	putative basic-leucine zipper (bZIP) transcription factor	gene	taxon:44689	DictyBase:DDB_G0290173	Q54GG8
 DDB_G0267948	ccdc53	WASH complex subunit ccdc53	gene	taxon:44689	DictyBase:DDB_G0267948	Q55FU3
-DDB_G0293532	dstC	signal transducer and activator of transcription (STAT) family protein DstC	transcriptional repressor|Dd-STATc|STATc	gene	taxon:44689	DictyBase:DDB_G0293532	Q54BD4
+DDB_G0293532	dstC	signal transducer and activator of transcription (STAT) family protein DstC	transcriptional repressor|STATc|Dd-STATc	gene	taxon:44689	DictyBase:DDB_G0293532	Q54BD4
 DDB_G0277921	sigE	transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0277921	Q54YR6
 DDB_G0294557	DDB_G0294557	putative actin binding protein	gene	taxon:44689	DictyBase:DDB_G0294557	Q1ZXJ2
 DDB_G0269258	DDB_G0269258_RTE	TRE3-C ORF2	gene	taxon:44689	DictyBase:DDB_G0269258	Q55EF3
@@ -11714,7 +11714,7 @@ DDB_G0288621	psmD3	26S proteasome non-ATPase regulatory subunit 3	gene	taxon:446
 DDB_G0349518	DDB_G0349518	gene	taxon:44689	DictyBase:DDB_G0349518	
 DDB_G0293460	DDB_G0293460	gene	taxon:44689	DictyBase:DDB_G0293460	Q54BS2
 DDB_G0279933	DDB_G0279933	gene	taxon:44689	DictyBase:DDB_G0279933	Q54W44
-DDB_G0272600	DDB_G0272600	Hermansky-Pudlak syndrome 5 protein ortholog	WD40 repeat-containing protein|hps5|RING zinc finger-containing protein	gene	taxon:44689	DictyBase:DDB_G0272600	Q556N8
+DDB_G0272600	DDB_G0272600	Hermansky-Pudlak syndrome 5 protein ortholog	RING zinc finger-containing protein|hps5|WD40 repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0272600	Q556N8
 DDB_G0289735	DDB_G0289735	putative GTPase activating protein (GAP)	rabGAP	gene	taxon:44689	DictyBase:DDB_G0289735	Q54H32
 DDB_G0292028	DDB_G0292028	von Willebrand factor A domain-containing protein 5B1	gene	taxon:44689	DictyBase:DDB_G0292028	Q54DU5
 DDB_G0293732	DDB_G0293732_RTE	TRE5-A ORF2	gene	taxon:44689	DictyBase:DDB_G0293732	Q54BG9
@@ -11756,7 +11756,7 @@ DDB_G0294348	DDB_G0294348	gene	taxon:44689	DictyBase:DDB_G0294348	Q54AM2
 DDB_G0272370	DDB_G0272370	gene	taxon:44689	DictyBase:DDB_G0272370	Q55A22
 DDB_G0268410	drnB	dicer-like protein B	gene	taxon:44689	DictyBase:DDB_G0268410	Q55FS1
 DDB_G0268090	DDB_G0268090	glycoside hydrolase family 18 protein	gene	taxon:44689	DictyBase:DDB_G0268090	Q55FI9
-DDB_G0274131	act17	actin	actin2sub2|act2-2|actin2	gene	taxon:44689	DictyBase:DDB_G0274131	Q554S6
+DDB_G0274131	act17	actin	actin2sub2|actin2|act2-2	gene	taxon:44689	DictyBase:DDB_G0274131	Q554S6
 DDB_G0286871	DDB_G0286871	GCN5-related N-acetyltransferase	gene	taxon:44689	DictyBase:DDB_G0286871	Q54L65
 DDB_G0291726	DDB_G0291726	gene	taxon:44689	DictyBase:DDB_G0291726	Q54E70
 DDB_G0279525	DDB_G0279525	gene	taxon:44689	DictyBase:DDB_G0279525	Q54WN9
@@ -11876,7 +11876,7 @@ DDB_G0282273	DDB_G0282273	gene	taxon:44689	DictyBase:DDB_G0282273	Q54SR4
 DDB_G0282403	DDB_G0282403	gene	taxon:44689	DictyBase:DDB_G0282403	Q54SL2
 DDB_G0282783	DDB_G0282783	unknown	gene	taxon:44689	DictyBase:DDB_G0282783	Q54SB7
 DDB_G0286727	DDB_G0286727	chaC-like family protein	gene	taxon:44689	DictyBase:DDB_G0286727	Q54LB6
-DDB_G0293084	zizB	Ras guanine nucleotide exchange factor ZizB	GEF|zizimin B|Rac GEF ZizB	gene	taxon:44689	DictyBase:DDB_G0293084	Q54CA8
+DDB_G0293084	zizB	Ras guanine nucleotide exchange factor ZizB	Rac GEF ZizB|zizimin B|GEF	gene	taxon:44689	DictyBase:DDB_G0293084	Q54CA8
 DDB_G0286915	DDB_G0286915	gene	taxon:44689	DictyBase:DDB_G0286915	Q54L43
 DDB_G0281545	acaA	adenylate cyclase	adenylyl cyclase|ACA	gene	taxon:44689	DictyBase:DDB_G0281545	Q03100
 DDB_G0272264	DDB_G0272264	coiled-coil domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0272264	Q559Z2
@@ -11897,7 +11897,7 @@ DDB_G0283499	DDB_G0283499	unknown	gene	taxon:44689	DictyBase:DDB_G0283499	Q54R40
 DDB_G0281707	DDB_G0281707	putative transmembrane protein	gene	taxon:44689	DictyBase:DDB_G0281707	P0C7W5
 DDB_G0270322	DDB_G0270322	leucine-rich repeat-containing protein (LRR)	gene	taxon:44689	DictyBase:DDB_G0270322	Q55BX4
 DDB_G0274055	DDB_G0274055	gene	taxon:44689	DictyBase:DDB_G0274055	Q556H6
-DDB_G0280531	tgrC1	tiger protein C1	lagC1|lagC|GP150	gene	taxon:44689	DictyBase:DDB_G0280531	P42523
+DDB_G0280531	tgrC1	tiger protein C1	lagC1|GP150|lagC	gene	taxon:44689	DictyBase:DDB_G0280531	P42523
 DDB_G0270806	ldhd	D-lactate dehydrogenase (cytochrome)	gene	taxon:44689	DictyBase:DDB_G0270806	Q55BQ4
 DDB_G0267378	aqpA	aquaporin A	gene	taxon:44689	DictyBase:DDB_G0267378	Q9U8P7
 DDB_G0288765	DDB_G0288765	gene	taxon:44689	DictyBase:DDB_G0288765	Q54IH0
@@ -11919,7 +11919,7 @@ DDB_G0292616	DDB_G0292616	gene	taxon:44689	DictyBase:DDB_G0292616	Q54CZ4
 DDB_G0276929	DDB_G0276929	gene	taxon:44689	DictyBase:DDB_G0276929	Q86KQ5
 DDB_G0293770	DDB_G0293770	putative ubiquitin carboxyl-terminal hydrolase (UCH)	gene	taxon:44689	DictyBase:DDB_G0293770	Q54BB6
 DDB_G0273183	DDB_G0273183	gene	taxon:44689	DictyBase:DDB_G0273183	Q556V3
-DDB_G0285161	dagA	cytosolic regulator of adenylate cyclase	CRAC|synag7|synag7	gene	taxon:44689	DictyBase:DDB_G0285161	P35401
+DDB_G0285161	dagA	cytosolic regulator of adenylate cyclase	synag7|synag7|CRAC	gene	taxon:44689	DictyBase:DDB_G0285161	P35401
 DDB_G0271828	DDB_G0271828	coiled-coil domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0271828	Q55AK9
 DDB_G0272386	DDB_G0272386	cyclin-like F-box containing protein	gene	taxon:44689	DictyBase:DDB_G0272386	Q55A02
 DDB_G0274931	DDB_G0274931	gene	taxon:44689	DictyBase:DDB_G0274931	Q86HS2
@@ -12016,7 +12016,7 @@ DDB_G0285061	DDB_G0285061	gene	taxon:44689	DictyBase:DDB_G0285061
 DDB_G0277903	cotE	spore coat protein	SP65	gene	taxon:44689	DictyBase:DDB_G0277903	Q9NAX4
 DDB_G0280803	DDB_G0280803	unknown	gene	taxon:44689	DictyBase:DDB_G0280803	Q54UU7
 DDB_G0276067	ddcB	putative diaminopimelate decarboxylase	DAPDC	gene	taxon:44689	DictyBase:DDB_G0276067	Q75JL7
-DDB_G0284469	gpaH	G-protein subunit alpha 8	Galpha8|Ga8|gpa8|Ga8	gene	taxon:44689	DictyBase:DDB_G0284469	P34046
+DDB_G0284469	gpaH	G-protein subunit alpha 8	Galpha8|Ga8|Ga8|gpa8	gene	taxon:44689	DictyBase:DDB_G0284469	P34046
 DDB_G0281919	DDB_G0281919	gene	taxon:44689	DictyBase:DDB_G0281919	Q54T90
 DDB_G0280819	aoxA	gene	taxon:44689	DictyBase:DDB_G0280819	Q8WSV6
 DDB_G0268302	rpl38	S60 ribosomal protein L38	gene	taxon:44689	DictyBase:DDB_G0268302	Q55GJ7
@@ -12064,7 +12064,7 @@ DDB_G0286109	DDB_G0286109	unknown	gene	taxon:44689	DictyBase:DDB_G0286109
 DDB_G0277323	DDB_G0277323	FNIP repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0277323	Q1ZXK1
 DDB_G0287337	taf5	TFIID subunit	gene	taxon:44689	DictyBase:DDB_G0287337	Q54KH7
 DDB_G0282735	DDB_G0282735	gene	taxon:44689	DictyBase:DDB_G0282735	Q54S06
-DDB_G0269140	gapA	RasGTPase-activating protein GapA	DdIQGAP2|IQGAP-related protein|iqgB|GAPA|RasGAP	gene	taxon:44689	DictyBase:DDB_G0269140	O00899
+DDB_G0269140	gapA	RasGTPase-activating protein GapA	DdIQGAP2|IQGAP-related protein|iqgB|RasGAP|GAPA	gene	taxon:44689	DictyBase:DDB_G0269140	O00899
 DDB_G0283463	DDB_G0283463	gene	taxon:44689	DictyBase:DDB_G0283463	Q54R00
 DDB_G0272811	wasB	WASP-related protein B	WASP-B|putative actin binding protein	gene	taxon:44689	DictyBase:DDB_G0272811	Q7KWP7
 DDB_G0268266	DDB_G0268266	RNA recognition motif-containing protein	gene	taxon:44689	DictyBase:DDB_G0268266	Q55GV1
@@ -12094,7 +12094,7 @@ DDB_G0277477	DDB_G0277477	acyl-CoA oxidase	gene	taxon:44689	DictyBase:DDB_G02774
 DDB_G0279655	DDB_G0279655	putative phosphotyrosyl phosphatase activator	gene	taxon:44689	DictyBase:DDB_G0279655	Q54WH6
 DDB_G0275677	DDB_G0275677	gene	taxon:44689	DictyBase:DDB_G0275677	Q86HC5
 DDB_G0287969	cnrN	putative cell number regulator	gene	taxon:44689	DictyBase:DDB_G0287969	Q54JL7
-DDB_G0291684	pks41	beta-ketoacyl synthase family protein	PKS|dipks41	gene	taxon:44689	DictyBase:DDB_G0291684	Q54ED6
+DDB_G0291684	pks41	beta-ketoacyl synthase family protein	dipks41|PKS	gene	taxon:44689	DictyBase:DDB_G0291684	Q54ED6
 DDB_G0280643	DDB_G0280643	protein kinase, CMGC group	gene	taxon:44689	DictyBase:DDB_G0280643	Q54V35
 DDB_G0273595	DDB_G0273595	putative importin subunit alpha A	gene	taxon:44689	DictyBase:DDB_G0273595	Q557F4
 DDB_G0280147	ddx47	DEAD/DEAH box helicase	gene	taxon:44689	DictyBase:DDB_G0280147	Q54VT4
@@ -12110,7 +12110,7 @@ DDB_G0293072	DDB_G0293072	ADIPOR-like receptor IZH3	gene	taxon:44689	DictyBase:D
 DDB_G0286037	lrlA	latrophilin receptor-like protein	gene	taxon:44689	DictyBase:DDB_G0286037	Q54MC6
 DDB_G0280841	DDB_G0280841	gene	taxon:44689	DictyBase:DDB_G0280841	Q54UT3
 DDB_G0292074	commd1	COMM domain-containing protein 1	gene	taxon:44689	DictyBase:DDB_G0292074	Q54DR0
-DDB_G0285101	kif4	kinesin family member 4	ksnD|kinesin-7|K4	gene	taxon:44689	DictyBase:DDB_G0285101	Q54NP8
+DDB_G0285101	kif4	kinesin family member 4	ksnD|K4|kinesin-7	gene	taxon:44689	DictyBase:DDB_G0285101	Q54NP8
 DDB_G0270972	DDB_G0270972	DUF341 family protein	gene	taxon:44689	DictyBase:DDB_G0270972	Q55D01
 DDB_G0272100	DDB_G0272100	gene	taxon:44689	DictyBase:DDB_G0272100	Q55A60
 DDB_G0294587	DDB_G0294587	unknown	gene	taxon:44689	DictyBase:DDB_G0294587	Q1ZXP2
@@ -12154,7 +12154,7 @@ DDB_G0288085	DDB_G0288085	gene	taxon:44689	DictyBase:DDB_G0288085	Q54JF3
 DDB_G0269812	DDB_G0269812	gene	taxon:44689	DictyBase:DDB_G0269812	Q55D19
 DDB_G0273043	DDB_G0273043	EGF-like domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0273043	Q558J3
 DDB_G0286379	DDB_G0286379	gene	taxon:44689	DictyBase:DDB_G0286379	Q54LW3
-DDB_G0273397	carA-1	cAMP receptor 1	cAR1|G-protein-coupled receptor|carA1|carA	gene	taxon:44689	DictyBase:DDB_G0273397	P13773
+DDB_G0273397	carA-1	cAMP receptor 1	cAR1|carA1|G-protein-coupled receptor|carA	gene	taxon:44689	DictyBase:DDB_G0273397	P13773
 DDB_G0292462	DDB_G0292462	gene	taxon:44689	DictyBase:DDB_G0292462	Q54D62
 DDB_G0272929	isg12	gene	taxon:44689	DictyBase:DDB_G0272929	Q86II1
 DDB_G0293214	orcE	origin recognition complex subunit 5	ORC5	gene	taxon:44689	DictyBase:DDB_G0293214	Q54C22
@@ -12180,7 +12180,7 @@ DDB_G0282969	masB	malate synthase	gene	taxon:44689	DictyBase:DDB_G0282969	Q54RR4
 DDB_G0289385	DDB_G0289385	gene	taxon:44689	DictyBase:DDB_G0289385	Q54HL2
 DDB_G0283261	acoA	acyl-CoA oxidase	gene	taxon:44689	DictyBase:DDB_G0283261	Q54RB0
 DDB_G0280217	DDB_G0280217	gene	taxon:44689	DictyBase:DDB_G0280217	Q54VP3
-DDB_G0267830	gemA	mitochondrial GTPase	Miro|Ras-related GTPase	gene	taxon:44689	DictyBase:DDB_G0267830	Q55G45
+DDB_G0267830	gemA	mitochondrial GTPase	Ras-related GTPase|Miro	gene	taxon:44689	DictyBase:DDB_G0267830	Q55G45
 DDB_G0276791	DDB_G0276791	leucine-rich repeat-containing protein (LRR)	gene	taxon:44689	DictyBase:DDB_G0276791	Q7KWW4
 DDB_G0271846	DDB_G0271846	gene	taxon:44689	DictyBase:DDB_G0271846	
 DDB_G0272901	DDB_G0272901	EGF-like domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0272901	Q556M2
@@ -12207,7 +12207,7 @@ DDB_G0292384	abcH1	putative non-transporter ABC protein	gene	taxon:44689	DictyBa
 DDB_G0282777	DDB_G0282777	putative protein serine/threonine kinase	gene	taxon:44689	DictyBase:DDB_G0282777	Q54SC4
 DDB_G0280261	DDB_G0280261	LisH/WD repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0280261	Q54VL8
 DDB_G0277545	cyp518A1	cytochrome P450 family protein	gene	taxon:44689	DictyBase:DDB_G0277545	Q54ZM4
-DDB_G0277399	piaA	cytosolic regulator of adenylate cyclase	DG1117|rictor|pia|amiA|Pianissimo	gene	taxon:44689	DictyBase:DDB_G0277399	O77203
+DDB_G0277399	piaA	cytosolic regulator of adenylate cyclase	DG1117|rictor|amiA|pia|Pianissimo	gene	taxon:44689	DictyBase:DDB_G0277399	O77203
 DDB_G0288135	DDB_G0288135	neugrin domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0288135	P0C8Z6
 DDB_G0289195	DDB_G0289195	arginase/agmatinase/formiminoglutamase family protein	gene	taxon:44689	DictyBase:DDB_G0289195	Q54HV8
 DDB_G0281795	nacB	nascent polypeptide-associated complex NAC domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0281795	Q54TR8
@@ -12330,7 +12330,7 @@ DDB_G0292986	abcG10	ABC transporter G family protein	gene	taxon:44689	DictyBase:
 DDB_G0293396	gxcO	RhoGEF domain-containing protein	RacGEF	gene	taxon:44689	DictyBase:DDB_G0293396	Q54BV5
 DDB_G0280485	jcdH	transcription factor jumonji, jmjC domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0280485	Q54VA7
 DDB_G0268078	DDB_G0268078	RCK family protein kinase	gene	taxon:44689	DictyBase:DDB_G0268078	Q55FJ6
-DDB_G0283907	pkaC	cAMP-dependent protein kinase A, catalytic subunit	PKA|PKA-C|DdPK2|cAK|pkacat|PK3|PK2|DdPK3	gene	taxon:44689	DictyBase:DDB_G0283907	P34099
+DDB_G0283907	pkaC	cAMP-dependent protein kinase A, catalytic subunit	DdPK3|cAK|DdPK2|PKA-C|pkacat|PK2|PK3|PKA	gene	taxon:44689	DictyBase:DDB_G0283907	P34099
 DDB_G0270062	DDB_G0270062	gene	taxon:44689	DictyBase:DDB_G0270062	Q55CG6
 DDB_G0279215	DDB_G0279215	gene	taxon:44689	DictyBase:DDB_G0279215	Q54X46
 DDB_G0267882	DDB_G0267882	gene	taxon:44689	DictyBase:DDB_G0267882	Q55G00
@@ -12426,12 +12426,12 @@ DDB_G0274967	aplL	amoebapore-like protein L	saposin-like protein L	gene	taxon:44
 DDB_G0286425	srrm1	serine/arginine repetitive matrix-like protein	gene	taxon:44689	DictyBase:DDB_G0286425	Q54LT3
 DDB_G0272714	DDB_G0272714	gene	taxon:44689	DictyBase:DDB_G0272714	Q86II9
 DDB_G0276577	fray2	FRAY subfamily protein kinase	DFray2	gene	taxon:44689	DictyBase:DDB_G0276577	Q551H4
-DDB_G0274455	myoI	myosin VII	M7|DdMVII|MVII	gene	taxon:44689	DictyBase:DDB_G0274455	Q9U1M8
+DDB_G0274455	myoI	myosin VII	M7|MVII|DdMVII	gene	taxon:44689	DictyBase:DDB_G0274455	Q9U1M8
 DDB_G0280021	mcfL	mitochondrial substrate carrier family protein	gene	taxon:44689	DictyBase:DDB_G0280021	Q54W11
 DDB_G0277347	DDB_G0277347	Methionyl-tRNA formyltransferase, mitochondrial	gene	taxon:44689	DictyBase:DDB_G0277347	Q54ZW4
 DDB_G0276481	ercc8	DNA excision repair protein 8	gene	taxon:44689	DictyBase:DDB_G0276481	Q551N8
 DDB_G0272933	DDB_G0272933	unknown	gene	taxon:44689	DictyBase:DDB_G0272933	Q559H0
-DDB_G0272520	act15	actin	act3a|actinIII-12/A1|actinIII-12|actin15|actinA1	gene	taxon:44689	DictyBase:DDB_G0272520	P07830
+DDB_G0272520	act15	actin	act3a|actinIII-12|actinIII-12/A1|actin15|actinA1	gene	taxon:44689	DictyBase:DDB_G0272520	P07830
 DDB_G0290163	tom1	tom1 protein	gene	taxon:44689	DictyBase:DDB_G0290163	Q54GH3
 DDB_G0290549	DDB_G0290549	gene	taxon:44689	DictyBase:DDB_G0290549	Q54FX3
 DDB_G0278231	DDB_G0278231	gene	taxon:44689	DictyBase:DDB_G0278231	Q54YH8
@@ -12476,7 +12476,7 @@ DDB_G0280393	DDB_G0280393	CCHC-type zinc finger-containing protein	gene	taxon:44
 DDB_G0285619	DDB_G0285619	unknown	gene	taxon:44689	DictyBase:DDB_G0285619	Q54MX6
 DDB_G0282275	DDB_G0282275	gene	taxon:44689	DictyBase:DDB_G0282275	Q54SR3
 DDB_G0272434	DDB_G0272434	gene	taxon:44689	DictyBase:DDB_G0272434	Q559U0
-DDB_G0278733	aip1	actin-interacting protein 1	DAip1|rcdA|veg150|WRP2|wdpA	gene	taxon:44689	DictyBase:DDB_G0278733	P54686
+DDB_G0278733	aip1	actin-interacting protein 1	DAip1|veg150|rcdA|WRP2|wdpA	gene	taxon:44689	DictyBase:DDB_G0278733	P54686
 DDB_G0270362	zfand	AN1-type zinc finger protein	gene	taxon:44689	DictyBase:DDB_G0270362	Q55BU1
 DDB_G0295709	ufm1	ubiquitin-like Ufm1 family protein	gene	taxon:44689	DictyBase:DDB_G0295709	B0G186
 DDB_G0291952	DDB_G0291952	unknown	gene	taxon:44689	DictyBase:DDB_G0291952	Q1ZXB2
@@ -12525,7 +12525,7 @@ DDB_G0285735	DDB_G0285735	Uncharacterized protein C3orf23	gene	taxon:44689	Dicty
 DDB_G0284813	DDB_G0284813	gene	taxon:44689	DictyBase:DDB_G0284813	Q54P38
 DDB_G0281781	DDB_G0281781	gene	taxon:44689	DictyBase:DDB_G0281781	Q54TF3
 DDB_G0279251	DDB_G0279251	RmlC-like cupin family protein	gene	taxon:44689	DictyBase:DDB_G0279251	Q54X25
-DDB_G0273061	cinD-1	putative helix-turn-helix transcription factor	H7|VSH7|vspH7|cinD	gene	taxon:44689	DictyBase:DDB_G0273061	P14327
+DDB_G0273061	cinD-1	putative helix-turn-helix transcription factor	cinD|VSH7|vspH7|H7	gene	taxon:44689	DictyBase:DDB_G0273061	P14327
 DDB_G0267760	tbck	TBCK family protein kinase	gene	taxon:44689	DictyBase:DDB_G0267760	Q55G97
 DDB_G0292000	DDB_G0292000	gene	taxon:44689	DictyBase:DDB_G0292000	Q54DW3
 DDB_G0285399	cyb5r1	NADH-cytochrome b5 reductase	gene	taxon:44689	DictyBase:DDB_G0285399	Q54NC1
@@ -12539,9 +12539,9 @@ DDB_G0290919	smc5	AAA ATPase domain-containing protein	gene	taxon:44689	DictyBas
 DDB_G0269740	DDB_G0269740	putative cell surface glycoprotein	gene	taxon:44689	DictyBase:DDB_G0269740	Q55D91
 DDB_G0277775	DDB_G0277775	PpiC-type peptidyl-prolyl cis-trans isomerase	gene	taxon:44689	DictyBase:DDB_G0277775	Q54Z53
 DDB_G0293884	DDB_G0293884	Opioid growth factor receptor-like protein 1	gene	taxon:44689	DictyBase:DDB_G0293884	Q54B61
-DDB_G0267418	sahA	adenosylhomocysteinase	S-adenosyl-L-homocysteine hydrolase|AdoHyc hydrolase|SAHH	gene	taxon:44689	DictyBase:DDB_G0267418	P10819
+DDB_G0267418	sahA	adenosylhomocysteinase	S-adenosyl-L-homocysteine hydrolase|SAHH|AdoHyc hydrolase	gene	taxon:44689	DictyBase:DDB_G0267418	P10819
 DDB_G0289071	DDB_G0289071_RTE	TRE3-A ORF1	gene	taxon:44689	DictyBase:DDB_G0289071	Q54I17
-DDB_G0289117	myoB	myosin IB	myosin-1B|DMIB|myoIB|abmB	gene	taxon:44689	DictyBase:DDB_G0289117	P34092
+DDB_G0289117	myoB	myosin IB	myosin-1B|myoIB|DMIB|abmB	gene	taxon:44689	DictyBase:DDB_G0289117	P34092
 DDB_G0278365	DDB_G0278365	gene	taxon:44689	DictyBase:DDB_G0278365	Q54Y86
 DDB_G0276299	agnA	argonaut-like protein	gene	taxon:44689	DictyBase:DDB_G0276299	Q7KWS3
 DDB_G0274361	prpf38a	pre-mRNA processing factor 38	gene	taxon:44689	DictyBase:DDB_G0274361	Q86IV3
@@ -12677,8 +12677,8 @@ DDB_G0286771	DDB_G0286771	gene	taxon:44689	DictyBase:DDB_G0286771	Q54L91
 DDB_G0274803	DDB_G0274803	gene	taxon:44689	DictyBase:DDB_G0274803	Q555X3
 DDB_G0271112	DDB_G0271112	gene	taxon:44689	DictyBase:DDB_G0271112	Q55BK7
 DDB_G0269746	itpk1	inositol 1,3,4-Tri5Phosphate 5/6 Kinase	ipkB	gene	taxon:44689	DictyBase:DDB_G0269746	Q55D87
-DDB_G0286561	aplC	amoebapore-like protein C	salA|saposin-like protein C|SAPLIP C protein	gene	taxon:44689	DictyBase:DDB_G0286561	Q54LG2
-DDB_G0287739	arpH	actin related protein 10	Arp10|Actr10|Arp11|Actr11	gene	taxon:44689	DictyBase:DDB_G0287739	Q54JY2
+DDB_G0286561	aplC	amoebapore-like protein C	SAPLIP C protein|saposin-like protein C|salA	gene	taxon:44689	DictyBase:DDB_G0286561	Q54LG2
+DDB_G0287739	arpH	actin related protein 10	Actr11|Actr10|Arp11|Arp10	gene	taxon:44689	DictyBase:DDB_G0287739	Q54JY2
 DDB_G0269200	cplA	calpain-like cysteine protease	gene	taxon:44689	DictyBase:DDB_G0269200	Q8MUF9
 DDB_G0268322	DDB_G0268322	zinc-containing alcohol dehydrogenase (ADH)	gene	taxon:44689	DictyBase:DDB_G0268322	Q55GE3
 DDB_G0285407	DDB_G0285407	gene	taxon:44689	DictyBase:DDB_G0285407	Q54NA8
@@ -12727,7 +12727,7 @@ DDB_G0278217	rsmK	small GTPase	gene	taxon:44689	DictyBase:DDB_G0278217	Q54YJ0
 DDB_G0278667	DDB_G0278667	gene	taxon:44689	DictyBase:DDB_G0278667	Q54Y89
 DDB_G0274469	DDB_G0274469	gene	taxon:44689	DictyBase:DDB_G0274469	Q86HQ8
 DDB_G0280071	DDB_G0280071	gene	taxon:44689	DictyBase:DDB_G0280071	Q54VY0
-DDB_G0276343	gpaK	G-protein subunit alpha 11	Ga11|gpa11|Galpha11	gene	taxon:44689	DictyBase:DDB_G0276343	Q8T130
+DDB_G0276343	gpaK	G-protein subunit alpha 11	Ga11|Galpha11|gpa11	gene	taxon:44689	DictyBase:DDB_G0276343	Q8T130
 DDB_G0281869	DDB_G0281869	gene	taxon:44689	DictyBase:DDB_G0281869	Q54TB9
 DDB_G0292716	DDB_G0292716	gene	taxon:44689	DictyBase:DDB_G0292716	Q54D23
 DDB_G0291332	DDB_G0291332	Probable 1-acyl-sn-glycerol-3-phosphate acyltransferase	gene	taxon:44689	DictyBase:DDB_G0291332	Q54EU4
@@ -12842,7 +12842,7 @@ DDB_G0276569	DDB_G0276569	unknown	gene	taxon:44689	DictyBase:DDB_G0276569	Q551I8
 DDB_G0279873	DDB_G0279873	B-box zinc finger-containing protein/FNIP repeat-containing protein	gene	taxon:44689	DictyBase:DDB_G0279873	Q54W56
 DDB_G0271076	DDB_G0271076_RTE	TRE3-A ORF1	gene	taxon:44689	DictyBase:DDB_G0271076	Q55BU4
 DDB_G0282443	DDB_G0282443	gene	taxon:44689	DictyBase:DDB_G0282443	Q54SI7
-DDB_G0293912	pks45	beta-ketoacyl synthase family protein	PKS|dipks45	gene	taxon:44689	DictyBase:DDB_G0293912	Q54B49
+DDB_G0293912	pks45	beta-ketoacyl synthase family protein	dipks45|PKS	gene	taxon:44689	DictyBase:DDB_G0293912	Q54B49
 DDB_G0284615	DDB_G0284615	EGF-like domain-containing protein	gene	taxon:44689	DictyBase:DDB_G0284615	Q54PE3
 DDB_G0280881	DDB_G0280881	putative glutathione S-transferase	gene	taxon:44689	DictyBase:DDB_G0280881	Q54UR0
 DDB_G0277089	commd4	COMM domain-containing protein 4	gene	taxon:44689	DictyBase:DDB_G0277089	Q550I8

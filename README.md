@@ -121,8 +121,9 @@ The preliminary conclusion is that now it is possible to develop perl DBI script
 #### Refactoring
 Incorporate issue's suggestions. 
 
-* I made perltidy worked with Sublime Text 2 (it took me too much time to make it work on sublime
+* I made perltidy worked with Sublime Text 2 (it took me too much time to make it work on sublime, for stupid reasons)
 * Create ``gen_gpi_file-v2.pl``: incorporate some of the options before I start the next version, which will follow the issue's suggestions
+* Create ``gen_gpi_file-v3.pl``: implementing su
 
 	
 

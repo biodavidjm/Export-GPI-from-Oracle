@@ -35,12 +35,13 @@ print " done!!\n";
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup
-# Statement 1: It selects DDB_G ID and gene name from the database
+# Statement: 1 to 1
+# It selects DDB_G ID and gene name from the database
 # Excludes pseudogenes
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-my $statement = "
-SELECT dbxref.accession gene_id, gene.name
+my $statement = <<"STATEMENT";
+SELECT dbxref.accession gene_id, gene.feature_id, gene.name
 FROM cgm_chado.feature gene
 JOIN organism ON organism.organism_id=gene.organism_id
 JOIN dbxref on dbxref.dbxref_id=gene.dbxref_id
@@ -50,28 +51,73 @@ JOIN cgm_chado.feature mrna ON frel.subject_id=mrna.feature_id
 JOIN cgm_chado.cvterm mtype ON mtype.cvterm_id=mrna.type_id
 WHERE gtype.name='gene' AND mtype.name='mRNA' AND organism.common_name = 'dicty'
 AND gene.name NOT LIKE '%\\_ps%' ESCAPE '\\'
-";
+STATEMENT
 
 print "> Execute statement... ";
+
 my $results = $dbh->prepare($statement);
 $results->execute()
     or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
-print " done!!";
 
+say " done!!";
 
-my ($DDB_G, $genename);
-my %ddbg2genename = ();
+my ( $DDB_G, $locus_no, $gene_name );
+my %ddbg2gene_name    = ();
+my %ddbg2locus_number = ();
 
-while( ($DDB_G, $genename) = $results->fetchrow_array) {
-	$ddbg2genename{$DDB_G} = $genename;
+while ( ( $DDB_G, $locus_no, $gene_name ) = $results->fetchrow_array ) {
+    $ddbg2gene_name{$DDB_G}    = $gene_name;
+    $ddbg2locus_number{$DDB_G} = $locus_no;
 }
 
-my $count_d = 1;
-for my $key (sort keys %ddbg2genename)
-{
-	say $count_d." ".$key." -> ".$ddbg2genename{$key};
-	$count_d++;
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Database setup
+# Statement: 1 to 1
+# DDB_G ID and gene PRODUCTS from the database
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+my $statement_geneproduct = <<"STATEMENT";
+SELECT gporder.gene_product FROM (
+SELECT gp.gene_product
+FROM cgm_ddb.gene_product gp
+INNER JOIN cgm_ddb.locus_gp lgp ON lgp.gene_product_no = gp.gene_product_no
+WHERE lgp.locus_no = ?
+ORDER BY date_created DESC
+) gporder
+WHERE rownum = 1
+STATEMENT
+
+# SELECT dx.accession AS DDB_G_ID,
+my $result_product = $dbh->prepare($statement_geneproduct);
+my $count_u  = 0;    # count unknowns gene products
+my $count_t  = 1;
+my $count_gp = 0;
+
+for my $ddb ( sort keys %ddbg2locus_number ) {
+    my $locus_no = $ddbg2locus_number{$ddb};
+    $result_product->execute($locus_no);
+    my $gene_product;
+    print $count_t. " "
+        . $ddb . " -> "
+        . $ddbg2locus_number{$ddb} . "\t"
+        . $ddbg2gene_name{$ddb} . "\t";
+    while ( ($gene_product) = $result_product->fetchrow_array ) {
+        print $gene_product ;
+        if ( $gene_product eq "unknown" ) {
+            $count_u++;
+        }
+        $count_gp++;
+    }
+    $count_t++;
+    print "\n";
 }
+
+say "Gene products: "
+    . $count_gp
+    . " (unkowns: "
+    . $count_u
+    . ") out of "
+    . $count_t;
 
 $dbh->disconnect();
 

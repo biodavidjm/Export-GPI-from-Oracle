@@ -35,18 +35,12 @@ print " done!!\n";
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup
-# Statement 1: Main query. It selects gene name, gene synonym and protein synonym, DDB_G ID
-# Excluding pseudogenes
-#
-# Precaution: it is not a copy and paste from the SQL dictywiki.
-# The following line was rearranged:
-# Original: SELECT gene.name,wm_concat(syn.name) gsyn,dg.gene_id gene_id
-# Here: dg.gene_id gene_id, gene.name, wm_concat(syn.name) gsyn
+# Statement 1: It selects DDB_G ID and gene name from the database
+# Excludes pseudogenes
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 my $statement = "
-WITH dicty_coding_genes AS (
-SELECT dbxref.accession gene_id
+SELECT dbxref.accession gene_id, gene.name
 FROM cgm_chado.feature gene
 JOIN organism ON organism.organism_id=gene.organism_id
 JOIN dbxref on dbxref.dbxref_id=gene.dbxref_id
@@ -54,32 +48,31 @@ JOIN cgm_chado.cvterm gtype on gtype.cvterm_id=gene.type_id
 JOIN cgm_chado.feature_relationship frel ON frel.object_id=gene.feature_id
 JOIN cgm_chado.feature mrna ON frel.subject_id=mrna.feature_id
 JOIN cgm_chado.cvterm mtype ON mtype.cvterm_id=mrna.type_id
-WHERE gtype.name='gene'
-AND mtype.name='mRNA'
-AND organism.common_name = 'dicty'
-AND gene.name NOT LIKE '%\\_ps%'
-ESCAPE '\\'
-group by dbxref.accession
-)
-
-SELECT dg.gene_id gene_id, gene.name, wm_concat(syn.name) gsyn
-FROM cgm_chado.feature gene
-JOIN cgm_chado.dbxref on gene.dbxref_id=dbxref.dbxref_id
-JOIN dicty_coding_genes dg on dg.gene_id=dbxref.accession
-LEFT JOIN cgm_chado.feature_synonym fsyn on gene.feature_id=fsyn.feature_id
-LEFT JOIN cgm_chado.synonym_ syn on syn.synonym_id=fsyn.SYNONYM_ID
-group by gene.name,dg.gene_id
-order by gene.name DESC
+WHERE gtype.name='gene' AND mtype.name='mRNA' AND organism.common_name = 'dicty'
+AND gene.name NOT LIKE '%\\_ps%' ESCAPE '\\'
 ";
 
-print "> Execute statement ";
+print "> Execute statement... ";
 my $results = $dbh->prepare($statement);
 $results->execute()
     or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
 print " done!!";
 
 
-close $out;
+my ($DDB_G, $genename);
+my %ddbg2genename = ();
+
+while( ($DDB_G, $genename) = $results->fetchrow_array) {
+	$ddbg2genename{$DDB_G} = $genename;
+}
+
+my $count_d = 1;
+for my $key (sort keys %ddbg2genename)
+{
+	say $count_d." ".$key." -> ".$ddbg2genename{$key};
+	$count_d++;
+}
+
 $dbh->disconnect();
 
 exit;
@@ -112,6 +105,9 @@ YYYYMMDD_HHMMSS.gpi_dicty
 
 Connect to the dictyOracle database and dump to a file
 (YYYYMMDD_HHMMSS.gpi_dicty) the following information:
+
+- DDB_G ID
+- Gene name 
 
 =head1 DETAILS
 

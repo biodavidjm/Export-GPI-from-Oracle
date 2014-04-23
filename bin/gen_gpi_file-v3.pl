@@ -76,48 +76,79 @@ while ( ( $DDB_G, $locus_no, $gene_name ) = $results->fetchrow_array ) {
 # DDB_G ID and gene PRODUCTS from the database
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-my $statement_geneproduct = <<"STATEMENT";
-SELECT gporder.gene_product FROM (
-SELECT gp.gene_product
-FROM cgm_ddb.gene_product gp
-INNER JOIN cgm_ddb.locus_gp lgp ON lgp.gene_product_no = gp.gene_product_no
-WHERE lgp.locus_no = ?
-ORDER BY date_created DESC
-) gporder
-WHERE rownum = 1
+# my $statement_geneproduct = <<"STATEMENT";
+# SELECT gporder.gene_product FROM (
+# SELECT gp.gene_product
+# FROM cgm_ddb.gene_product gp
+# INNER JOIN cgm_ddb.locus_gp lgp ON lgp.gene_product_no = gp.gene_product_no
+# WHERE lgp.locus_no = ?
+# ORDER BY date_created DESC
+# ) gporder
+# WHERE rownum = 1
+# STATEMENT
+
+# # SELECT dx.accession AS DDB_G_ID,
+# my $result_product = $dbh->prepare($statement_geneproduct);
+# my $count_u  = 0;    # count unknowns gene products
+# my $count_t  = 1;
+# my $count_gp = 0;
+
+# for my $ddb ( sort keys %ddbg2locus_number ) {
+#     my $locus_no = $ddbg2locus_number{$ddb};
+#     $result_product->execute($locus_no);
+#     my $gene_product;
+#     print $count_t. " "
+#         . $ddb . " -> "
+#         . $ddbg2locus_number{$ddb} . "\t"
+#         . $ddbg2gene_name{$ddb} . "\t";
+#     while ( ($gene_product) = $result_product->fetchrow_array ) {
+#         print $gene_product ;
+#         if ( $gene_product eq "unknown" ) {
+#             $count_u++;
+#         }
+#         $count_gp++;
+#     }
+#     $count_t++;
+#     print "\n";
+# }
+
+# # Stats
+# # p p p p p p p p p p p p p
+# say "Gene products: "
+#     . $count_gp
+#     . " (unkowns: "
+#     . $count_u
+#     . ") out of "
+#     . $count_t;
+# # p p p p p p p p p p p p p
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Database setup
+# Statement: 1 to many
+# For each DDB_G ID, get all the gene and protein alternative names
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+my $statement_syn = <<"STATEMENT";
+SELECT syn.name gsyn
+FROM cgm_chado.feature gene
+JOIN dbxref on dbxref.dbxref_id=gene.dbxref_id
+LEFT JOIN cgm_chado.feature_synonym fsyn on gene.feature_id=fsyn.feature_id
+LEFT JOIN cgm_chado.synonym_ syn on syn.synonym_id=fsyn.SYNONYM_ID
+WHERE dbxref.accession = ?
 STATEMENT
 
-# SELECT dx.accession AS DDB_G_ID,
-my $result_product = $dbh->prepare($statement_geneproduct);
-my $count_u  = 0;    # count unknowns gene products
-my $count_t  = 1;
-my $count_gp = 0;
+my $result_syn = $dbh->prepare($statement_syn);
 
-for my $ddb ( sort keys %ddbg2locus_number ) {
-    my $locus_no = $ddbg2locus_number{$ddb};
-    $result_product->execute($locus_no);
-    my $gene_product;
-    print $count_t. " "
-        . $ddb . " -> "
-        . $ddbg2locus_number{$ddb} . "\t"
-        . $ddbg2gene_name{$ddb} . "\t";
-    while ( ($gene_product) = $result_product->fetchrow_array ) {
-        print $gene_product ;
-        if ( $gene_product eq "unknown" ) {
-            $count_u++;
-        }
-        $count_gp++;
+for my $ddbg_id ( sort keys %ddbg2gene_name ) {
+    $result_syn->execute($ddbg_id);
+    my $syn = '';
+    while ( ($syn) = $result_syn->fetchrow_array ) {
+        print $ddbg_id." ".$syn."\n";
     }
-    $count_t++;
-    print "\n";
 }
 
-say "Gene products: "
-    . $count_gp
-    . " (unkowns: "
-    . $count_u
-    . ") out of "
-    . $count_t;
 
 $dbh->disconnect();
 

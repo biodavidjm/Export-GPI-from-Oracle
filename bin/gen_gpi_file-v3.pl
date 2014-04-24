@@ -150,6 +150,7 @@ for my $ddbg_id ( sort keys %ddbg2gene_name ) {
     $total++;
 }
 
+
 # Print out STATS
 # Gene product
 say "Gene products: "

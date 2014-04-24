@@ -100,7 +100,7 @@ foreach my $linea (@$row_statement) {
 }
 print " (and now data in hashes also)\n";
 
-print "IN: " . $count_statement_in . " OUT: " . $count_statement_out . "\n";
+print "\tIN: " . $count_statement_in . " OUT: " . $count_statement_out . "\n";
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup

@@ -122,8 +122,26 @@ The preliminary conclusion is that now it is possible to develop perl DBI script
 Incorporate issue's suggestions. 
 
 * I made perltidy worked with Sublime Text 2 (it took me too much time to make it work on sublime, for stupid reasons)
-* Create ``gen_gpi_file-v2.pl``: incorporate some of the options before I start the next version, which will follow the issue's suggestions
-* Create ``gen_gpi_file-v3.pl``: implementing su
+
+* Create ``gen_gpi_file-v2.pl``: incorporate some of the options before I start the next version, which will follow the issue's suggestions. The stats from this file:
+
+	```
+	> Execute statement  done!! (and now data in hashes also)
+		IN: 12862 OUT: 0
+	> Execute statement_splitgenes  done!! (and now data in hashes also)
+	> Execute statement_gene_product  done!! (and now data in hashes also)
+		-DDB_G with only ONE product: 7179
+		-DDB_G with MORE THAN one pd: 1389
+	>Execute statement_ddb2uniprot  done!! (and now data in hashes also)
+		-DDB_G ids with Uniprot IDS: 12690
+
+	Dicty GPI file (12862 genes, 53 are split genes)
+		- Gene products: 7950 	No Gene Product: 4912
+		- Alternt names: 1826 	No Alt Names   : 11036
+		- Uniprot ids  : 12674 	No uniprot     : 188
+	```
+
+* Create ``gen_gpi_file-v3.pl``: implementing Sidd's suggestions
 
 	
 

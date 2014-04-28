@@ -321,7 +321,7 @@ my $ymd = sprintf(
 my $outfile = "$ymd.gpi_dicty";
 
 open my $out, '>', $outfile
-    or print "Big problem: I can't create '$outfile'";
+    or die "Big problem: I can't create '$outfile'";
 
     # Head info to the GPI FILE
     my $headinfo = "

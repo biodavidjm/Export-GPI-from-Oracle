@@ -1,9 +1,7 @@
 #!/usr/bin/perl -w
 
-use POSIX;
 use strict;
 use feature qw/say/;
-use warnings;
 
 use DBI;
 
@@ -11,7 +9,6 @@ use Getopt::Long;
 use IO::File;
 use autodie qw/open close/;
 use Text::CSV;
-use Perl::Tidy;
 
 # Validation section
 my %options;
@@ -30,8 +27,7 @@ print "Connecting to the database... ";
 my $dbh = DBI->connect( "dbi:Oracle:host=$host;sid=orcl;port=1521",
     $options{user}, $options{passwd},
     { RaiseError => 1, LongReadLen => 2**20 } );
-
-print " done!!\n";
+say " done!!";
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup
@@ -49,8 +45,11 @@ JOIN cgm_chado.cvterm gtype on gtype.cvterm_id=gene.type_id
 JOIN cgm_chado.feature_relationship frel ON frel.object_id=gene.feature_id
 JOIN cgm_chado.feature mrna ON frel.subject_id=mrna.feature_id
 JOIN cgm_chado.cvterm mtype ON mtype.cvterm_id=mrna.type_id
-WHERE gtype.name='gene' AND mtype.name='mRNA' AND organism.common_name = 'dicty'
-AND gene.name NOT LIKE '%\\_ps%' ESCAPE '\\'
+WHERE gtype.name='gene' 
+        AND mtype.name='mRNA' 
+        AND organism.common_name = 'dicty' 
+        AND gene.is_deleted = 0 
+        AND gene.name NOT LIKE '%\\_ps%' ESCAPE '\\'
 STATEMENT
 
 print "> Execute statement... ";
@@ -61,14 +60,28 @@ $results->execute()
 
 say " done!!";
 
-my ( $DDB_G, $locus_no, $gene_name );
 my %ddbg2gene_name    = ();
 my %ddbg2locus_number = ();
+my $count_prot_coding = 0;
+my $unique = 0;
+my $duplications = 0;
 
-while ( ( $DDB_G, $locus_no, $gene_name ) = $results->fetchrow_array ) {
-    $ddbg2gene_name{$DDB_G}    = $gene_name;
+while ( my ( $DDB_G, $locus_no, $gene_name ) = $results->fetchrow_array ) {
+    
+    if(!$ddbg2gene_name{$DDB_G})
+    {
+        $ddbg2gene_name{$DDB_G}    = $gene_name; 
+        $unique++;
+    }
+    else
+    {
+        $duplications++;
+    }
     $ddbg2locus_number{$DDB_G} = $locus_no;
+    $count_prot_coding++;
 }
+
+say "Total number of DDB_G_ID: ".$unique;
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup
@@ -97,21 +110,27 @@ for my $ddb ( sort keys %ddbg2locus_number ) {
     my $locus_no = $ddbg2locus_number{$ddb};
     $result_product->execute($locus_no);
     my $gene_product;
-    print $count_t. " "
-        . $ddb . " -> "
-        . $ddbg2locus_number{$ddb} . "\t"
-        . $ddbg2gene_name{$ddb} . "\t";
+    # print $count_t. " "
+    #     . $ddb . " -> "
+    #     . $ddbg2locus_number{$ddb} . "\t"
+    #     . $ddbg2gene_name{$ddb} . "\t";
     while ( ($gene_product) = $result_product->fetchrow_array ) {
-        print $gene_product ;
+        # print $gene_product ;
         if ( $gene_product eq "unknown" ) {
             $count_u++;
         }
         $count_gp++;
     }
     $count_t++;
-    print "\n";
+    # print "\n";
 }
 
+say "WITH GENE PRODUCT: "
+    .$count_gp
+    ." (unknown: "
+    .$count_u
+    .") out of a total of "
+    .$count_t;
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup
@@ -129,27 +148,26 @@ WHERE dbxref.accession = ?
 GROUP BY dbxref.accession
 STATEMENT
 
-my $result_syn = $dbh->prepare($statement_syn);
-my $count_syn  = 0;
+my $result_syn  = $dbh->prepare($statement_syn);
+my $count_syn   = 0;
 my $count_nosyn = 0;
-my $total = 1;
+my $total       = 1;
 for my $ddbg_id ( sort keys %ddbg2gene_name ) {
     $result_syn->execute($ddbg_id);
-    print $total. " " . $ddbg_id. "\t";
+    # print $total. " " . $ddbg_id . "\t";
     my $syn = '';
     while ( ($syn) = $result_syn->fetchrow_array ) {
         if ($syn) {
-            print $syn . "\n";
+            # print $syn . "\n";
             $count_syn++;
         }
         else {
-            print "null\n";
+            # print "null\n";
             $count_nosyn++;
         }
-    } # while
+    }    # while
     $total++;
 }
-
 
 # Print out STATS
 # Gene product
@@ -161,10 +179,9 @@ say "Gene products: "
     . $count_t;
 
 # Alternative gene and protein names
-say "\nTotal DDB_G ids: " .($total - 1);
-say "\tWith syn: " .$count_syn;
-say "\tNO syn  : ". $count_nosyn;
-
+say "\nTotal DDB_G ids: " . ( $total - 1 );
+say "\tWith syn: " . $count_syn;
+say "\tNO syn  : " . $count_nosyn;
 
 $dbh->disconnect();
 

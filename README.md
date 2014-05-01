@@ -143,6 +143,45 @@ Incorporate issue's suggestions.
 
 * Create ``gen_gpi_file-v3.pl``: implementing Sidd's suggestions
 
+With this script, I have found multiple problems that I need to resolve one by one. But in order to have a good version of the GPI file ready to go, I will write a temporal script taking a safer approach:
+
+* Create ``gen_gpi_file_gp2protein.pl``: uses the gp2protein.dictyBase file as the reference for protein coding genes, which contains the list of protein coding genes (DDB_G to Uniprot).
+	* This version does not have modules and does not print the bpi file 
+	* There are a total of 12,201 DDB_G ids with a Uniprot ID.
+	* Two genes do not have a Uniprot ID. These are: 
+	
+		```
+		dictyBase:DDB_G0278875	NCBI_GP:EAL68039.1 ---> do not have an Uniprot id in dictyweb
+		dictyBase:DDB_G0271556	NCBI_GP:EAL71642.2 ---> do have a uniprot id in dictyweb:V9H176 
+		```
+* Create ``gen_gpi_file_gp2protein-v2.pl``: this version prints out a GPI file. These are some stats:
+	
+		```
+		> Getting ddb_g and Uniprot from gp2protein file...
+			Number of DDB_G to Uniprot: 12201
+		> Getting gene name...  done!
+		> Getting gene product...
+			with Gene Product: 7920
+			without gene product: 4281
+			Total: 12201
+		> Getting gene synonyms...
+			With syn: 1819
+			Without syn  : 10382
+			Total DDB_G ids: 12201
+
+		Double checking numbers
+			- Has products: 7920
+			- Has synonyms: 1819
+		```
+
+
+#### Question for Petra:
+
+- In the pg2protein file there are 509 genes (file ``proteincoding.transposons.txt``) that are annotated as Retro Transposon Elements (\_RTE) and Transposon Elements (\_TE). Most of them seem to come from the paper: 
+
+	*Cytogenet Genome Res. 2005;110(1-4):288-98. Transfer RNA gene-targeted integration: an adaptation of retrotransposable elements to survive in the compact Dictyostelium discoideum genome. Winckler T1, Szafranski K, Glöckner G.*
+
+	Is this ok?
 
 
 

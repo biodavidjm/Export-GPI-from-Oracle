@@ -10,12 +10,14 @@ use IO::File;
 use autodie qw/open close/;
 use Text::CSV;
 
+my $script_name = "gen_gpi_file_gp2protein.pl";
+
 # Validation section
 my %options;
 GetOptions( \%options, 'dsn=s', 'user=s', 'passwd=s' );
 for my $arg (qw/dsn user passwd/) {
     die
-        "\tperl gen_gpi_file.pl -dsn=ORACLE_DNS -user=USERNAME -passwd=PASSWD\n\n"
+        "\tperl $script_name -dsn=ORACLE_DNS -user=USERNAME -passwd=PASSWD\n\n"
         if not defined $options{$arg};
 }
 
@@ -29,15 +31,56 @@ my $dbh = DBI->connect( "dbi:Oracle:host=$host;sid=orcl;port=1521",
     { RaiseError => 1, LongReadLen => 2**20 } );
 say " done!!";
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Map DDB_G_ID to Uniprot IDs from gp2protein file.
+# Use this as a list of genes (DDB_G ids)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+my $filename = "../data/gp2protein.dictyBase";
+
+open my $FILE, '<', $filename or die "Cannot open '$filename'!\n";
+
+my %hash_gp2protein = ();
+
+# stats
+my $c_file  = 0;
+my $c_regex = 0;
+my $c_lines = 0;
+
+foreach my $line (<$FILE>) {
+    chomp($line);
+    $c_lines++;
+    if ( $line =~ /dictyBase:(\S+)\s+UniProtKB:(\w{6})/ ) {
+        my $ddb = $1;
+        my $uni = $2;
+        $c_file++;
+        # say $ddb. "--->" . $uni;
+        if ( !$hash_gp2protein{$ddb} ) {    
+            $hash_gp2protein{$ddb} = $uni;
+            $c_regex++;
+        }
+        else {
+            die "\n\nOooops " . $line . " is repeated!!\n";
+        }
+    }
+    else {
+        print $line. "\n";
+    }
+}
+
+say "\nStats in gp2protein file:\n";
+say "Lines in file: ".$c_lines;
+say "In file: " . $c_file;
+say "In loop: " . $c_regex;
+
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup
 # Statement: 1 to 1
 # It selects DDB_G ID and gene name from the database
-# Excludes pseudogenes
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-my $statement = <<"STATEMENT";
-SELECT dbxref.accession gene_id, gene.feature_id, gene.name
+my $statement_genename = <<"STATEMENT";
+SELECT DISTINCT dbxref.accession gene_id, gene.feature_id, gene.name
 FROM cgm_chado.feature gene
 JOIN organism ON organism.organism_id=gene.organism_id
 JOIN dbxref on dbxref.dbxref_id=gene.dbxref_id
@@ -45,23 +88,8 @@ JOIN cgm_chado.cvterm gtype on gtype.cvterm_id=gene.type_id
 JOIN cgm_chado.feature_relationship frel ON frel.object_id=gene.feature_id
 JOIN cgm_chado.feature mrna ON frel.subject_id=mrna.feature_id
 JOIN cgm_chado.cvterm mtype ON mtype.cvterm_id=mrna.type_id
-WHERE gtype.name='gene' 
-        AND mtype.name='mRNA' 
-        AND organism.common_name = 'dicty' 
-        AND gene.is_deleted = 0 
-        AND gene.name NOT LIKE '%\\_ps%' ESCAPE '\\'
-        AND gene.name NOT LIKE '%\\_TE%' ESCAPE '\\'
-        AND gene.name NOT LIKE '%\\_RTE%' ESCAPE '\\'
+WHERE dbxref.accession = ?
 STATEMENT
-
-print "> Execute statement... ";
-
-my $results = $dbh->prepare($statement);
-$results->execute()
-    or die "\n\nOh no! I could not execute: " . DBI->errstr . "\n\n";
-
-say " done!!";
-
 
 my %ddbg2gene_name    = ();
 my %ddbg2locus_number = ();
@@ -69,8 +97,25 @@ my $count_prot_coding = 0;
 my $unique            = 0;
 my $duplications      = 0;
 
-while ( my ( $DDB_G, $locus_no, $gene_name ) = $results->fetchrow_array ) {
+for my $ddbg_id ( keys %hash_gp2protein ) {
+    my @data = $dbh->selectrow_array($statement_genename, {}, ($ddbg_id) );
 
+    my $DDB_G = $data[0];
+    my $locus_no = $data[1];
+    my $gene_name = $data[2];
+
+    # just a control
+    if (!$DDB_G) {
+        die "\noh no!!! how is this possible there is no DDB_G_ID!!!\n";
+    }
+    elsif (!$locus_no) {
+        die "\noh no!!! how is this possible there is no feature_id (locus number)!!!\n";
+    }
+    elsif (!$gene_name) {
+        die "\noh no!!! how is this possible there is no gene name!!!\n";
+    }
+
+    # Double checking
     if ( !$ddbg2gene_name{$DDB_G} ) {
         $ddbg2gene_name{$DDB_G} = $gene_name;
         $unique++;
@@ -78,71 +123,12 @@ while ( my ( $DDB_G, $locus_no, $gene_name ) = $results->fetchrow_array ) {
     else {
         $duplications++;
     }
+
     $ddbg2locus_number{$DDB_G} = $locus_no;
     $count_prot_coding++;
 }
 
 say "Total number of DDB_G_ID: " . $unique;
-
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Database setup
-# Statement: 1 to 1
-# For each DDB_G ID, get the uniprot ID
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-my $statement_ddb2uniprot = <<"STATEMENT";
-SELECT gxref.accession geneid, dbxref.accession uniprot
-FROM dbxref
-    JOIN db ON db.db_id = dbxref.db_id
-    JOIN feature_dbxref fxref ON fxref.dbxref_id = dbxref.dbxref_id
-    JOIN feature polypeptide ON polypeptide.feature_id = fxref.feature_id
-    JOIN feature_relationship frel ON polypeptide.feature_id = frel.subject_id
-    JOIN feature transcript ON transcript.feature_id = frel.object_id
-    JOIN feature_dbxref fxref2 ON fxref2.feature_id = transcript.feature_id
-    JOIN dbxref dbxref2 ON fxref2.dbxref_id = dbxref2.dbxref_id
-    JOIN db db2 ON db2.db_id = dbxref2.db_id
-    JOIN feature_relationship frel2 ON frel2.subject_id = transcript.feature_id
-    JOIN feature gene ON frel2.object_id = gene.feature_id
-    JOIN cvterm ptype ON ptype.cvterm_id = polypeptide.type_id
-    JOIN cvterm mtype ON mtype.cvterm_id = transcript.type_id
-    JOIN cvterm gtype ON gtype.cvterm_id = gene.type_id
-    JOIN dbxref gxref ON gene.dbxref_id = gxref.dbxref_id
-WHERE 
-    ptype.name = 'polypeptide'
-    AND mtype.name = 'mRNA'
-    AND gtype.name = 'gene'
-    AND db2.name = 'GFF_source'
-    AND db.name = 'DB:SwissProt'
-    AND gxref.accession = ?
-STATEMENT
-#AND dbxref2.accession = 'dictyBase Curator'
-#AND     AND transcript.is_deleted = 0
-
-my %hash_ddbg2uniprot = ();
-
-my $yes = 0;
-my $no = 0;
-for my $ddbg_id ( sort keys %ddbg2gene_name ) {
-    my @uniprot = $dbh->selectrow_array($statement_ddb2uniprot, {}, ($ddbg_id) );
-    if ($uniprot[0])
-    {
-        # say $uniprot[0];
-        $hash_ddbg2uniprot{$ddbg_id} = $uniprot[0];
-        $yes++;
-    }
-    else
-    {
-        say "$ddbg_id";
-        $no++;
-    }
-}
-
-say "yes ".$yes;
-say "no ". $no;
-exit;
-
-
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -162,32 +148,31 @@ ORDER BY date_created DESC
 WHERE rownum = 1
 STATEMENT
 
+say "> Checking for Gene Products";
 # SELECT dx.accession AS DDB_G_ID,
-my $result_product = $dbh->prepare($statement_geneproduct);
+
+my %hash_geneproduct = ();
+
 my $count_u  = 0;    # count unknowns gene products
 my $count_t  = 1;
 my $count_gp = 0;
 
 for my $ddb ( sort keys %ddbg2locus_number ) {
+
     my $locus_no = $ddbg2locus_number{$ddb};
-    $result_product->execute($locus_no);
-    my $gene_product;
+    my @data = $dbh->selectrow_array($statement_geneproduct, {}, ($locus_no) );
 
-    # print $count_t. " "
-    #     . $ddb . " -> "
-    #     . $ddbg2locus_number{$ddb} . "\t"
-    #     . $ddbg2gene_name{$ddb} . "\t";
-    while ( ($gene_product) = $result_product->fetchrow_array ) {
-
-        # print $gene_product ;
-        if ( $gene_product eq "unknown" ) {
-            $count_u++;
-        }
+    my $gene_product = '';
+    $gene_product = $data[0];
+    if (!$gene_product) {
+        $count_u++
+    }
+    else {
         $count_gp++;
+        $hash_geneproduct{$ddb} = $gene_product;
+        # say $ddb." has this gene product: ".$gene_product;
     }
     $count_t++;
-
-    # print "\n";
 }
 
 say "WITH GENE PRODUCT: "
@@ -196,6 +181,7 @@ say "WITH GENE PRODUCT: "
     . $count_u
     . ") out of a total of "
     . $count_t;
+
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Database setup
@@ -217,11 +203,11 @@ my $result_syn  = $dbh->prepare($statement_syn);
 my $count_syn   = 0;
 my $count_nosyn = 0;
 my $total       = 1;
+
 for my $ddbg_id ( sort keys %ddbg2gene_name ) {
     
     $result_syn->execute($ddbg_id);
 
-    # print $total. " " . $ddbg_id . "\t";
     my $syn = '';
     while ( ($syn) = $result_syn->fetchrow_array ) {
         if ($syn) {
@@ -236,10 +222,6 @@ for my $ddbg_id ( sort keys %ddbg2gene_name ) {
     }    # while
     $total++;
 }
-
-
-
-
 
 
 # -------------------------------------------------------------
@@ -261,18 +243,69 @@ $dbh->disconnect();
 
 exit;
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Map DDB_G_ID to Uniprot IDs from gp2protein file.
+# Use this as a list of genes (DDB_G ids)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+sub get_gp2protein {
+
+    my ($dbh) = @_;
+    
+    my $filename = "../data/gp2protein.dictyBase";
+    open my $FILE, '<', $filename or die "Cannot open '$filename'!\n";
+
+    my %hash_gp2protein = ();
+
+    # stats
+    my $c_file  = 0;
+    my $c_regex = 0;
+    my $c_lines = 0;
+
+    foreach my $line (<$FILE>) {
+        chomp($line);
+        $c_lines++;
+        if ( $line =~ /dictyBase:(\S+)\s+UniProtKB:(\w{6})/ ) {
+            my $ddb = $1;
+            my $uni = $2;
+            $c_file++;
+            # say $ddb. "--->" . $uni;
+            if ( !$hash_gp2protein{$ddb} ) {    
+                $hash_gp2protein{$ddb} = $uni;
+                $c_regex++;
+            }
+            else {
+                die "\n\nOooops " . $line . " is repeated!!\n";
+            }
+        }
+    }
+
+    say "\nStats in gp2protein file:\n";
+    say "Lines in file: ".$c_lines;
+    say "In file: " . $c_file;
+    say "In loop: " . $c_regex."\n";
+
+    return (%hash_gp2protein);
+    my %hash_gp2protein = get_gp2protein($dbh);
+
+}
+
+
+
+
+
+
 =head1 NAME
 
-gen_gpi_file-v3.pl - Generate a GPI file from the dictyBase
+gen_gpi_file_gp2protein.pl - Generate a GPI file from the dictyBase
 
 =head1 VERSION
  
 Version 3
 
-
 =head1 SYNOPSIS
 
-perl gen_gpi_file-v3.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle password>
+perl gen_gpi_file_gp2protein.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle password>
+(It resquires the gp2protein file at Export-GPI-from-Oracle/data/gp2protein.dictyBase).
 
 
 =head1 OPTIONS
@@ -283,17 +316,15 @@ perl gen_gpi_file-v3.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracl
 
 =head1 OUTPUT
 
-YYYYMMDD_HHMMSS.gpi_dicty
+YYYYMMDD_HHMMSS.gp2protein.gpi_dicty
 
 =head1 DESCRIPTION
 
-Connect to the dictyOracle database and dump to a file
-(YYYYMMDD_HHMMSS.gpi_dicty) the following information:
+It connects to the dictyOracle database and generates a GPI file
+(YYYYMMDD_HHMMSS.gp2protein.gpi_dicty)
 
-- DDB_G ID
-- Gene name 
-- Gene product
-- Alternative gene name
+The script uses the DDB_G_IDS corresponding to protein coding genes available
+at the gp2protein file.
 
 
 =head1 DETAILS
@@ -303,8 +334,7 @@ http://wiki.geneontology.org/index.php/Final_GPAD_and_GPI_file_format
 
 =head1 ISSUES
 
-Statement 3 needs to be revised. According to the curation statistics, there
-should be ~9,000 gene products. However this script gets less.
+
 
 
 

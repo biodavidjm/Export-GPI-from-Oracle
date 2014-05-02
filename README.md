@@ -181,7 +181,7 @@ With this script, I have found multiple problems that I need to resolve one by o
 
 	*Cytogenet Genome Res. 2005;110(1-4):288-98. Transfer RNA gene-targeted integration: an adaptation of retrotransposable elements to survive in the compact Dictyostelium discoideum genome. Winckler T1, Szafranski K, Glöckner G.*
 
-	Is this ok?
+~~~Is this ok?~~ Never mind. I read the paper and of course that these annotations make sense: the encode for reverse retrotranscriptase and transposase, depending on the mechanism of transposition. 
 
 
 

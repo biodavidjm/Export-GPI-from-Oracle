@@ -3,6 +3,14 @@ Export-GPI-from-Oracle
 
 Dump a gp_information (GPI) file from our Oracle database according to the GO specifications
 
+### Synopsis
+
+```
+`perl gen_gpi_file_gp2protein.pl  --dsn=<Oracle DSN> --user=<Oracle_user> --passwd=<Oracle password>`
+```
+
+### Output
+The output is available at `data/` with the name YYYYMMDD_HHMMSS.gp2protein.gpi_dicty
 
 ### GPI format
 
@@ -156,23 +164,23 @@ With this script, I have found multiple problems that I need to resolve one by o
 		```
 * Create ``gen_gpi_file_gp2protein-v2.pl``: this version prints out a GPI file. These are some stats:
 	
-		```
-		> Getting ddb_g and Uniprot from gp2protein file...
-			Number of DDB_G to Uniprot: 12201
-		> Getting gene name...  done!
-		> Getting gene product...
-			with Gene Product: 7920
-			without gene product: 4281
-			Total: 12201
-		> Getting gene synonyms...
-			With syn: 1819
-			Without syn  : 10382
-			Total DDB_G ids: 12201
+```
+> Getting ddb_g and Uniprot from gp2protein file...
+	Number of DDB_G to Uniprot: 12201
+> Getting gene name...  done!
+> Getting gene product...
+	with Gene Product: 7920
+	without gene product: 4281
+	Total: 12201
+> Getting gene synonyms...
+	With syn: 1819
+	Without syn  : 10382
+	Total DDB_G ids: 12201
 
-		Double checking numbers
-			- Has products: 7920
-			- Has synonyms: 1819
-		```
+Double checking numbers
+	- Has products: 7920
+	- Has synonyms: 1819
+```
 
 
 #### Question for Petra:

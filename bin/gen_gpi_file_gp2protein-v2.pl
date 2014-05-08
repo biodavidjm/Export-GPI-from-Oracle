@@ -65,7 +65,7 @@ my $ymd = sprintf(
     $year + 1900,
     $mon + 1, $mday, $hour, $min, $sec
 );
-my $outfile = "$ymd.gp2protein.gpi_dicty";
+my $outfile = "../data/$ymd.gp2protein.gpi_dicty";
 
 open my $out, '>', $outfile
     or die "Big problem: I can't create '$outfile'";

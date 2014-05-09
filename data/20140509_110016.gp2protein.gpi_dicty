@@ -19,7 +19,7 @@
 !   DB_Xref(s)             optional  0 or greater  -           
 !   Properties             optional  0 or greater  -           
 !
-! Generated on localtime()
+! Generated on Fri May  9 11:00:16 2014
 !
 DDB_G_ID	Gene_Name	Gene_Product	Alternative_gene_name	Object_type	Taxon	Parent_Object	Uniprot_ID
 DDB_G0267178	DDB_G0267178_RTE	DIRS1 ORF2 fragment	 	gene	taxon:44689	 	Q55H43

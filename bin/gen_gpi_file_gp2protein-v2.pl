@@ -70,9 +70,11 @@ my $outfile = "../data/$ymd.gp2protein.gpi_dicty";
 open my $out, '>', $outfile
     or die "Big problem: I can't create '$outfile'";
 
+my $localtime = localtime();
+say $localtime;
+
 # Head info to the GPI FILE
-my $headinfo = "
-!
+my $headinfo = "!
 ! gpi-version: 1.1
 ! namespace: dictyBase
 !
@@ -92,7 +94,7 @@ my $headinfo = "
 !   DB_Xref(s)             optional  0 or greater  -           
 !   Properties             optional  0 or greater  -           
 !
-! Generated on localtime()
+! Generated on $localtime
 !
 ";
 

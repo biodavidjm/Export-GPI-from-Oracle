@@ -71,7 +71,6 @@ open my $out, '>', $outfile
     or die "Big problem: I can't create '$outfile'";
 
 my $localtime = localtime();
-say $localtime;
 
 # Head info to the GPI FILE
 my $headinfo = "!

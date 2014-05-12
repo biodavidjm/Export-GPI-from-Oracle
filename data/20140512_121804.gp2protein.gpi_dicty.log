@@ -1,0 +1,15 @@
+> Getting ddb_g and Uniprot from gp2protein file...
+	Number of DDB_G to Uniprot: 12201
+> Getting gene name...  done!
+> Getting gene product...
+	with Gene Product: 7921
+	without gene product: 4280
+	Total: 12201
+> Getting gene synonyms...
+	With syn: 1820
+	Without syn  : 10381
+	Total DDB_G ids: 12201
+
+Double checking numbers
+	- Has products: 7921
+	- Has synonyms: 1820

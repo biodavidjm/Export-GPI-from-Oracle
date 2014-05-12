@@ -30,9 +30,11 @@ column | name                    | required? | cardinality  | GAF column  | Exam
 09     | Gene_Product_Properties | optional  | 0 or greater | -           | See Note 4 below	
 ***
 
+#### GPI file from other databases
+- GPI files are available for Uniprot in this [site](ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/). And [this is the paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245010/) related to it.
+
 #### GPI FORMAT from Dictybase
 Where is the info?
-
 
 01 DB_Object_ID = dictyID (DDB#) = feature.uniquename
 
@@ -53,73 +55,10 @@ Where is the info?
 09 Gene_Product_Properties = Think about it.
 
 
-### The Plan / challenges
-
-I will test my scripts on oracle-vm of nubic. I will write scripts that will connect to the oracle database and dump the data. These are the challenges ahead:
-
-* Keep synchronized this github working directory between my computer and the nubic-vm
-* Write Perl scripts to interact with the database. These scripts will basically take the required data from sql queries and store it in perl data structure, to further save it in a file.
-
 ### Steps completed
 
-
-#### On the Mac
-
-##### Installation of DBD::Oracle 
-
-I need to first install the 64 bits instant client for Mac, which traditionally has been very problematic. After a lot of difficulties, I made it work. And these are the steps adapted from [here](http://blog.caseylucas.com/tag/oracle-sqlplus/) (the sh script is the essential part) and specially [here](http://blog.g14n.info/2013/07/how-to-install-dbdoracle.html). Since I combined both, I am going to rewrite the steps:
-
-Folder: ``$HOME:/opt/Oracle/packages/`` where I [downloaded](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html):
-
-```
-ls opt/Oracle/packages/
-instantclient-basic-macos.x64-11.2.0.3.0.zip   
-instantclient-sdk-macos.x64-11.2.0.3.0.zip     
-instantclient-sqlplus-macos.x64-11.2.0.3.0.zip
-```
-
-Next unzip them:
-
-```
-$ cd $HOME/opt/Oracle
-$ unzip packages/basic-10.2.0.5.0-linux-x64.zip
-$ unzip packages/sdk-10.2.0.5.0-linux-x64.zip
-$ unzip packages/sqlplus-10.2.0.5.0-linux-x64.zip
-```
-
-Then, go to $HOME and create a ``.oracle_profile`` file with the environment variables 
-
-```
-more .oracle_profile
-export ORACLE_BASE=$HOME/opt/Oracle
-export ORACLE_HOME=$ORACLE_BASE/instantclient_11_2
-export PATH=$ORACLE_HOME:$PATH
-export TNS_ADMIN=$HOME/etc
-export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P15
-export LD_LIBRARY_PATH=$ORACLE_HOME
-export DYLD_LIBRARY_PATH=$ORACLE_HOME
-```
-
-...which has to be source from ``.bash_profile``. At this point, the test ``sqlplus /nolog`` should give errors. To solve the problem, I cd to the folder ``/opt/Oracle/instantclient_11_2`` and run the script ``changeOracleLibs.sh`` (it should be available in this github project, folder ``/bin``).
-
-After running the script, testing sqlplus should work:
-
-```
-$ sqlplus /nolog
-
-SQLPlus: Release 11.2.0.3.0 Production on Fri Mar 21 13:49:34 2014
-
-Copyright (c) 1982, 2012, Oracle.  All rights reserved.
-
-SQL>
-
-```
-
-Finally, install the DBI module ``cpanm PERL::DBI``, which was installed WITH SUCCESS!!
-
-The testing script ``connect2oracle.pl`` was tested to connect to the Oracle database at the VM on nubic with SUCCESS!
-
-The preliminary conclusion is that now it is possible to develop perl DBI scripts from a Mac OS X (64 bits).
+### Installation of DBD::Oracle on the Mac
+Follow the instructions in the [General-Scripts readme file](https://github.com/dictyBase/General-Scripts/blob/master/README.md) about how to install DBD::Oracle on the Mac.
 
 ### Scripts
 * Started with script ``connect2oracle.pl``
@@ -181,15 +120,6 @@ Double checking numbers
 	- Has products: 7920
 	- Has synonyms: 1819
 ```
-
-
-#### Question for Petra:
-
-- In the pg2protein file there are 509 genes (file ``proteincoding.transposons.txt``) that are annotated as Retro Transposon Elements (\_RTE) and Transposon Elements (\_TE). Most of them seem to come from the paper: 
-
-	*Cytogenet Genome Res. 2005;110(1-4):288-98. Transfer RNA gene-targeted integration: an adaptation of retrotransposable elements to survive in the compact Dictyostelium discoideum genome. Winckler T1, Szafranski K, Glöckner G.*
-
-~~~Is this ok?~~ Never mind. I read the paper and of course that these annotations make sense: the encode for reverse retrotranscriptase and transposase, depending on the mechanism of transposition. 
 
 
 

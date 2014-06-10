@@ -6,7 +6,7 @@ Dump a gp_information (GPI) file from our Oracle database according to the GO sp
 ### Synopsis
 
 ```
-`perl gen_gpi_file_gp2protein.pl  --dsn=<Oracle DSN> --user=<Oracle_user> --passwd=<Oracle password>`
+`perl gen_gpi_file_gp2protein-v2.pl  --dsn=<Oracle DSN> --user=<Oracle_user> --passwd=<Oracle password>`
 ```
 
 ### Output

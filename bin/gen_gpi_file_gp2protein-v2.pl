@@ -392,7 +392,7 @@ This version also prints out the GPI file YYYYMMDD_HHMMSS.gp2protein.gpi_dicty
 
 =head1 SYNOPSIS
 
-perl gen_gpi_file_gp2protein.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle password>
+perl gen_gpi_file_gp2protein-v2.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle password>
 
 (It resquires the gp2protein file at Export-GPI-from-Oracle/data/gp2protein.dictyBase).
 

@@ -104,7 +104,7 @@ my $c_products = 0;
 my $c_syn      = 0;
 
 print {$out}
-    "DDB_G_ID\tGene_Name\tGene_Product\tAlternative_gene_name\tObject_type\tTaxon\tParent_Object\tUniprot_ID\n";
+    "DDB_G_ID\tGene_Name\tGene_Product\tAlternative_gene_name\tObject_type\tTaxon\tParent_Object\tUniprotKB:ID\n";
 for my $ddbg ( sort keys %hash_gp2protein ) {
 
     # ddbg
@@ -137,7 +137,7 @@ for my $ddbg ( sort keys %hash_gp2protein ) {
     print {$out} "gene\ttaxon:44689\t \t";
 
     # Uniprot ID
-    print {$out} $hash_gp2protein{$ddbg} . "\n";
+    print {$out} "UniProtKB:".$hash_gp2protein{$ddbg} . "\n";
 
     $c_genes++;
 }

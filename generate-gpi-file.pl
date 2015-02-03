@@ -10,20 +10,18 @@ use IO::File;
 use autodie qw/open close/;
 use Text::CSV;
 
-system('clear');
-
-my $script_name = "gen_gpi_file_gp2protein.pl";
+my $script_name = "generate-gpi-file.pl";
 
 # Validation section
 my %options;
-GetOptions( \%options, 'dsn=s', 'user=s', 'passwd=s' );
-for my $arg (qw/dsn user passwd/) {
+GetOptions( \%options, 'host=s', 'user=s', 'passwd=s' );
+for my $arg (qw/host user passwd/) {
     die
-        "\tperl $script_name -dsn=ORACLE_DNS -user=USERNAME -passwd=PASSWD\n\n"
+        "\nError!\n\nUSAGE: perl $script_name -host=ORACLE_DNS -user=USERNAME -passwd=PASSWD\n\n"
         if not defined $options{$arg};
 }
 
-my $host = $options{dsn};
+my $host = $options{host};
 my $user = $options{user};
 my $pass = $options{passwd};
 
@@ -65,7 +63,7 @@ my $ymd = sprintf(
     $year + 1900,
     $mon + 1, $mday, $hour, $min, $sec
 );
-my $outfile = "../data/$ymd.gp2protein.gpi_dicty";
+my $outfile = "data/$ymd.gp2protein.gpi_dicty";
 
 open my $out, '>', $outfile
     or die "Big problem: I can't create '$outfile'";
@@ -160,7 +158,7 @@ sub get_gp2protein {
 
     my ($dbh) = @_;
 
-    my $filename = "../data/gp2protein.dictyBase";
+    my $filename = "data/gp2protein.dictyBase";
     open my $FILE, '<', $filename or die "Cannot open '$filename'!\n";
 
     my %hash_gp2protein = ();
@@ -383,12 +381,12 @@ STATEMENT
 
 =head1 NAME
 
-gen_gpi_file_gp2protein-v2.pl - Generate a GPI file from the dictyBase
+generate-gpi-file.pl - Generate a GPI file from the dictyBase
 
 =head1 VERSION
  
-Version 3.2: it differs from gen_gpi_file_gp2protein.pl in the subroutines. 
-This version also prints out the GPI file YYYYMMDD_HHMMSS.gp2protein.gpi_dicty
+Version 3.3: it differs from gen_gpi_file_gp2protein-v2.pl in:
+- It runs from the root of the github project (change the path to the files)
 
 =head1 SYNOPSIS
 
@@ -399,7 +397,7 @@ perl gen_gpi_file_gp2protein-v2.pl  --dsn=<Oracle DSN> --user=<Oracle user> --pa
 
 =head1 OPTIONS
 
- --dsn           Oracle database DSN
+ --host          Oracle database HOST
  --user          Database user name
  --passwd        Database password
 

@@ -6,7 +6,7 @@ Dump a gp_information (GPI) file from our Oracle database according to the GO sp
 ### Synopsis
 
 ```
-`perl gen_gpi_file_gp2protein-v2.pl  --dsn=<Oracle DSN> --user=<Oracle_user> --passwd=<Oracle password>`
+`perl generate-gpi-file.pl  --dsn=<Oracle DSN> --user=<Oracle_user> --passwd=<Oracle password>`
 ```
 
 ### Output
@@ -55,15 +55,10 @@ Where is the info?
 09 Gene_Product_Properties = Think about it.
 
 
-### Steps completed
+### Developing log
 
 ### Installation of DBD::Oracle on the Mac
 Follow the instructions in the [General-Scripts readme file](https://github.com/dictyBase/General-Scripts/blob/master/README.md) about how to install DBD::Oracle on the Mac.
-
-### Scripts
-* Started with script ``connect2oracle.pl``
-* After Sidd feedback, re-write the script in a more professional way. 
-* As a result: ``gen_gpi_file.pl``
 
 #### Refactoring
 Incorporate issue's suggestions. 
@@ -101,24 +96,28 @@ With this script, I have found multiple problems that I need to resolve one by o
 		dictyBase:DDB_G0278875	NCBI_GP:EAL68039.1 ---> do not have an Uniprot id in dictyweb
 		dictyBase:DDB_G0271556	NCBI_GP:EAL71642.2 ---> do have a uniprot id in dictyweb:V9H176 
 		```
-* Create ``gen_gpi_file_gp2protein-v2.pl``: this version prints out a GPI file. These are some stats:
+### Stats 
+
+The script gets:
 	
 ```
+February, 2015 02 09
+
 > Getting ddb_g and Uniprot from gp2protein file...
 	Number of DDB_G to Uniprot: 12201
 > Getting gene name...  done!
 > Getting gene product...
-	with Gene Product: 7920
-	without gene product: 4281
+	with Gene Product: 7925
+	without gene product: 4276
 	Total: 12201
 > Getting gene synonyms...
-	With syn: 1819
-	Without syn  : 10382
+	With syn: 1833
+	Without syn  : 10368
 	Total DDB_G ids: 12201
 
 Double checking numbers
-	- Has products: 7920
-	- Has synonyms: 1819
+	- Has products: 7925
+	- Has synonyms: 1833
 ```
 
 

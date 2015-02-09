@@ -390,7 +390,7 @@ Version 3.3: it differs from gen_gpi_file_gp2protein-v2.pl in:
 
 =head1 SYNOPSIS
 
-perl gen_gpi_file_gp2protein-v2.pl  --dsn=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle password>
+perl generate-gpi-file.pl  --host=<Oracle DSN> --user=<Oracle user> --passwd=<Oracle password>
 
 (It resquires the gp2protein file at Export-GPI-from-Oracle/data/gp2protein.dictyBase).
 

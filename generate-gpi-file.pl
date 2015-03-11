@@ -24,11 +24,13 @@ for my $arg (qw/host user passwd/) {
 my $host = $options{host};
 my $user = $options{user};
 my $pass = $options{passwd};
+my $dsn  = "dbi:Oracle:host=$host;sid=orcl;port=1521";
 
 print "\n" . $script_name . " is connecting to the database... ";
-my $dbh = DBI->connect( "dbi:Oracle:host=$host;sid=orcl;port=1521",
-    $options{user}, $options{passwd},
+
+my $dbh = DBI->connect( $dsn, $user, $pass,
     { RaiseError => 1, LongReadLen => 2**20 } );
+
 say " done!!\n";
 
 # Get DDB_G and Uniprot ids
@@ -135,7 +137,7 @@ for my $ddbg ( sort keys %hash_gp2protein ) {
     print {$out} "gene\ttaxon:44689\t \t";
 
     # Uniprot ID
-    print {$out} "UniProtKB:".$hash_gp2protein{$ddbg} . "\n";
+    print {$out} "UniProtKB:" . $hash_gp2protein{$ddbg} . "\n";
 
     $c_genes++;
 }
